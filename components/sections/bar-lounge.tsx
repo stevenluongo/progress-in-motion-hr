@@ -1,7 +1,7 @@
 import ChevronDown from "@/components/icons/chevron-down";
 import TextContainer from "@/components/text/text-container";
 import TextHeadingPrimary from "@/components/text/text-heading-primary";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import TextBody from "@/components/text/text-body";
 import ButtonPrimary from "@/components/button/button-primary";
 import ContentWrapper from "@/components/content/content-wrapper";
@@ -31,11 +31,13 @@ const BarLounge = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                layout="fill"
                 alt="26 North Craft Kitchen"
-                objectFit="cover"
-                objectPosition="center"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center"
+                }} />
             </ImageWrapper>
           </ContentPanel>
         </ContentContainer>
@@ -48,28 +50,34 @@ const BarLounge = () => {
               <Image
                 src="/header.jpeg"
                 alt="26 North Craft Kitchen"
-                objectFit="cover"
-                objectPosition="center"
-                layout="fill"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center"
+                }} />
             </div>
             <div className="w-full relative max-h-[300px] hidden lg:block">
               <Image
                 src="/header.jpeg"
                 alt="26 North Craft Kitchen"
-                objectFit="cover"
-                objectPosition="center"
-                layout="fill"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center"
+                }} />
             </div>
             <div className="w-full h-ful relative">
               <Image
                 src="/header.jpeg"
                 alt="26 North Craft Kitchen"
-                objectFit="cover"
-                objectPosition="center"
-                layout="fill"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center"
+                }} />
             </div>
           </div>
         </div>
@@ -96,11 +104,13 @@ const BarLounge = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                layout="fill"
                 alt="26 North Craft Kitchen"
-                objectFit="cover"
-                objectPosition="center"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center"
+                }} />
             </ImageWrapper>
           </ContentPanel>
         </ContentContainer>

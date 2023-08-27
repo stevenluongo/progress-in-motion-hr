@@ -1,6 +1,6 @@
 import TextContainer from "@/components/text/text-container";
 import TextHeadingPrimary from "@/components/text/text-heading-primary";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import TextBody from "@/components/text/text-body";
 import ButtonPrimary from "@/components/button/button-primary";
 import ContentWrapper from "@/components/content/content-wrapper";
@@ -30,11 +30,13 @@ const MainDiningRoom = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                layout="fill"
                 alt="26 North Craft Kitchen"
-                objectFit="cover"
-                objectPosition="center"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center"
+                }} />
             </ImageWrapper>
           </ContentPanel>
         </ContentContainer>
@@ -61,11 +63,13 @@ const MainDiningRoom = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                layout="fill"
                 alt="26 North Craft Kitchen"
-                objectFit="cover"
-                objectPosition="center"
-              />
+                fill
+                sizes="100vw"
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center"
+                }} />
             </ImageWrapper>
           </ContentPanel>
         </ContentContainer>

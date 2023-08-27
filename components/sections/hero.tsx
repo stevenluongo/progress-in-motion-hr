@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import TextContainer from "../text/text-container";
 import TextBody from "../text/text-body";
 import ArrowSmDown from "../icons/arrow-sm-down";
@@ -9,12 +9,14 @@ const Hero = () => {
       <div className="w-full h-full bg-gradient-to-b from-[#0000005a] from-30% to-transparent z-[1] absolute top-0 left-0" />
       <Image
         src="/header.jpeg"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
         alt="header"
         className="z-0"
-      />
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+          objectPosition: "center"
+        }} />
       <TextContainer className="z-10 max-w-[500px] md:items-center px-8">
         <h1 className="uppercase text-header-xs md:text-header-md lg:text-header-lg font-prata text-center text-white leading-header">
           Progress in motion
