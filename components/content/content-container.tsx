@@ -4,19 +4,27 @@ import React, { FC, Fragment, ReactNode } from "react";
 This component is used to wrap content in a container that has a max width of 80rem and a gap of 200px between each child.
 It passes down a className prop to each child that alternates between order-1 and order-2.
 This is used to reverse the order of the children on mobile and desktop.
+It also passes down a light prop to each child.
+This is used to dynamically change the styles of the children.
 */
 
 interface ContentContainerProps {
   children: ReactNode[];
   reverse?: boolean;
+  light?: boolean;
 }
 
-const ContentContainer: FC<ContentContainerProps> = ({ children, reverse }) => {
+const ContentContainer: FC<ContentContainerProps> = ({
+  children,
+  reverse,
+  light = false,
+}) => {
   return (
     <div className="flex gap-16 items-center flex-col md:flex-row">
       {children.map((child, index) => (
         <Fragment key={index}>
           {React.cloneElement(child as React.ReactElement, {
+            // alternating between order-1 and order-2
             className:
               index % 2 === 0
                 ? reverse
@@ -25,6 +33,8 @@ const ContentContainer: FC<ContentContainerProps> = ({ children, reverse }) => {
                 : reverse
                 ? "order-2 md:order-1"
                 : "order-2",
+            // passing down the light prop to each child
+            light,
           })}
         </Fragment>
       ))}

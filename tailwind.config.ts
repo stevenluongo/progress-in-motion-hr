@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { extendTailwindMerge } from "tailwind-merge";
 
 const config: Config = {
   content: [
@@ -29,6 +30,9 @@ const config: Config = {
         header: "120%",
         // Body
         body: "150%",
+      },
+      boxShadow: {
+        image: "22px 28px 0px 0px rgba(0, 0, 0, 0.25)",
       },
       colors: {
         // Blue Palette
@@ -65,20 +69,10 @@ const config: Config = {
 };
 export default config;
 
-/*
-//FONT SIZES
-
-
-
-text-header-lg = 4rem
-text-header-md = 3rem
-text-header-sm = 2rem
-text-header-xs = 1.5rem
-text-body = 1em
-text-sm = 0.875em
-text-xs = 0.75em
-
-
-
-
-*/
+export const twMerge = extendTailwindMerge({
+  classGroups: {
+    "font-size": Object.keys(config.theme!.extend!.fontSize!).map(
+      (key) => `text-${key}`
+    ),
+  },
+});

@@ -1,6 +1,7 @@
 import { FC } from "react";
+import IconProps from "./interfaces/icon-props";
 
-const ChevronDown: FC<{ className: string }> = ({ className }) => {
+const ChevronDown: FC<IconProps> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
