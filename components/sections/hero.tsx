@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import TextContainer from "../text/text-container";
 import TextBody from "../text/text-body";
 import ArrowSmDown from "../icons/arrow-sm-down";

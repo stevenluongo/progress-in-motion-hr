@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import ButtonPrimary from "../button/button-primary";
 import ContentContainer from "../content/content-container";
 import ContentPanel from "../content/content-panel";
@@ -35,7 +35,7 @@ const TwentySixNorth = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                fill
+                layout="fill"
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
@@ -54,7 +54,7 @@ const TwentySixNorth = () => {
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
-                fill
+                layout="fill"
               />
             </div>
             <div className="w-full relative max-h-[300px] hidden lg:block">
@@ -63,7 +63,7 @@ const TwentySixNorth = () => {
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
-                fill
+                layout="fill"
               />
             </div>
             <div className="w-full h-ful relative">
@@ -72,7 +72,7 @@ const TwentySixNorth = () => {
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
-                fill
+                layout="fill"
               />
             </div>
           </div>
@@ -100,7 +100,7 @@ const TwentySixNorth = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                fill
+                layout="fill"
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"

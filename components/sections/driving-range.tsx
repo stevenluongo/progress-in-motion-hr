@@ -1,7 +1,7 @@
 import ChevronDown from "@/components/icons/chevron-down";
 import TextContainer from "@/components/text/text-container";
 import TextHeadingPrimary from "@/components/text/text-heading-primary";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React from "react";
 import TextBody from "@/components/text/text-body";
 import ButtonPrimary from "@/components/button/button-primary";
@@ -32,7 +32,7 @@ const DrivingRange = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                fill
+                layout="fill"
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
@@ -48,7 +48,7 @@ const DrivingRange = () => {
             <ImageWrapper full light>
               <Image
                 src="/header.jpeg"
-                fill
+                layout="fill"
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
@@ -78,7 +78,7 @@ const DrivingRange = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                fill
+                layout="fill"
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"

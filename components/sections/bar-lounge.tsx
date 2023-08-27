@@ -1,7 +1,7 @@
 import ChevronDown from "@/components/icons/chevron-down";
 import TextContainer from "@/components/text/text-container";
 import TextHeadingPrimary from "@/components/text/text-heading-primary";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import TextBody from "@/components/text/text-body";
 import ButtonPrimary from "@/components/button/button-primary";
 import ContentWrapper from "@/components/content/content-wrapper";
@@ -31,7 +31,7 @@ const BarLounge = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                fill
+                layout="fill"
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
@@ -50,7 +50,7 @@ const BarLounge = () => {
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
-                fill
+                layout="fill"
               />
             </div>
             <div className="w-full relative max-h-[300px] hidden lg:block">
@@ -59,7 +59,7 @@ const BarLounge = () => {
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
-                fill
+                layout="fill"
               />
             </div>
             <div className="w-full h-ful relative">
@@ -68,7 +68,7 @@ const BarLounge = () => {
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
-                fill
+                layout="fill"
               />
             </div>
           </div>
@@ -96,7 +96,7 @@ const BarLounge = () => {
             <ImageWrapper>
               <Image
                 src="/header.jpeg"
-                fill
+                layout="fill"
                 alt="26 North Craft Kitchen"
                 objectFit="cover"
                 objectPosition="center"
