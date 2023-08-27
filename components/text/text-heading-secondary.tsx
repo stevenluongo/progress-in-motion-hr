@@ -1,11 +1,6 @@
 import { twMerge } from "@/tailwind.config";
-import { FC, ReactNode } from "react";
-
-interface TextHeadingSecondaryProps {
-  children: ReactNode;
-  heading?: string;
-  light?: boolean;
-}
+import { FC } from "react";
+import { TextHeadingSecondaryProps } from "./text";
 
 const TextHeadingSecondary: FC<TextHeadingSecondaryProps> = ({
   children,

@@ -1,13 +1,8 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { twMerge } from "tailwind-merge";
+import { TextBaseProps } from "./text";
 
-interface TextBodyProps {
-  children: ReactNode;
-  className?: string;
-  light?: boolean;
-}
-
-const TextBody: FC<TextBodyProps> = ({ children, className, light }) => {
+const TextBody: FC<TextBaseProps> = ({ children, className, light }) => {
   return (
     <p
       className={twMerge(

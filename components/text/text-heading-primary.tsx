@@ -1,11 +1,6 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { twMerge } from "@/tailwind.config";
-
-interface TextHeadingPrimaryProps {
-  children: ReactNode;
-  number: number;
-  light?: boolean;
-}
+import { TextHeadingPrimaryProps } from "./text";
 
 const TextHeadingPrimary: FC<TextHeadingPrimaryProps> = ({
   number,

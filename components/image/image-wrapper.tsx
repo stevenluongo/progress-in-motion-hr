@@ -1,11 +1,6 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { twMerge } from "@/tailwind.config";
-
-interface ImageWrapperProps {
-  children: ReactNode;
-  light?: boolean;
-  full?: boolean;
-}
+import { ImageWrapperProps } from "./image";
 
 const ImageWrapper: FC<ImageWrapperProps> = ({ children, light, full }) => {
   return (

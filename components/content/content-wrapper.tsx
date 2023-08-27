@@ -1,8 +1,5 @@
-import { FC, ReactNode } from "react";
-
-interface ContentWrapperProps {
-  children: ReactNode;
-}
+import { FC } from "react";
+import { ContentWrapperProps } from "./content";
 
 const ContentWrapper: FC<ContentWrapperProps> = ({ children }) => {
   return (

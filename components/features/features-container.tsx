@@ -1,9 +1,5 @@
 import React, { Fragment, FC, ReactElement, ReactNode } from "react";
-
-interface FeaturesContainerProps {
-  children: ReactNode[];
-  light?: boolean;
-}
+import { FeaturesContainerProps } from "./features";
 
 const FeaturesContainer: FC<FeaturesContainerProps> = ({ children, light }) => {
   return (

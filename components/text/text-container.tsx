@@ -1,12 +1,7 @@
 import React, { Fragment } from "react";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { twMerge } from "tailwind-merge";
-
-interface TextContainerProps {
-  children: ReactNode[];
-  className?: string;
-  light?: boolean;
-}
+import { TextContainerProps } from "./text";
 
 const TextContainer: FC<TextContainerProps> = ({
   children,

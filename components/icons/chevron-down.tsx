@@ -1,5 +1,5 @@
 import { FC } from "react";
-import IconProps from "./interfaces/icon-props";
+import { IconProps } from "./icons";
 
 const ChevronDown: FC<IconProps> = ({ className }) => {
   return (

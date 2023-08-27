@@ -1,5 +1,5 @@
 import { FC } from "react";
-import IconProps from "./interfaces/icon-props";
+import { IconProps } from "./icons";
 
 const ArrowSmDown: FC<IconProps> = ({ className }) => {
   return (

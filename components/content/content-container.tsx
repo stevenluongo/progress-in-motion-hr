@@ -1,4 +1,5 @@
-import React, { FC, Fragment, ReactNode } from "react";
+import React, { FC, Fragment } from "react";
+import { ContentContainerProps } from "./content";
 
 /*
 This component is used to wrap content in a container that has a max width of 80rem and a gap of 200px between each child.
@@ -7,12 +8,6 @@ This is used to reverse the order of the children on mobile and desktop.
 It also passes down a light prop to each child.
 This is used to dynamically change the styles of the children.
 */
-
-interface ContentContainerProps {
-  children: ReactNode[];
-  reverse?: boolean;
-  light?: boolean;
-}
 
 const ContentContainer: FC<ContentContainerProps> = ({
   children,

@@ -1,11 +1,7 @@
 import { FC, ReactNode } from "react";
 import CheckIcon from "../icons/check";
 import { twMerge } from "@/tailwind.config";
-
-interface FeaturesItemProps {
-  children: ReactNode;
-  light?: boolean;
-}
+import { FeaturesItemProps } from "./features";
 
 const FeaturesItem: FC<FeaturesItemProps> = ({ children, light }) => {
   return (

@@ -1,10 +1,6 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { twMerge } from "@/tailwind.config";
-
-interface ButtonPrimaryProps {
-  children: ReactNode;
-  light?: boolean;
-}
+import { ButtonPrimaryProps } from "./button";
 
 const ButtonPrimary: FC<ButtonPrimaryProps> = ({ children, light }) => {
   return (

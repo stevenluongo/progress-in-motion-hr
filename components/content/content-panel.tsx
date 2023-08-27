@@ -1,4 +1,5 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC } from "react";
+import { ContentPanelProps } from "./content";
 
 /*
 This component is a wrapper for each item in the content container.
@@ -9,12 +10,6 @@ It also takes in a light prop that is used to dynamically change the styles of t
 This prop is passed down from the content container component.
 This prop is further passed down to the children of the content panel component.
 */
-
-interface ContentPanelProps {
-  children: ReactNode;
-  className?: string;
-  light?: boolean;
-}
 
 const ContentPanel: FC<ContentPanelProps> = ({
   children,

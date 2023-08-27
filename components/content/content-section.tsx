@@ -1,11 +1,6 @@
 import { twMerge } from "@/tailwind.config";
-import { ReactNode } from "react";
 import { FC } from "react";
-
-interface ContentSectionProps {
-  children: ReactNode;
-  className?: string;
-}
+import { ContentSectionProps } from "./content";
 
 const ContentSection: FC<ContentSectionProps> = ({ children, className }) => {
   return (
