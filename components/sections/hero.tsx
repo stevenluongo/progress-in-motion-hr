@@ -6,7 +6,7 @@ import ArrowSmDown from "../icons/arrow-sm-down";
 const Hero = () => {
   return (
     <section className="h-screen w-screen grid place-items-center">
-      <div className="w-full h-full bg-gradient-to-b from-[#0000005a] from-30% to-transparent z-[1] absolute" />
+      <div className="w-full h-full bg-gradient-to-b from-[#0000005a] from-30% to-transparent z-[1] absolute top-0 left-0" />
       <Image
         src="/header.jpeg"
         layout="fill"
