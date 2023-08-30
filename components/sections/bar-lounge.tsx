@@ -11,6 +11,7 @@ import TextHeadingSecondary from "@/components/text/text-heading-secondary";
 import ImageWrapper from "@/components/image/image-wrapper";
 import FeaturesItem from "@/components/features/features-item";
 import FeaturesContainer from "@/components/features/features-container";
+import { Element } from "react-scroll";
 
 const BarLounge = () => {
   return (
@@ -24,7 +25,9 @@ const BarLounge = () => {
                 26° North uncorks an intimate and artisanal experience for our
                 membership with seasonally sources ingredients.
               </TextBody>
-              <ButtonPrimary>Read More</ButtonPrimary>
+              <ButtonPrimary scrollTo="bar-lounge-discover">
+                Read More
+              </ButtonPrimary>
             </TextContainer>
           </ContentPanel>
           <ContentPanel>
@@ -36,51 +39,57 @@ const BarLounge = () => {
                 sizes="100vw"
                 style={{
                   objectFit: "cover",
-                  objectPosition: "center"
-                }} />
+                  objectPosition: "center",
+                }}
+              />
             </ImageWrapper>
           </ContentPanel>
         </ContentContainer>
-        <div className="grid gap-y-8">
-          <TextHeadingSecondary heading="2023 - 2024 Season">
-            Indulge in culinary excellence.
-          </TextHeadingSecondary>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 h-[300px]">
-            <div className="w-full h-full relative hidden md:block">
-              <Image
-                src="/header.jpeg"
-                alt="26 North Craft Kitchen"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center"
-                }} />
-            </div>
-            <div className="w-full relative max-h-[300px] hidden lg:block">
-              <Image
-                src="/header.jpeg"
-                alt="26 North Craft Kitchen"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center"
-                }} />
-            </div>
-            <div className="w-full h-ful relative">
-              <Image
-                src="/header.jpeg"
-                alt="26 North Craft Kitchen"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center"
-                }} />
+        <Element name="bar-lounge-discover">
+          <div className="grid gap-y-8">
+            <TextHeadingSecondary heading="2023 - 2024 Season">
+              Indulge in culinary excellence.
+            </TextHeadingSecondary>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 h-[300px]">
+              <div className="w-full h-full relative hidden md:block">
+                <Image
+                  src="/header.jpeg"
+                  alt="26 North Craft Kitchen"
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                />
+              </div>
+              <div className="w-full relative max-h-[300px] hidden lg:block">
+                <Image
+                  src="/header.jpeg"
+                  alt="26 North Craft Kitchen"
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                />
+              </div>
+              <div className="w-full h-ful relative">
+                <Image
+                  src="/header.jpeg"
+                  alt="26 North Craft Kitchen"
+                  fill
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </Element>
         <ContentContainer>
           <ContentPanel>
             <TextContainer>
@@ -109,12 +118,16 @@ const BarLounge = () => {
                 sizes="100vw"
                 style={{
                   objectFit: "cover",
-                  objectPosition: "center"
-                }} />
+                  objectPosition: "center",
+                }}
+              />
             </ImageWrapper>
           </ContentPanel>
         </ContentContainer>
-        <ChevronDown className="w-12 h-12 m-auto stroke-2 stroke-blue-800 cursor-pointer" />
+        <ChevronDown
+          scrollTo="east-course"
+          className="w-12 h-12 m-auto stroke-2 stroke-blue-800 cursor-pointer"
+        />
       </ContentWrapper>
     </section>
   );
