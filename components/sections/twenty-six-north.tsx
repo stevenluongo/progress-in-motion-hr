@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ButtonPrimary from "../button/button-primary";
 import ContentContainer from "../content/content-container";
 import ContentPanel from "../content/content-panel";
@@ -11,6 +10,7 @@ import TextHeadingSecondary from "../text/text-heading-secondary";
 import FeaturesContainer from "../features/features-container";
 import FeaturesItem from "../features/features-item";
 import ChevronDown from "../icons/chevron-down";
+import Image from "../image/full-image";
 
 const TwentySixNorth = () => {
   return (
@@ -24,8 +24,9 @@ const TwentySixNorth = () => {
                 <br /> CRAFT KITCHEN
               </TextHeadingPrimary>
               <TextBody>
-                At 26° North, you’ll find a carefully crafted menu complemented
-                by hand-selected fine wines, craft cocktails and exceptional
+                Dining at 26° North will indeed be a feast for the senses. Here
+                you&apos;ll find a carefully crafted menu complemented by
+                hand-selected fine wines, craft cocktails and exceptional
                 service.
               </TextBody>
               <ButtonPrimary>Read More</ButtonPrimary>
@@ -34,14 +35,9 @@ const TwentySixNorth = () => {
           <ContentPanel>
             <ImageWrapper>
               <Image
-                src="/header.jpeg"
+                src="/twenty-six-north/host.jpg"
                 alt="26 North Craft Kitchen"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center"
-                }} />
+              />
             </ImageWrapper>
           </ContentPanel>
         </ContentContainer>
@@ -52,36 +48,21 @@ const TwentySixNorth = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 h-[300px]">
             <div className="w-full h-full relative hidden md:block">
               <Image
-                src="/header.jpeg"
+                src="/twenty-six-north/food_1.JPEG"
                 alt="26 North Craft Kitchen"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center"
-                }} />
+              />
             </div>
             <div className="w-full relative max-h-[300px] hidden lg:block">
               <Image
-                src="/header.jpeg"
+                src="/twenty-six-north/cheers.jpg"
                 alt="26 North Craft Kitchen"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center"
-                }} />
+              />
             </div>
             <div className="w-full h-ful relative">
               <Image
-                src="/header.jpeg"
+                src="/twenty-six-north/food_2.JPEG"
                 alt="26 North Craft Kitchen"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center"
-                }} />
+              />
             </div>
           </div>
         </div>
@@ -93,28 +74,23 @@ const TwentySixNorth = () => {
               </TextHeadingSecondary>
               <TextBody>
                 26° North uncorks an intimate and artisanal experience for our
-                membership with seasonally sources ingredients.
+                membership with seasonally sourced ingredients.
               </TextBody>
               <FeaturesContainer>
-                <FeaturesItem>More Driving Stations</FeaturesItem>
-                <FeaturesItem>More Driving Stations</FeaturesItem>
-                <FeaturesItem>More Driving Stations</FeaturesItem>
-                <FeaturesItem>More Driving Stations</FeaturesItem>
-                <FeaturesItem>More Driving Stations</FeaturesItem>
+                <FeaturesItem>Sophisticated restaurant</FeaturesItem>
+                <FeaturesItem>Attentive service</FeaturesItem>
+                <FeaturesItem>Covered outdoor seating</FeaturesItem>
+                <FeaturesItem>Craft cocktails</FeaturesItem>
+                <FeaturesItem>Intimate ambiance</FeaturesItem>
               </FeaturesContainer>
             </TextContainer>
           </ContentPanel>
           <ContentPanel>
             <ImageWrapper>
               <Image
-                src="/header.jpeg"
+                src="/twenty-six-north/bar.jpg"
                 alt="26 North Craft Kitchen"
-                fill
-                sizes="100vw"
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center"
-                }} />
+              />
             </ImageWrapper>
           </ContentPanel>
         </ContentContainer>
