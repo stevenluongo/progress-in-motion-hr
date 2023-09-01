@@ -1,7 +1,6 @@
 import ChevronDown from "@/components/icons/chevron-down";
 import TextContainer from "@/components/text/text-container";
 import TextHeadingPrimary from "@/components/text/text-heading-primary";
-import Image from "next/image";
 import TextBody from "@/components/text/text-body";
 import ButtonPrimary from "@/components/button/button-primary";
 import ContentWrapper from "@/components/content/content-wrapper";
@@ -10,6 +9,7 @@ import ContentContainer from "@/components/content/content-container";
 import TextHeadingSecondary from "@/components/text/text-heading-secondary";
 import ImageWrapper from "@/components/image/image-wrapper";
 import { Element } from "react-scroll";
+import Image from "../image/full-image";
 
 const EastCourse = () => {
   return (
@@ -23,8 +23,11 @@ const EastCourse = () => {
                   East Course Renovation
                 </TextHeadingPrimary>
                 <TextBody>
-                  26° North uncorks an intimate and artisanal experience for our
-                  membership with seasonally sources ingredients.
+                  Exciting changes are on the horizon as we proudly present the
+                  East Golf Course Renovation Project. This endeavor marks a
+                  thrilling chapter in our commitment to enhancing the golfing
+                  adventure, where tradition meets innovation for an even more
+                  enjoyable experience.
                 </TextBody>
                 <ButtonPrimary scrollTo="east-course-discover">
                   Read More
@@ -35,13 +38,7 @@ const EastCourse = () => {
               <ImageWrapper>
                 <Image
                   src="/header.jpeg"
-                  alt="26 North Craft Kitchen"
-                  fill
-                  sizes="100vw"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
+                  alt="Drone image of the East Course"
                 />
               </ImageWrapper>
             </ContentPanel>
@@ -51,27 +48,31 @@ const EastCourse = () => {
               <ContentPanel>
                 <TextContainer>
                   <TextHeadingSecondary>
-                    Teeing up tomorrow.
+                    A fresh fairway forward
                   </TextHeadingSecondary>
                   <TextBody>
-                    Whether you&apos;re fine-tuning your technique or just
-                    starting your golfing journey, the renovated Driving Range
-                    provides the ideal space to unleash your potential.
+                    This project is a true reflection of our dedication to both
+                    golf and nature. By revitalizing the East Golf Course,
+                    we&apos;re ensuring that both avid golf enthusiasts and
+                    newcomers can enjoy a fantastic golfing experience.
                   </TextBody>
-                  <ButtonPrimary>Read More</ButtonPrimary>
+                  <ButtonPrimary
+                    onClick={() =>
+                      window.open(
+                        "https://www.huntersrun.net/documents/10184/14462025/East+Course+Renovation+Hole+by+Hole+Web+Booklet.pdf?t=1692393509574",
+                        "_blank"
+                      )
+                    }
+                  >
+                    View the booklet
+                  </ButtonPrimary>
                 </TextContainer>
               </ContentPanel>
               <ContentPanel>
                 <ImageWrapper>
                   <Image
                     src="/east-course/map.png"
-                    alt="26 North Craft Kitchen"
-                    fill
-                    sizes="100vw"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center",
-                    }}
+                    alt="Conceptual rendering of the updated East Course"
                   />
                 </ImageWrapper>
               </ContentPanel>
@@ -79,19 +80,13 @@ const EastCourse = () => {
           </Element>
           <div className="grid gap-y-8">
             <TextHeadingSecondary heading="2023 - 2024 Season" light>
-              Indulge in culinary excellence.
+              Reimagining the greens
             </TextHeadingSecondary>
             <div className="h-[300px]">
               <ImageWrapper full light>
                 <Image
                   src="/east-course/footer.png"
-                  alt="26 North Craft Kitchen"
-                  fill
-                  sizes="100vw"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
+                  alt="Putting green image of the East Course"
                 />
               </ImageWrapper>
             </div>

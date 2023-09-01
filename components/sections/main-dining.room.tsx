@@ -20,10 +20,15 @@ const MainDiningRoom = () => {
           <ContentContainer>
             <ContentPanel>
               <TextContainer>
-                <TextHeadingPrimary number={3}>Main Lobby</TextHeadingPrimary>
+                <TextHeadingPrimary number={3}>
+                  Main Dining Room
+                </TextHeadingPrimary>
                 <TextBody>
-                  26° North uncorks an intimate and artisanal experience for our
-                  membership with seasonally sources ingredients.
+                  The Main Dining Room has always been the heart of our culinary
+                  affairs, where flavors come to life and memories are made.
+                  With this refurbishment, we&apos;re not just upgrading the
+                  setting; we&apos;re crafting an event space that reflects the
+                  artistry of our Club and the warmth of our hospitality.
                 </TextBody>
                 <ButtonPrimary scrollTo="main-dining-room-discover">
                   Read More
@@ -34,7 +39,7 @@ const MainDiningRoom = () => {
               <ImageWrapper>
                 <Image
                   src="/main-dining-room/dining_1.png"
-                  alt="26 North Craft Kitchen"
+                  alt="Conceptual rendering of the main dining room"
                 />
               </ImageWrapper>
             </ContentPanel>
@@ -44,18 +49,22 @@ const MainDiningRoom = () => {
               <ContentPanel>
                 <TextContainer>
                   <TextHeadingSecondary heading="2023 - 2024 Season">
-                    Elevate your dining experience.
+                    A taste of tomorrow
                   </TextHeadingSecondary>
                   <TextBody>
-                    26° North uncorks an intimate and artisanal experience for
-                    our membership with seasonally sources ingredients.
+                    Whether you&apos;re planning a grand celebration, a company
+                    gala, or a corporate meeting, our banquet space can be
+                    tailored to suit your needs. With flexible seating
+                    arrangements and state-of-the-art audiovisual equipment,
+                    we&apos;ve got you covered.
                   </TextBody>
                   <FeaturesContainer>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
+                    <FeaturesItem>New carpeting</FeaturesItem>
+                    <FeaturesItem>New lighting</FeaturesItem>
+                    <FeaturesItem>Improved infrastructure</FeaturesItem>
+                    <FeaturesItem>New seating</FeaturesItem>
+                    <FeaturesItem>New tables</FeaturesItem>
+                    <FeaturesItem>Modern furnishings</FeaturesItem>
                   </FeaturesContainer>
                 </TextContainer>
               </ContentPanel>
@@ -70,7 +79,7 @@ const MainDiningRoom = () => {
                   <ImageWrapper>
                     <Image
                       src="/main-dining-room/dining_2.png"
-                      alt="26 North Craft Kitchen"
+                      alt="Second conceptual rendering of the main dining room"
                     />
                   </ImageWrapper>
                 </div>

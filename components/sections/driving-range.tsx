@@ -28,10 +28,7 @@ const DrivingRange = () => {
                 <TextBody>
                   Get ready to tee off into a new era of golfing excellence as
                   we embark on a journey to elevate your practice experience
-                  through the renovation of our Golf Driving Range. We&apos;re
-                  excited to unveil a transformation that blends cutting-edge
-                  design with an unwavering commitment to providing you with the
-                  finest facilities to hone your skills.
+                  through the renovation of our Golf Driving Range.
                 </TextBody>
                 <ButtonPrimary scrollTo="driving-range-discover">
                   Read More

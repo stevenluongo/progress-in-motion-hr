@@ -22,8 +22,12 @@ const MainLobby = () => {
               <TextContainer>
                 <TextHeadingPrimary number={3}>Main Lobby</TextHeadingPrimary>
                 <TextBody>
-                  26° North uncorks an intimate and artisanal experience for our
-                  membership with seasonally sources ingredients.
+                  A bright transformation is underway, as we re-imagine and
+                  refresh our current lobby space into a realm of quintessential
+                  warmth and unpretentious sophistication. As we refresh our
+                  lobby, we are also rejuvenating the heart of our club – a
+                  space where connections begin, and the future unfolds in the
+                  most graceful of ways.
                 </TextBody>
                 <ButtonPrimary scrollTo="main-lobby-discover">
                   Read More
@@ -34,7 +38,7 @@ const MainLobby = () => {
               <ImageWrapper>
                 <Image
                   src="/lobby/lobby_1.png"
-                  alt="26 North Craft Kitchen"
+                  alt="First conceptual rendering of the lobby"
                   fill
                   sizes="100vw"
                   style={{
@@ -50,18 +54,20 @@ const MainLobby = () => {
               <ContentPanel>
                 <TextContainer>
                   <TextHeadingSecondary heading="2023 - 2024 Season">
-                    Elevate your dining experience.
+                    Elevating warmth & beauty
                   </TextHeadingSecondary>
                   <TextBody>
-                    26° North uncorks an intimate and artisanal experience for
-                    our membership with seasonally sources ingredients.
+                    Witness the convergence of aesthetics and functionality,
+                    where each element is thoughtfully chosen to create an
+                    ambiance that greets our members and guests with
+                    familiarity.
                   </TextBody>
                   <FeaturesContainer>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
-                    <FeaturesItem>More Driving Stations</FeaturesItem>
+                    <FeaturesItem>Dedicated reception desk</FeaturesItem>
+                    <FeaturesItem>Bright, inviting atmosphere</FeaturesItem>
+                    <FeaturesItem>Modern furnishings</FeaturesItem>
+                    <FeaturesItem>Multiple seating spaces</FeaturesItem>
+                    <FeaturesItem>Communal, tech table</FeaturesItem>
                   </FeaturesContainer>
                 </TextContainer>
               </ContentPanel>
@@ -69,7 +75,7 @@ const MainLobby = () => {
                 <ImageWrapper>
                   <Image
                     src="/lobby/lobby_2.png"
-                    alt="26 North Craft Kitchen"
+                    alt="Second conceptual rendering of the lobby"
                     fill
                     sizes="100vw"
                     style={{
