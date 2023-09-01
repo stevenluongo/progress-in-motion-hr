@@ -1,5 +1,6 @@
 export interface ContentWrapperProps {
   children: ReactNode;
+  light?: boolean;
 }
 
 export interface ContentSectionProps {

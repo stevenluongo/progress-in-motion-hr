@@ -33,7 +33,7 @@ const MainLobby = () => {
             <ContentPanel>
               <ImageWrapper>
                 <Image
-                  src="/header.jpeg"
+                  src="/lobby/lobby_1.png"
                   alt="26 North Craft Kitchen"
                   fill
                   sizes="100vw"
@@ -68,7 +68,7 @@ const MainLobby = () => {
               <ContentPanel>
                 <ImageWrapper>
                   <Image
-                    src="/header.jpeg"
+                    src="/lobby/lobby_2.png"
                     alt="26 North Craft Kitchen"
                     fill
                     sizes="100vw"

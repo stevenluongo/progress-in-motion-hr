@@ -64,7 +64,7 @@ const EastCourse = () => {
               <ContentPanel>
                 <ImageWrapper>
                   <Image
-                    src="/header.jpeg"
+                    src="/east-course/map.png"
                     alt="26 North Craft Kitchen"
                     fill
                     sizes="100vw"
@@ -84,7 +84,7 @@ const EastCourse = () => {
             <div className="h-[300px]">
               <ImageWrapper full light>
                 <Image
-                  src="/header.jpeg"
+                  src="/east-course/footer.png"
                   alt="26 North Craft Kitchen"
                   fill
                   sizes="100vw"

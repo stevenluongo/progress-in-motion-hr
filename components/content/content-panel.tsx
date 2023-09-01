@@ -19,7 +19,7 @@ const ContentPanel: FC<ContentPanelProps> = ({
   return (
     <div className={`${className} w-full`}>
       {React.cloneElement(children as React.ReactElement, {
-        light,
+        light: light,
       })}
     </div>
   );

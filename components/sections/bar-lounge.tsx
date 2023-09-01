@@ -33,7 +33,7 @@ const BarLounge = () => {
           <ContentPanel>
             <ImageWrapper>
               <Image
-                src="/header.jpeg"
+                src="/bar-lounge/bar_1.png"
                 alt="26 North Craft Kitchen"
                 fill
                 sizes="100vw"
@@ -53,7 +53,7 @@ const BarLounge = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 h-[300px]">
               <div className="w-full h-full relative hidden md:block">
                 <Image
-                  src="/header.jpeg"
+                  src="/bar-lounge/cocktail.jpg"
                   alt="26 North Craft Kitchen"
                   fill
                   sizes="100vw"
@@ -65,7 +65,7 @@ const BarLounge = () => {
               </div>
               <div className="w-full relative max-h-[300px] hidden lg:block">
                 <Image
-                  src="/header.jpeg"
+                  src="/bar-lounge/drinks.jpg"
                   alt="26 North Craft Kitchen"
                   fill
                   sizes="100vw"
@@ -77,7 +77,7 @@ const BarLounge = () => {
               </div>
               <div className="w-full h-ful relative">
                 <Image
-                  src="/header.jpeg"
+                  src="/bar-lounge/talking.jpg"
                   alt="26 North Craft Kitchen"
                   fill
                   sizes="100vw"
@@ -112,7 +112,7 @@ const BarLounge = () => {
           <ContentPanel>
             <ImageWrapper>
               <Image
-                src="/header.jpeg"
+                src="/bar-lounge/bar_2.png"
                 alt="26 North Craft Kitchen"
                 fill
                 sizes="100vw"

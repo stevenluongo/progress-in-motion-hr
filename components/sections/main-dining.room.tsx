@@ -1,6 +1,5 @@
 import TextContainer from "@/components/text/text-container";
 import TextHeadingPrimary from "@/components/text/text-heading-primary";
-import Image from "next/image";
 import TextBody from "@/components/text/text-body";
 import ButtonPrimary from "@/components/button/button-primary";
 import ContentWrapper from "@/components/content/content-wrapper";
@@ -11,6 +10,7 @@ import ImageWrapper from "@/components/image/image-wrapper";
 import FeaturesItem from "@/components/features/features-item";
 import FeaturesContainer from "@/components/features/features-container";
 import { Element } from "react-scroll";
+import Image from "../image/full-image";
 
 const MainDiningRoom = () => {
   return (
@@ -33,14 +33,8 @@ const MainDiningRoom = () => {
             <ContentPanel>
               <ImageWrapper>
                 <Image
-                  src="/header.jpeg"
+                  src="/main-dining-room/dining_1.png"
                   alt="26 North Craft Kitchen"
-                  fill
-                  sizes="100vw"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
                 />
               </ImageWrapper>
             </ContentPanel>
@@ -66,18 +60,20 @@ const MainDiningRoom = () => {
                 </TextContainer>
               </ContentPanel>
               <ContentPanel>
-                <ImageWrapper>
-                  <Image
-                    src="/header.jpeg"
-                    alt="26 North Craft Kitchen"
-                    fill
-                    sizes="100vw"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center",
-                    }}
-                  />
-                </ImageWrapper>
+                <div className="flex gap-x-8">
+                  <ImageWrapper>
+                    <Image
+                      src="/main-dining-room/plate.png"
+                      alt="26 North Craft Kitchen"
+                    />
+                  </ImageWrapper>
+                  <ImageWrapper>
+                    <Image
+                      src="/main-dining-room/dining_2.png"
+                      alt="26 North Craft Kitchen"
+                    />
+                  </ImageWrapper>
+                </div>
               </ContentPanel>
             </ContentContainer>
           </Element>

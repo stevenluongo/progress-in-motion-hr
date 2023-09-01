@@ -13,6 +13,8 @@ import ChevronDown from "../icons/chevron-down";
 import Image from "../image/full-image";
 import { Element } from "react-scroll";
 
+import { default as NextImage } from "next/image";
+
 const TwentySixNorth = () => {
   return (
     <Element name="twenty-six-north">
@@ -58,14 +60,19 @@ const TwentySixNorth = () => {
                   />
                 </div>
                 <div className="w-full relative max-h-[300px] hidden lg:block">
-                  <Image
+                  <NextImage
                     src="/twenty-six-north/cheers.jpg"
                     alt="26 North Craft Kitchen"
+                    fill
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                    }}
                   />
                 </div>
                 <div className="w-full h-ful relative">
                   <Image
-                    src="/twenty-six-north/food_2.JPEG"
+                    src="/twenty-six-north/food_2.png"
                     alt="26 North Craft Kitchen"
                   />
                 </div>

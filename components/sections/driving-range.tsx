@@ -1,7 +1,6 @@
 import ChevronDown from "@/components/icons/chevron-down";
 import TextContainer from "@/components/text/text-container";
 import TextHeadingPrimary from "@/components/text/text-heading-primary";
-import Image from "next/image";
 import React from "react";
 import TextBody from "@/components/text/text-body";
 import ButtonPrimary from "@/components/button/button-primary";
@@ -13,6 +12,7 @@ import ImageWrapper from "@/components/image/image-wrapper";
 import FeaturesItem from "@/components/features/features-item";
 import FeaturesContainer from "@/components/features/features-container";
 import { Element } from "react-scroll";
+import Image from "../image/full-image";
 
 const DrivingRange = () => {
   return (
@@ -26,8 +26,12 @@ const DrivingRange = () => {
                   Driving Range
                 </TextHeadingPrimary>
                 <TextBody>
-                  26° North uncorks an intimate and artisanal experience for our
-                  membership with seasonally sources ingredients.
+                  Get ready to tee off into a new era of golfing excellence as
+                  we embark on a journey to elevate your practice experience
+                  through the renovation of our Golf Driving Range. We&apos;re
+                  excited to unveil a transformation that blends cutting-edge
+                  design with an unwavering commitment to providing you with the
+                  finest facilities to hone your skills.
                 </TextBody>
                 <ButtonPrimary scrollTo="driving-range-discover">
                   Read More
@@ -37,14 +41,8 @@ const DrivingRange = () => {
             <ContentPanel>
               <ImageWrapper>
                 <Image
-                  src="/header.jpeg"
+                  src="/driving-range/range_upscaled.png"
                   alt="26 North Craft Kitchen"
-                  fill
-                  sizes="100vw"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
                 />
               </ImageWrapper>
             </ContentPanel>
@@ -52,19 +50,13 @@ const DrivingRange = () => {
           <Element name="driving-range-discover">
             <div className="grid gap-y-8">
               <TextHeadingSecondary heading="2023 - 2024 Season" light>
-                Indulge in culinary excellence.
+                From drive to excellence.
               </TextHeadingSecondary>
               <div className="h-[300px]">
                 <ImageWrapper full light>
                   <Image
-                    src="/header.jpeg"
+                    src="/driving-range/range_upscaled.png"
                     alt="26 North Craft Kitchen"
-                    fill
-                    sizes="100vw"
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center",
-                    }}
                   />
                 </ImageWrapper>
               </div>
@@ -80,27 +72,30 @@ const DrivingRange = () => {
                   provides the ideal space to unleash your potential.
                 </TextBody>
                 <FeaturesContainer>
-                  <FeaturesItem>More Driving Stations</FeaturesItem>
-                  <FeaturesItem>More Driving Stations</FeaturesItem>
-                  <FeaturesItem>More Driving Stations</FeaturesItem>
-                  <FeaturesItem>More Driving Stations</FeaturesItem>
-                  <FeaturesItem>More Driving Stations</FeaturesItem>
+                  <FeaturesItem>More driving stations</FeaturesItem>
+                  <FeaturesItem>Short & long range targets</FeaturesItem>
+                  <FeaturesItem>Increased number of tees</FeaturesItem>
+                  <FeaturesItem>Covered tee stations</FeaturesItem>
+                  <FeaturesItem>New Infrastructure</FeaturesItem>
+                  <FeaturesItem>Improved drainage</FeaturesItem>
                 </FeaturesContainer>
               </TextContainer>
             </ContentPanel>
             <ContentPanel>
-              <ImageWrapper>
-                <Image
-                  src="/header.jpeg"
-                  alt="26 North Craft Kitchen"
-                  fill
-                  sizes="100vw"
-                  style={{
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
-                />
-              </ImageWrapper>
+              <div className="flex gap-x-8">
+                <ImageWrapper light>
+                  <Image
+                    src="/driving-range/ball.png"
+                    alt="26 North Craft Kitchen"
+                  />
+                </ImageWrapper>
+                <ImageWrapper light>
+                  <Image
+                    src="/driving-range/swing.JPG"
+                    alt="26 North Craft Kitchen"
+                  />
+                </ImageWrapper>
+              </div>
             </ContentPanel>
           </ContentContainer>
           <ChevronDown
