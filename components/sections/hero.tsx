@@ -39,26 +39,19 @@ const Hero = () => {
   return (
     <section className="h-screen grid place-items-center bg-black">
       <div className="w-full h-full bg-gradient-to-b from-[#0000005a] from-30% to-transparent z-[1] absolute top-0 left-0" />
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 4,
+
+      <Image
+        src="/header.jpeg"
+        alt="header"
+        className="z-0"
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+          objectPosition: "center",
         }}
-        className="z-0 absolute w-full h-full"
-      >
-        <Image
-          src="/header.jpeg"
-          alt="header"
-          className="z-0"
-          fill
-          sizes="100vw"
-          style={{
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
-      </motion.div>
+        onLoadingComplete={() => console.log("loaded!!")}
+      />
       <TextContainer className="z-10 max-w-[500px] md:items-center px-8">
         <motion.h1
           initial={{ opacity: 0, y: 120 }}

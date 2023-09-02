@@ -1,5 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, forwardRef } from "react";
 import { ContentPanelProps } from "./content";
+import { motion } from "framer-motion";
 
 /*
 This component is a wrapper for each item in the content container.
@@ -11,18 +12,19 @@ This prop is passed down from the content container component.
 This prop is further passed down to the children of the content panel component.
 */
 
-const ContentPanel: FC<ContentPanelProps> = ({
-  children,
-  className,
-  light,
-}) => {
-  return (
-    <div className={`${className} w-full`}>
-      {React.cloneElement(children as React.ReactElement, {
-        light: light,
-      })}
-    </div>
-  );
-};
+// const ContentPanel: FC<ContentPanelProps> = ({
+
+const ContentPanel = motion(
+  forwardRef<HTMLDivElement, ContentPanelProps>(function fn(props, ref) {
+    const { className, light = false, children } = props;
+    return (
+      <div ref={ref} className={`${className} w-full`}>
+        {React.cloneElement(children as React.ReactElement, {
+          light,
+        })}
+      </div>
+    );
+  })
+);
 
 export default ContentPanel;

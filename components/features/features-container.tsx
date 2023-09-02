@@ -7,7 +7,7 @@ const FeaturesContainer: FC<FeaturesContainerProps> = ({ children, light }) => {
       {children.map((child, index) => (
         <Fragment key={index}>
           {React.cloneElement(child as ReactElement, {
-            light,
+            light: light ? true : false,
           })}
         </Fragment>
       ))}

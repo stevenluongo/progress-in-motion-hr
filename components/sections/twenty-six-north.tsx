@@ -12,16 +12,50 @@ import FeaturesItem from "../features/features-item";
 import ChevronDown from "../icons/chevron-down";
 import Image from "../image/full-image";
 import { Element } from "react-scroll";
-
 import { default as NextImage } from "next/image";
+import { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const TwentySixNorth = () => {
+  const { ref, inView } = useInView({ threshold: 0 });
+  const controls = useAnimation();
+
+  const variant = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 30, damping: 10 },
+    },
+    initial: { opacity: 0, y: 100 },
+  };
+  const variant2 = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 30, damping: 10 },
+    },
+    initial: { opacity: 0, y: 100 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      setTimeout(() => {
+        controls.start("visible");
+      });
+    }
+  }, [inView, controls]);
   return (
     <Element name="twenty-six-north">
       <section className="py-[200px]">
         <ContentWrapper>
           <ContentContainer>
-            <ContentPanel>
+            <ContentPanel
+              ref={ref}
+              variants={variant}
+              animate={controls}
+              initial="initial"
+            >
               <TextContainer>
                 <TextHeadingPrimary number={1}>
                   26° NORTH
@@ -38,7 +72,12 @@ const TwentySixNorth = () => {
                 </ButtonPrimary>
               </TextContainer>
             </ContentPanel>
-            <ContentPanel>
+            <ContentPanel
+              ref={ref}
+              variants={variant2}
+              animate={controls}
+              initial="initial"
+            >
               <ImageWrapper>
                 <Image
                   src="/twenty-six-north/host.jpg"
@@ -47,38 +86,8 @@ const TwentySixNorth = () => {
               </ImageWrapper>
             </ContentPanel>
           </ContentContainer>
-          <Element name="twenty-six-north-discover">
-            <div className="grid gap-y-8">
-              <TextHeadingSecondary heading="2023 - 2024 Season">
-                Indulge in culinary excellence.
-              </TextHeadingSecondary>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 h-[300px]">
-                <div className="w-full h-full relative hidden md:block">
-                  <Image
-                    src="/twenty-six-north/food_1.JPEG"
-                    alt="26 North Craft Kitchen"
-                  />
-                </div>
-                <div className="w-full relative max-h-[300px] hidden lg:block">
-                  <NextImage
-                    src="/twenty-six-north/cheers.jpg"
-                    alt="26 North Craft Kitchen"
-                    fill
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center",
-                    }}
-                  />
-                </div>
-                <div className="w-full h-ful relative">
-                  <Image
-                    src="/twenty-six-north/food_2.png"
-                    alt="26 North Craft Kitchen"
-                  />
-                </div>
-              </div>
-            </div>
-          </Element>
+
+          <Discover />
 
           <ContentContainer reverse>
             <ContentPanel>
@@ -119,3 +128,107 @@ const TwentySixNorth = () => {
 };
 
 export default TwentySixNorth;
+
+const Discover = () => {
+  const { ref, inView } = useInView({ threshold: 0 });
+  const controls = useAnimation();
+
+  const variant = {
+    visible: {
+      opacity: 1,
+      transition: { duration: 1 },
+    },
+    initial: { opacity: 0 },
+  };
+  const variant2 = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 30, damping: 10 },
+    },
+    initial: { opacity: 0, y: 130 },
+  };
+  const variant3 = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 25, damping: 10 },
+    },
+    initial: { opacity: 0, y: 140 },
+  };
+  const variant4 = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 20, damping: 10 },
+    },
+    initial: { opacity: 0, y: 150 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      setTimeout(() => {
+        controls.start("visible");
+      });
+    }
+  }, [inView, controls]);
+
+  return (
+    <Element name="twenty-six-north-discover">
+      <div className="grid gap-y-8">
+        <TextHeadingSecondary
+          animate={controls}
+          ref={ref}
+          initial="initial"
+          variants={variant}
+          heading="2023 - 2024 Season"
+        >
+          Indulge in culinary excellence.
+        </TextHeadingSecondary>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 h-[300px]">
+          <motion.div
+            ref={ref}
+            animate={controls}
+            variants={variant2}
+            initial="initial"
+            className="w-full h-full relative hidden md:block"
+          >
+            <Image
+              src="/twenty-six-north/food_1.JPEG"
+              alt="26 North Craft Kitchen"
+            />
+          </motion.div>
+          <motion.div
+            ref={ref}
+            animate={controls}
+            variants={variant3}
+            initial="initial"
+            className="w-full relative max-h-[300px] hidden lg:block"
+          >
+            <NextImage
+              src="/twenty-six-north/cheers.jpg"
+              alt="26 North Craft Kitchen"
+              fill
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </motion.div>
+          <motion.div
+            ref={ref}
+            animate={controls}
+            variants={variant4}
+            initial="initial"
+            className="w-full h-ful relative"
+          >
+            <Image
+              src="/twenty-six-north/food_2.png"
+              alt="26 North Craft Kitchen"
+            />
+          </motion.div>
+        </div>
+      </div>
+    </Element>
+  );
+};

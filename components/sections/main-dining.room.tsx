@@ -11,6 +11,7 @@ import FeaturesItem from "@/components/features/features-item";
 import FeaturesContainer from "@/components/features/features-container";
 import { Element } from "react-scroll";
 import Image from "../image/full-image";
+import ImageGrid from "../image/image-grid";
 
 const MainDiningRoom = () => {
   return (
@@ -69,7 +70,7 @@ const MainDiningRoom = () => {
                 </TextContainer>
               </ContentPanel>
               <ContentPanel>
-                <div className="flex gap-x-8">
+                <ImageGrid>
                   <ImageWrapper>
                     <Image
                       src="/main-dining-room/plate.png"
@@ -82,7 +83,7 @@ const MainDiningRoom = () => {
                       alt="Second conceptual rendering of the main dining room"
                     />
                   </ImageWrapper>
-                </div>
+                </ImageGrid>
               </ContentPanel>
             </ContentContainer>
           </Element>

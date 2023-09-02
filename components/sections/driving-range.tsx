@@ -13,13 +13,14 @@ import FeaturesItem from "@/components/features/features-item";
 import FeaturesContainer from "@/components/features/features-container";
 import { Element } from "react-scroll";
 import Image from "../image/full-image";
+import ImageGrid from "../image/image-grid";
 
 const DrivingRange = () => {
   return (
     <Element name="driving-range">
       <section className="py-[200px] bg-blue">
         <ContentWrapper>
-          <ContentContainer reverse light>
+          <ContentContainer reverse light={true}>
             <ContentPanel>
               <TextContainer>
                 <TextHeadingPrimary number={2}>
@@ -46,11 +47,11 @@ const DrivingRange = () => {
           </ContentContainer>
           <Element name="driving-range-discover">
             <div className="grid gap-y-8">
-              <TextHeadingSecondary heading="2023 - 2024 Season" light>
+              <TextHeadingSecondary heading="2023 - 2024 Season" light={true}>
                 From drive to excellence.
               </TextHeadingSecondary>
               <div className="h-[300px]">
-                <ImageWrapper full light>
+                <ImageWrapper full light={true}>
                   <Image
                     src="/driving-range/range_upscaled.png"
                     alt="26 North Craft Kitchen"
@@ -59,7 +60,7 @@ const DrivingRange = () => {
               </div>
             </div>
           </Element>
-          <ContentContainer light>
+          <ContentContainer light={true}>
             <ContentPanel>
               <TextContainer>
                 <TextHeadingSecondary>Teeing up tomorrow.</TextHeadingSecondary>
@@ -79,20 +80,20 @@ const DrivingRange = () => {
               </TextContainer>
             </ContentPanel>
             <ContentPanel>
-              <div className="flex gap-x-8">
-                <ImageWrapper light>
+              <ImageGrid>
+                <ImageWrapper light={true}>
                   <Image
                     src="/driving-range/ball.png"
                     alt="26 North Craft Kitchen"
                   />
                 </ImageWrapper>
-                <ImageWrapper light>
+                <ImageWrapper light={true}>
                   <Image
                     src="/driving-range/swing.JPG"
                     alt="26 North Craft Kitchen"
                   />
                 </ImageWrapper>
-              </div>
+              </ImageGrid>
             </ContentPanel>
           </ContentContainer>
           <ChevronDown
