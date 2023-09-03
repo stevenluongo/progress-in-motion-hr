@@ -27,7 +27,7 @@ const BarLounge = () => {
                 libations. With the stroke of renovation magic, we are crafting
                 a space that harmoniously blends modern touches with comfort.
               </TextBody>
-              <ButtonPrimary scrollTo="bar-lounge-discover">
+              <ButtonPrimary scrollTo="bar-lounge-discover" offset={-100}>
                 Read More
               </ButtonPrimary>
             </TextContainer>

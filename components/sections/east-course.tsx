@@ -29,7 +29,7 @@ const EastCourse = () => {
                   adventure, where tradition meets innovation for an even more
                   enjoyable experience.
                 </TextBody>
-                <ButtonPrimary scrollTo="east-course-discover">
+                <ButtonPrimary scrollTo="east-course-discover" offset={-100}>
                   Read More
                 </ButtonPrimary>
               </TextContainer>

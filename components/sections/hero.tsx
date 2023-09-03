@@ -4,11 +4,8 @@ import TextBody from "../text/text-body";
 import ArrowSmDown from "../icons/arrow-sm-down";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
-import { PuffLoader } from "react-spinners";
-import { useState } from "react";
 
 const Hero = () => {
-  const [loading, setLoading] = useState(true);
   const executeScroll = () => {
     scroller.scrollTo("twenty-six-north", {
       duration: 1500,
@@ -30,64 +27,59 @@ const Hero = () => {
           objectFit: "cover",
           objectPosition: "center",
         }}
-        onLoadingComplete={() => setLoading(false)}
       />
-      {loading ? (
-        <PuffLoader className="absolute z-10 top-0" />
-      ) : (
-        <TextContainer className="z-10 max-w-[500px] md:items-center px-8">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              damping: 20,
-            }}
-            className="uppercase text-header-xs md:text-header-md lg:text-header-lg font-prata text-center text-white leading-header"
+      <TextContainer className="z-10 max-w-[500px] md:items-center px-8">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 20,
+          }}
+          className="uppercase text-header-xs md:text-header-md lg:text-header-lg font-prata text-center text-white leading-header"
+        >
+          Progress in motion
+        </motion.h1>
+        <TextBody
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 20,
+            delay: 0.2,
+          }}
+          className="text-center"
+          light
+        >
+          Dive into updates & behind-the-scenes of our initiatives redefining
+          Hunters Run
+        </TextBody>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 20,
+            delay: 0.4,
+          }}
+        >
+          <button
+            onClick={executeScroll}
+            className="relative inline-flex items-center justify-center overflow-hidden font-medium text-white transition duration-300 ease-out border bg-transparent shadow-md group px-4 py-2  md:px-10 md:py-4"
           >
-            Progress in motion
-          </motion.h1>
-          <TextBody
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              damping: 20,
-              delay: 0.2,
-            }}
-            className="text-center"
-            light
-          >
-            Dive into updates & behind-the-scenes of our initiatives redefining
-            Hunters Run
-          </TextBody>
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-              damping: 20,
-              delay: 0.4,
-            }}
-          >
-            <button
-              onClick={executeScroll}
-              className="relative inline-flex items-center justify-center overflow-hidden font-medium text-white transition duration-300 ease-out border bg-transparent shadow-md group px-4 py-2  md:px-10 md:py-4"
-            >
-              <span className="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
-                <ArrowSmDown className="h-[1.25rem] w-[1.25rem] stroke-2 stroke-blue-800" />
-              </span>
-              <span className="absolute flex justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease text-xs md:text-sm uppercase leading-body items-center tracking-[.245rem] font-[700]">
-                EXPLORE
-              </span>
-              <span className="relative invisible">EXPLORE</span>
-            </button>
-          </motion.div>
-        </TextContainer>
-      )}
+            <span className="absolute inset-0 flex items-center justify-center w-full h-full duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
+              <ArrowSmDown className="h-[1.25rem] w-[1.25rem] stroke-2 stroke-blue-800" />
+            </span>
+            <span className="absolute flex justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease text-xs md:text-sm uppercase leading-body items-center tracking-[.245rem] font-[700]">
+              EXPLORE
+            </span>
+            <span className="relative invisible">EXPLORE</span>
+          </button>
+        </motion.div>
+      </TextContainer>
     </section>
   );
 };

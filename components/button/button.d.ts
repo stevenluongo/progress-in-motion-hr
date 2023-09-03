@@ -3,4 +3,5 @@ export interface ButtonPrimaryProps {
   light?: boolean;
   onClick?: () => void;
   scrollTo?: string;
+  offset?: number;
 }

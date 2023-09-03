@@ -31,7 +31,7 @@ const DrivingRange = () => {
                   we embark on a journey to elevate your practice experience
                   through the renovation of our Golf Driving Range.
                 </TextBody>
-                <ButtonPrimary scrollTo="driving-range-discover">
+                <ButtonPrimary scrollTo="driving-range-discover" offset={-100}>
                   Read More
                 </ButtonPrimary>
               </TextContainer>

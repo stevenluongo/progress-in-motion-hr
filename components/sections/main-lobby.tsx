@@ -29,7 +29,7 @@ const MainLobby = () => {
                   space where connections begin, and the future unfolds in the
                   most graceful of ways.
                 </TextBody>
-                <ButtonPrimary scrollTo="main-lobby-discover">
+                <ButtonPrimary scrollTo="main-lobby-discover" offset={-100}>
                   Read More
                 </ButtonPrimary>
               </TextContainer>

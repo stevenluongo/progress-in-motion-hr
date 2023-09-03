@@ -8,13 +8,14 @@ const ButtonPrimary: FC<ButtonPrimaryProps> = ({
   light,
   onClick,
   scrollTo,
+  offset = 0,
 }) => {
   const executeScroll = () => {
     scroller.scrollTo(scrollTo as string, {
       duration: 1500,
       delay: 0,
       smooth: "easeInOutQuart",
-      offset: 0,
+      offset,
     });
   };
   return (
