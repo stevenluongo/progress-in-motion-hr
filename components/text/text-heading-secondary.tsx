@@ -1,5 +1,5 @@
 import { twMerge } from "@/tailwind.config";
-import { FC, forwardRef } from "react";
+import { forwardRef } from "react";
 import { TextHeadingSecondaryProps } from "./text";
 import { motion } from "framer-motion";
 

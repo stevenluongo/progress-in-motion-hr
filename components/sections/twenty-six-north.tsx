@@ -16,6 +16,7 @@ import { useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
 import NextImage from "next/image";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
+import { opacity, translateY } from "@/utils/variants";
 
 const TwentySixNorth = () => {
   const headerControls = useAnimation();
@@ -30,32 +31,13 @@ const TwentySixNorth = () => {
   useAnimationInView(discoverRef, discoverControls);
   useAnimationInView(footerRef, footerControls);
 
-  const opacity = {
-    visible: {
-      opacity: 1,
-      transition: { duration: 2, delay: 0.4 },
-    },
-    initial: { opacity: 0 },
-  };
-
-  const translateY = (delay: number) => {
-    return {
-      visible: {
-        opacity: 1,
-        y: 0,
-        transition: { type: "spring", stiffness: 50, damping: 10, delay },
-      },
-      initial: { opacity: 0, y: 40 },
-    };
-  };
-
   return (
     <Element name="twenty-six-north">
       <section className="py-[200px]">
         <ContentWrapper>
           <ContentContainer ref={headerRef}>
             <ContentPanel
-              variants={translateY(0.4)}
+              variants={translateY(0.2)}
               animate={headerControls}
               initial="initial"
             >
@@ -79,7 +61,7 @@ const TwentySixNorth = () => {
               </TextContainer>
             </ContentPanel>
             <ContentPanel
-              variants={translateY(0.6)}
+              variants={translateY(0.4)}
               animate={headerControls}
               initial="initial"
             >
@@ -105,7 +87,7 @@ const TwentySixNorth = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 h-[300px]">
                 <motion.div
                   animate={discoverControls}
-                  variants={translateY(0.4)}
+                  variants={translateY(0.2)}
                   initial="initial"
                   className="w-full h-full relative hidden md:block"
                 >
@@ -116,7 +98,7 @@ const TwentySixNorth = () => {
                 </motion.div>
                 <motion.div
                   animate={discoverControls}
-                  variants={translateY(0.6)}
+                  variants={translateY(0.4)}
                   initial="initial"
                   className="w-full relative max-h-[300px] hidden lg:block"
                 >
@@ -132,7 +114,7 @@ const TwentySixNorth = () => {
                 </motion.div>
                 <motion.div
                   animate={discoverControls}
-                  variants={translateY(0.8)}
+                  variants={translateY(0.6)}
                   initial="initial"
                   className="w-full h-ful relative"
                 >
@@ -146,7 +128,7 @@ const TwentySixNorth = () => {
           </Element>
           <ContentContainer reverse ref={footerRef}>
             <ContentPanel
-              variants={translateY(0.6)}
+              variants={translateY(0.4)}
               animate={footerControls}
               initial="initial"
             >
@@ -168,7 +150,7 @@ const TwentySixNorth = () => {
               </TextContainer>
             </ContentPanel>
             <ContentPanel
-              variants={translateY(0.4)}
+              variants={translateY(0.2)}
               animate={footerControls}
               initial="initial"
             >

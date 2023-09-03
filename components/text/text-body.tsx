@@ -1,4 +1,4 @@
-import { FC, forwardRef } from "react";
+import { forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
 import { TextBaseProps } from "./text";
 import { motion } from "framer-motion";

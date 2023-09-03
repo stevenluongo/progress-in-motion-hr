@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import CheckIcon from "../icons/check";
 import { twMerge } from "@/tailwind.config";
 import { FeaturesItemProps } from "./features";

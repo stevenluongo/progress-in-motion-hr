@@ -1,7 +1,7 @@
 import ChevronDown from "@/components/icons/chevron-down";
 import TextContainer from "@/components/text/text-container";
 import TextHeadingPrimary from "@/components/text/text-heading-primary";
-import React from "react";
+import React, { useRef } from "react";
 import TextBody from "@/components/text/text-body";
 import ButtonPrimary from "@/components/button/button-primary";
 import ContentWrapper from "@/components/content/content-wrapper";
@@ -12,16 +12,35 @@ import ImageWrapper from "@/components/image/image-wrapper";
 import FeaturesItem from "@/components/features/features-item";
 import FeaturesContainer from "@/components/features/features-container";
 import { Element } from "react-scroll";
-import Image from "../image/full-image";
-import ImageGrid from "../image/image-grid";
+import Image from "@/components/image/full-image";
+import ImageGrid from "@/components/image/image-grid";
+import { useAnimation, motion } from "framer-motion";
+import { useAnimationInView } from "@/hooks/useAnimationInView";
+import { opacity, translateY } from "@/utils/variants";
 
 const DrivingRange = () => {
+  const headerControls = useAnimation();
+  const footerControls = useAnimation();
+  const discoverControls = useAnimation();
+
+  const headerRef = useRef(null);
+  const footerRef = useRef(null);
+  const discoverRef = useRef(null);
+
+  useAnimationInView(headerRef, headerControls);
+  useAnimationInView(discoverRef, discoverControls);
+  useAnimationInView(footerRef, footerControls);
+
   return (
     <Element name="driving-range">
       <section className="py-[200px] bg-blue">
         <ContentWrapper>
-          <ContentContainer reverse light={true}>
-            <ContentPanel>
+          <ContentContainer reverse light={true} ref={headerRef}>
+            <ContentPanel
+              variants={translateY(0.2)}
+              animate={headerControls}
+              initial="initial"
+            >
               <TextContainer>
                 <TextHeadingPrimary number={2}>
                   Driving Range
@@ -34,13 +53,17 @@ const DrivingRange = () => {
                 <ButtonPrimary
                   light
                   scrollTo="driving-range-discover"
-                  offset={-100}
+                  offset={-200}
                 >
                   Read More
                 </ButtonPrimary>
               </TextContainer>
             </ContentPanel>
-            <ContentPanel>
+            <ContentPanel
+              variants={translateY(0.4)}
+              animate={headerControls}
+              initial="initial"
+            >
               <ImageWrapper>
                 <Image
                   src="/driving-range/range_upscaled.png"
@@ -50,22 +73,38 @@ const DrivingRange = () => {
             </ContentPanel>
           </ContentContainer>
           <Element name="driving-range-discover">
-            <div className="grid gap-y-8">
-              <TextHeadingSecondary heading="2023 - 2024 Season" light={true}>
+            <div className="grid gap-y-8" ref={discoverRef}>
+              <TextHeadingSecondary
+                variants={opacity}
+                animate={discoverControls}
+                initial="initial"
+                heading="2023 - 2024 Season"
+                light={true}
+              >
                 From drive to excellence.
               </TextHeadingSecondary>
-              <div className="h-[300px]">
-                <ImageWrapper full light={true}>
+              <motion.div className="h-[300px]">
+                <ImageWrapper
+                  variants={translateY(0.2)}
+                  animate={discoverControls}
+                  initial="initial"
+                  full
+                  light={true}
+                >
                   <Image
                     src="/driving-range/range_upscaled.png"
                     alt="26 North Craft Kitchen"
                   />
                 </ImageWrapper>
-              </div>
+              </motion.div>
             </div>
           </Element>
-          <ContentContainer light={true}>
-            <ContentPanel>
+          <ContentContainer light={true} ref={footerRef}>
+            <ContentPanel
+              variants={opacity}
+              initial="initial"
+              animate={footerControls}
+            >
               <TextContainer>
                 <TextHeadingSecondary>Teeing up tomorrow.</TextHeadingSecondary>
                 <TextBody>
@@ -85,13 +124,23 @@ const DrivingRange = () => {
             </ContentPanel>
             <ContentPanel>
               <ImageGrid>
-                <ImageWrapper light={true}>
+                <ImageWrapper
+                  variants={translateY(0.2)}
+                  initial="initial"
+                  animate={footerControls}
+                  light={true}
+                >
                   <Image
                     src="/driving-range/ball.png"
                     alt="26 North Craft Kitchen"
                   />
                 </ImageWrapper>
-                <ImageWrapper light={true}>
+                <ImageWrapper
+                  variants={translateY(0.4)}
+                  initial="initial"
+                  animate={footerControls}
+                  light={true}
+                >
                   <Image
                     src="/driving-range/swing.JPG"
                     alt="26 North Craft Kitchen"

@@ -1,4 +1,4 @@
-import React, { Fragment, forwardRef, FC } from "react";
+import React, { Fragment, forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
 import { TextContainerProps } from "./text";
 import { motion } from "framer-motion";

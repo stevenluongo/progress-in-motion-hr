@@ -1,4 +1,4 @@
-import React, { Fragment, FC, ReactElement, ReactNode } from "react";
+import React, { Fragment, FC, ReactElement } from "react";
 import { FeaturesContainerProps } from "./features";
 
 const FeaturesContainer: FC<FeaturesContainerProps> = ({ children, light }) => {

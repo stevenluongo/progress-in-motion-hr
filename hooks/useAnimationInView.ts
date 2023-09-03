@@ -5,7 +5,7 @@ export const useAnimationInView = (
   ref: MutableRefObject<null>,
   animationControls: AnimationControls
 ) => {
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { margin: "-400px 0px" });
 
   useEffect(() => {
     if (isInView) {

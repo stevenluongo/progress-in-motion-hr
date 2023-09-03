@@ -11,14 +11,31 @@ import ImageWrapper from "@/components/image/image-wrapper";
 import FeaturesItem from "@/components/features/features-item";
 import FeaturesContainer from "@/components/features/features-container";
 import { Element } from "react-scroll";
+import { useAnimationInView } from "@/hooks/useAnimationInView";
+import { useRef } from "react";
+import { useAnimation } from "framer-motion";
+import { translateY } from "@/utils/variants";
 
 const MainLobby = () => {
+  const headerControls = useAnimation();
+  const footerControls = useAnimation();
+
+  const headerRef = useRef(null);
+  const footerRef = useRef(null);
+
+  useAnimationInView(headerRef, headerControls);
+  useAnimationInView(footerRef, footerControls);
+
   return (
     <Element name="main-lobby">
       <section className="py-[200px]">
         <ContentWrapper>
-          <ContentContainer>
-            <ContentPanel>
+          <ContentContainer ref={headerRef}>
+            <ContentPanel
+              animate={headerControls}
+              initial="initial"
+              variants={translateY(0.2)}
+            >
               <TextContainer>
                 <TextHeadingPrimary number={3}>Main Lobby</TextHeadingPrimary>
                 <TextBody>
@@ -34,7 +51,11 @@ const MainLobby = () => {
                 </ButtonPrimary>
               </TextContainer>
             </ContentPanel>
-            <ContentPanel>
+            <ContentPanel
+              animate={headerControls}
+              initial="initial"
+              variants={translateY(0.4)}
+            >
               <ImageWrapper>
                 <Image
                   src="/lobby/lobby_1.png"
@@ -50,8 +71,12 @@ const MainLobby = () => {
             </ContentPanel>
           </ContentContainer>
           <Element name="main-lobby-discover">
-            <ContentContainer reverse>
-              <ContentPanel>
+            <ContentContainer reverse ref={footerRef}>
+              <ContentPanel
+                animate={footerControls}
+                initial="initial"
+                variants={translateY(0.4)}
+              >
                 <TextContainer>
                   <TextHeadingSecondary heading="2023 - 2024 Season">
                     Elevating warmth & beauty
@@ -71,7 +96,11 @@ const MainLobby = () => {
                   </FeaturesContainer>
                 </TextContainer>
               </ContentPanel>
-              <ContentPanel>
+              <ContentPanel
+                animate={footerControls}
+                initial="initial"
+                variants={translateY(0.2)}
+              >
                 <ImageWrapper>
                   <Image
                     src="/lobby/lobby_2.png"
