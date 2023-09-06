@@ -14,7 +14,6 @@ import Image from "@/components/image/full-image";
 import { Element } from "react-scroll";
 import { useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
-import NextImage from "next/image";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { opacity, translateY } from "@/utils/variants";
 
@@ -102,14 +101,9 @@ const TwentySixNorth = () => {
                   initial="initial"
                   className="w-full relative max-h-[300px] hidden lg:block"
                 >
-                  <NextImage
+                  <Image
                     src="/twenty-six-north/cheers.jpg"
                     alt="26 North Craft Kitchen"
-                    fill
-                    style={{
-                      objectFit: "cover",
-                      objectPosition: "center",
-                    }}
                   />
                 </motion.div>
                 <motion.div

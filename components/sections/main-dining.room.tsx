@@ -12,14 +12,31 @@ import FeaturesContainer from "@/components/features/features-container";
 import { Element } from "react-scroll";
 import Image from "../image/full-image";
 import ImageGrid from "../image/image-grid";
+import { useAnimation } from "framer-motion";
+import { useRef } from "react";
+import { useAnimationInView } from "@/hooks/useAnimationInView";
+import { translateY } from "@/utils/variants";
 
 const MainDiningRoom = () => {
+  const headerControls = useAnimation();
+  const footerControls = useAnimation();
+
+  const headerRef = useRef(null);
+  const footerRef = useRef(null);
+
+  useAnimationInView(headerRef, headerControls);
+  useAnimationInView(footerRef, footerControls);
+
   return (
     <Element name="main-dining-room">
       <section className="py-[200px]">
         <ContentWrapper>
-          <ContentContainer>
-            <ContentPanel>
+          <ContentContainer ref={headerRef}>
+            <ContentPanel
+              variants={translateY(0.2)}
+              animate={headerControls}
+              initial="initial"
+            >
               <TextContainer>
                 <TextHeadingPrimary number={3}>
                   Main Dining Room
@@ -36,7 +53,11 @@ const MainDiningRoom = () => {
                 </ButtonPrimary>
               </TextContainer>
             </ContentPanel>
-            <ContentPanel>
+            <ContentPanel
+              variants={translateY(0.4)}
+              animate={headerControls}
+              initial="initial"
+            >
               <ImageWrapper>
                 <Image
                   src="/main-dining-room/dining_1.png"
@@ -46,8 +67,12 @@ const MainDiningRoom = () => {
             </ContentPanel>
           </ContentContainer>
           <Element name="main-dining-room-discover">
-            <ContentContainer reverse>
-              <ContentPanel>
+            <ContentContainer reverse ref={footerRef}>
+              <ContentPanel
+                variants={translateY(0.2)}
+                animate={footerControls}
+                initial="initial"
+              >
                 <TextContainer>
                   <TextHeadingSecondary heading="2023 - 2024 Season">
                     A taste of tomorrow
@@ -71,13 +96,21 @@ const MainDiningRoom = () => {
               </ContentPanel>
               <ContentPanel>
                 <ImageGrid>
-                  <ImageWrapper>
+                  <ImageWrapper
+                    variants={translateY(0.4)}
+                    animate={footerControls}
+                    initial="initial"
+                  >
                     <Image
                       src="/main-dining-room/plate.png"
                       alt="26 North Craft Kitchen"
                     />
                   </ImageWrapper>
-                  <ImageWrapper>
+                  <ImageWrapper
+                    variants={translateY(0.6)}
+                    animate={footerControls}
+                    initial="initial"
+                  >
                     <Image
                       src="/main-dining-room/dining_2.png"
                       alt="Second conceptual rendering of the main dining room"

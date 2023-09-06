@@ -12,13 +12,33 @@ import FeaturesItem from "@/components/features/features-item";
 import FeaturesContainer from "@/components/features/features-container";
 import { Element } from "react-scroll";
 import Image from "../image/full-image";
+import { useAnimation, motion } from "framer-motion";
+import { useRef } from "react";
+import { useAnimationInView } from "@/hooks/useAnimationInView";
+import { opacity, translateY } from "@/utils/variants";
 
 const BarLounge = () => {
+  const headerControls = useAnimation();
+  const footerControls = useAnimation();
+  const discoverControls = useAnimation();
+
+  const headerRef = useRef(null);
+  const footerRef = useRef(null);
+  const discoverRef = useRef(null);
+
+  useAnimationInView(headerRef, headerControls);
+  useAnimationInView(discoverRef, discoverControls);
+  useAnimationInView(footerRef, footerControls);
+
   return (
     <section className="py-[200px]">
       <ContentWrapper>
-        <ContentContainer reverse>
-          <ContentPanel>
+        <ContentContainer reverse ref={headerRef}>
+          <ContentPanel
+            animate={headerControls}
+            initial="initial"
+            variants={translateY(0.2)}
+          >
             <TextContainer>
               <TextHeadingPrimary number={4}>Bar Lounge</TextHeadingPrimary>
               <TextBody>
@@ -32,7 +52,11 @@ const BarLounge = () => {
               </ButtonPrimary>
             </TextContainer>
           </ContentPanel>
-          <ContentPanel>
+          <ContentPanel
+            animate={headerControls}
+            initial="initial"
+            variants={translateY(0.4)}
+          >
             <ImageWrapper>
               <Image
                 src="/bar-lounge/bar_1.png"
@@ -42,31 +66,55 @@ const BarLounge = () => {
           </ContentPanel>
         </ContentContainer>
         <Element name="bar-lounge-discover">
-          <div className="grid gap-y-8">
-            <TextHeadingSecondary heading="2023 - 2024 Season">
+          <div className="grid gap-y-8" ref={discoverRef}>
+            <TextHeadingSecondary
+              heading="2023 - 2024 Season"
+              animate={discoverControls}
+              initial="initial"
+              variants={opacity}
+            >
               Where conversations flow freely
             </TextHeadingSecondary>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 h-[300px]">
-              <div className="w-full h-full relative hidden md:block">
+              <motion.div
+                animate={discoverControls}
+                variants={translateY(0.2)}
+                initial="initial"
+                className="w-full h-full relative hidden md:block"
+              >
                 <Image
                   src="/bar-lounge/cocktail.jpg"
                   alt="Cocktail at the bar"
                 />
-              </div>
-              <div className="w-full relative max-h-[300px] hidden lg:block">
+              </motion.div>
+              <motion.div
+                animate={discoverControls}
+                variants={translateY(0.4)}
+                initial="initial"
+                className="w-full relative max-h-[300px] hidden lg:block"
+              >
                 <Image src="/bar-lounge/drinks.jpg" alt="Drinks at the bar" />
-              </div>
-              <div className="w-full h-ful relative">
+              </motion.div>
+              <motion.div
+                animate={discoverControls}
+                variants={translateY(0.6)}
+                initial="initial"
+                className="w-full h-ful relative"
+              >
                 <Image
                   src="/bar-lounge/talking.jpg"
                   alt="People talking at the bar"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </Element>
-        <ContentContainer>
-          <ContentPanel>
+        <ContentContainer ref={footerRef}>
+          <ContentPanel
+            variants={translateY(0.2)}
+            animate={footerControls}
+            initial="initial"
+          >
             <TextContainer>
               <TextHeadingSecondary>Sip, savor, and relax</TextHeadingSecondary>
               <TextBody>
@@ -86,7 +134,11 @@ const BarLounge = () => {
               </FeaturesContainer>
             </TextContainer>
           </ContentPanel>
-          <ContentPanel>
+          <ContentPanel
+            variants={translateY(0.4)}
+            animate={footerControls}
+            initial="initial"
+          >
             <ImageWrapper>
               <Image
                 src="/bar-lounge/bar_2.png"
