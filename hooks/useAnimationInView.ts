@@ -1,6 +1,5 @@
 import { AnimationControls, useInView } from "framer-motion";
 import { MutableRefObject, useEffect } from "react";
-import { useDeviceWidth } from "./useDeviceWidth";
 import { useMediaQuery } from "react-responsive";
 
 export const useAnimationInView = (

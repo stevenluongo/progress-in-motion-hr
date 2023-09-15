@@ -11,7 +11,7 @@ import ImageWrapper from "@/components/image/image-wrapper";
 import FeaturesItem from "@/components/features/features-item";
 import FeaturesContainer from "@/components/features/features-container";
 import { Element } from "react-scroll";
-import Image from "../image/full-image";
+import Image from "@/components/image/full-image";
 import { useAnimation, motion } from "framer-motion";
 import { useRef } from "react";
 import { useAnimationInView } from "@/hooks/useAnimationInView";

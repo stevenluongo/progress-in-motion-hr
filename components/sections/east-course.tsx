@@ -9,7 +9,7 @@ import ContentContainer from "@/components/content/content-container";
 import TextHeadingSecondary from "@/components/text/text-heading-secondary";
 import ImageWrapper from "@/components/image/image-wrapper";
 import { Element } from "react-scroll";
-import Image from "../image/full-image";
+import Image from "@/components/image/full-image";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { useRef } from "react";
 import { useAnimation } from "framer-motion";

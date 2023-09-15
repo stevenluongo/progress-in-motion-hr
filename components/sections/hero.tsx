@@ -1,7 +1,7 @@
 import Image from "next/image";
-import TextContainer from "../text/text-container";
-import TextBody from "../text/text-body";
-import ArrowSmDown from "../icons/arrow-sm-down";
+import TextContainer from "@/components/text/text-container";
+import TextBody from "@/components/text/text-body";
+import ArrowSmDown from "@/components/icons/arrow-sm-down";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 
