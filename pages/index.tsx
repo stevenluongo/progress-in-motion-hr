@@ -15,11 +15,13 @@ export default function Landing() {
   const ref = useRef(null);
 
   useEffect(() => {
-    ref.current.continuousStart();
+    // @ts-ignore
+    ref.current?.continuousStart();
     const image = document.createElement("img");
     image.src = "/header.jpeg";
     image.onload = () => {
-      ref.current.complete();
+      // @ts-ignore
+      ref.current?.complete();
       setShow(true);
     };
   }, []);
