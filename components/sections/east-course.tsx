@@ -30,8 +30,8 @@ const EastCourse = () => {
 
   return (
     <Element name="east-course">
-      <section className="py-[200px] bg-blue">
-        <ContentWrapper>
+      <section className="py-[200px] bg-blue background">
+        <ContentWrapper className="z-10 relative">
           <ContentContainer light ref={headerRef}>
             <ContentPanel
               variants={translateY(0.2)}

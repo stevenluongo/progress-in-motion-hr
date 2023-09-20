@@ -33,8 +33,8 @@ const DrivingRange = () => {
 
   return (
     <Element name="driving-range">
-      <section className="py-[200px] bg-blue">
-        <ContentWrapper>
+      <section className="py-[200px] bg-blue background">
+        <ContentWrapper className="z-10 relative">
           <ContentContainer reverse light={true} ref={headerRef}>
             <ContentPanel
               variants={translateY(0.2)}
