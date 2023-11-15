@@ -8,7 +8,7 @@ export const useAnimationInView = (
 ) => {
   const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
 
-  const margin = `${isMobile ? "0px" : "-400px"} 0px`;
+  const margin = `${isMobile ? "0px" : "-200px"} 0px`;
 
   const isInView = useInView(ref, {
     margin,
