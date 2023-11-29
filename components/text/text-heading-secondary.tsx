@@ -20,7 +20,7 @@ const TextHeadingSecondary = motion(
         </h6>
         <h3
           className={twMerge(
-            "text-header-sm font-prata leading-header text-blue-800",
+            "text-header-xs md:text-header-sm font-prata leading-header text-blue-800",
             light && "text-white"
           )}
         >

@@ -16,6 +16,7 @@ const config: Config = {
       },
       fontSize: {
         // Header
+        "header-xl": "5rem",
         "header-lg": "4rem",
         "header-md": "3rem",
         "header-sm": "2rem",

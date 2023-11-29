@@ -12,7 +12,7 @@ const TextBody = motion(
       <p
         ref={ref}
         className={twMerge(
-          `leading-body text-body`,
+          `leading-body text-body 2xl:text-lg`,
           light ? "text-white" : "text-blue-700",
           className
         )}

@@ -11,7 +11,7 @@ const TextHeadingPrimary: FC<TextHeadingPrimaryProps> = ({
     <span className="grid gap-y-2">
       <h4
         className={twMerge(
-          `font-prata leading-header text-header-xs`,
+          `font-prata leading-header text-header-xs hidden md:block`,
           light ? "text-[#ffffff80]" : "text-[#3a627b80]"
         )}
       >

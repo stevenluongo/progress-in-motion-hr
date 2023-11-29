@@ -28,7 +28,7 @@ const Hero = () => {
           objectPosition: "center",
         }}
       />
-      <TextContainer className="z-10 max-w-[500px] md:items-center px-8">
+      <TextContainer className="z-10 max-w-[600px] md:items-center px-8">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ const Hero = () => {
             stiffness: 50,
             damping: 20,
           }}
-          className="uppercase text-header-xs md:text-header-md lg:text-header-lg font-prata text-center text-white leading-header"
+          className="uppercase text-header-md sm:text-header-lg 2xl:text-header-xl font-prata text-center text-white leading-header"
         >
           Progress in motion
         </motion.h1>
@@ -50,7 +50,7 @@ const Hero = () => {
             damping: 20,
             delay: 0.2,
           }}
-          className="text-center"
+          className="text-center max-w-md"
           light
         >
           Dive into updates & behind-the-scenes of our initiatives redefining

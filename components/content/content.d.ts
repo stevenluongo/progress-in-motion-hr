@@ -1,7 +1,6 @@
-export interface ContentWrapperProps {
-  children: ReactNode;
+export interface ContentWrapperProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   light?: boolean;
-  className?: string;
 }
 
 export interface ContentSectionProps {
@@ -10,9 +9,8 @@ export interface ContentSectionProps {
   light?: boolean;
 }
 
-export interface ContentPanelProps {
-  children: ReactNode;
-  className?: string;
+export interface ContentPanelProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   light?: boolean;
 }
 

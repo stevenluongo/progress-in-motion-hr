@@ -32,7 +32,7 @@ const TwentySixNorth = () => {
 
   return (
     <Element name="twenty-six-north">
-      <section className="py-[200px]">
+      <section className="py-24 md:py-48">
         <ContentWrapper>
           <ContentContainer ref={headerRef}>
             <ContentPanel

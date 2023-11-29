@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import { ContentPanelProps } from "./content";
 import { motion } from "framer-motion";
+import { twMerge } from "tailwind-merge";
 
 /*
 This component is a wrapper for each item in the content container.
@@ -15,16 +16,15 @@ This prop is further passed down to the children of the content panel component.
 // const ContentPanel: FC<ContentPanelProps> = ({
 
 const ContentPanel = motion(
-  forwardRef<HTMLDivElement, ContentPanelProps>(function fn(props, ref) {
-    const { className, light = false, children } = props;
-    return (
-      <div ref={ref} className={`${className} w-full`}>
+  forwardRef<HTMLDivElement, ContentPanelProps>(
+    ({ className, light, children }, ref) => (
+      <div ref={ref} className={twMerge("w-full", className)}>
         {React.cloneElement(children as React.ReactElement, {
           light,
         })}
       </div>
-    );
-  })
+    )
+  )
 );
 
 export default ContentPanel;

@@ -31,7 +31,7 @@ const BarLounge = () => {
   useAnimationInView(footerRef, footerControls);
 
   return (
-    <section className="py-[200px]">
+    <section className="py-24 md:py-48">
       <ContentWrapper>
         <ContentContainer reverse ref={headerRef}>
           <ContentPanel
