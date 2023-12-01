@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IconProps } from "./icons";
+import { IconProps } from "./icon-props";
 import { scroller } from "react-scroll";
 
 const ChevronDown: FC<IconProps> = ({ className, onClick, scrollTo }) => {

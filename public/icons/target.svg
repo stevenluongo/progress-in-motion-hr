@@ -1,0 +1,7 @@
+<svg width="inherit" height="inherit" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 40C18.9391 40 17.9218 40.4215 17.1716 41.1716C16.4215 41.9218 16 42.9391 16 44C16 45.0609 16.4215 46.0782 17.1716 46.8284C17.9218 47.5785 18.9391 48 20 48H44C45.0609 48 46.0782 47.5785 46.8284 46.8284C47.5785 46.0782 48 45.0609 48 44C48 42.9391 47.5785 41.9218 46.8284 41.1716C46.0782 40.4215 45.0609 40 44 40H20Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 10H36V22H24" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 10V48" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 14V26H48L44 20L48 14H36Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 34C17.3478 34 14.8043 35.0536 12.9289 36.9289C11.0536 38.8043 10 41.3478 10 44C10 46.6522 11.0536 49.1957 12.9289 51.0711C14.8043 52.9464 17.3478 54 20 54H44C46.6522 54 49.1957 52.9464 51.0711 51.0711C52.9464 49.1957 54 46.6522 54 44C54 41.3478 52.9464 38.8043 51.0711 36.9289C49.1957 35.0536 46.6522 34 44 34H20Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -113,12 +113,16 @@ const DrivingRange = () => {
                   provides the ideal space to unleash your potential.
                 </TextBody>
                 <FeaturesContainer>
-                  <FeaturesItem>More driving stations</FeaturesItem>
-                  <FeaturesItem>Short & long range targets</FeaturesItem>
-                  <FeaturesItem>Increased number of tees</FeaturesItem>
-                  <FeaturesItem>Covered tee stations</FeaturesItem>
-                  <FeaturesItem>New Infrastructure</FeaturesItem>
-                  <FeaturesItem>Improved drainage</FeaturesItem>
+                  <FeaturesItem icon="tee">
+                    Increased number of tees
+                  </FeaturesItem>
+                  <FeaturesItem icon="drivingRange">
+                    More driving stations
+                  </FeaturesItem>
+                  <FeaturesItem icon="target">
+                    Short & long range targets
+                  </FeaturesItem>
+                  <FeaturesItem icon="drainage">Improved drainage</FeaturesItem>
                 </FeaturesContainer>
               </TextContainer>
             </ContentPanel>

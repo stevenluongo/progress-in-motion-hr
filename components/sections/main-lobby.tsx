@@ -88,11 +88,18 @@ const MainLobby = () => {
                     familiarity.
                   </TextBody>
                   <FeaturesContainer>
-                    <FeaturesItem>Dedicated reception desk</FeaturesItem>
-                    <FeaturesItem>Bright, inviting atmosphere</FeaturesItem>
-                    <FeaturesItem>Modern furnishings</FeaturesItem>
-                    <FeaturesItem>Multiple seating spaces</FeaturesItem>
-                    <FeaturesItem>Communal, tech table</FeaturesItem>
+                    <FeaturesItem icon="bright">
+                      Bright, inviting atmosphere
+                    </FeaturesItem>
+                    <FeaturesItem icon="hostStand">
+                      Dedicated reception desk
+                    </FeaturesItem>
+                    <FeaturesItem icon="connections">
+                      Multiple Meeting spaces
+                    </FeaturesItem>
+                    <FeaturesItem icon="tech">
+                      Communal, tech table
+                    </FeaturesItem>
                   </FeaturesContainer>
                 </TextContainer>
               </ContentPanel>

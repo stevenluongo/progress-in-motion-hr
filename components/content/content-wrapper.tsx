@@ -3,7 +3,7 @@ import { ContentWrapperProps } from "./content";
 import { twMerge } from "@/tailwind.config";
 
 const ContentWrapper = forwardRef<HTMLDivElement, ContentWrapperProps>(
-  ({ children, className }, ref) => {
+  function fn({ children, className }, ref) {
     return (
       <div
         className={twMerge(

@@ -85,12 +85,14 @@ const MainDiningRoom = () => {
                     we&apos;ve got you covered.
                   </TextBody>
                   <FeaturesContainer>
-                    <FeaturesItem>New carpeting</FeaturesItem>
-                    <FeaturesItem>New lighting</FeaturesItem>
-                    <FeaturesItem>Improved infrastructure</FeaturesItem>
-                    <FeaturesItem>New seating</FeaturesItem>
-                    <FeaturesItem>New tables</FeaturesItem>
-                    <FeaturesItem>Modern furnishings</FeaturesItem>
+                    <FeaturesItem icon="carpet">New carpeting</FeaturesItem>
+                    <FeaturesItem icon="infrastructure">
+                      Improved infrastructure
+                    </FeaturesItem>
+                    <FeaturesItem icon="seating">Updated seating</FeaturesItem>
+                    <FeaturesItem icon="window">
+                      Modern furnishings
+                    </FeaturesItem>
                   </FeaturesContainer>
                 </TextContainer>
               </ContentPanel>

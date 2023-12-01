@@ -13,18 +13,19 @@ This prop is passed down from the content container component.
 This prop is further passed down to the children of the content panel component.
 */
 
-// const ContentPanel: FC<ContentPanelProps> = ({
-
 const ContentPanel = motion(
-  forwardRef<HTMLDivElement, ContentPanelProps>(
-    ({ className, light, children }, ref) => (
+  forwardRef<HTMLDivElement, ContentPanelProps>(function fn(
+    { className, light, children },
+    ref
+  ) {
+    return (
       <div ref={ref} className={twMerge("w-full", className)}>
         {React.cloneElement(children as React.ReactElement, {
           light,
         })}
       </div>
-    )
-  )
+    );
+  })
 );
 
 export default ContentPanel;

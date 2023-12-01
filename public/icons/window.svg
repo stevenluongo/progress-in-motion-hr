@@ -1,0 +1,7 @@
+<svg width="inherit" height="inherit" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 16H14V48H50V16Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32 16V48" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 32H50" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.0005 10H53C53.2652 10 53.5196 10.1054 53.7071 10.2929C53.8946 10.4804 54 10.7348 54 11V15C54 15.2652 53.8946 15.5196 53.7071 15.7071C53.5196 15.8946 53.2652 16 53 16H11C10.7348 16 10.4804 15.8946 10.2929 15.7071C10.1054 15.5196 10 15.2652 10 15V11.0005C10 10.7352 10.1054 10.4807 10.293 10.293C10.4807 10.1054 10.7352 10 11.0005 10Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.0005 48H53C53.2652 48 53.5196 48.1054 53.7071 48.2929C53.8946 48.4804 54 48.7348 54 49V53C54 53.2652 53.8946 53.5196 53.7071 53.7071C53.5196 53.8946 53.2652 54 53 54H11C10.7348 54 10.4804 53.8946 10.2929 53.7071C10.1054 53.5196 10 53.2652 10 53V49.0005C10 48.7352 10.1054 48.4807 10.293 48.293C10.4807 48.1054 10.7352 48 11.0005 48Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

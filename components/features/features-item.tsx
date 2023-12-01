@@ -1,14 +1,28 @@
-import { FC } from "react";
-import CheckIcon from "../icons/check";
-import { twMerge } from "@/tailwind.config";
-import { FeaturesItemProps } from "./features";
+"use client";
 
-const FeaturesItem: FC<FeaturesItemProps> = ({ children, light }) => {
+import { FC, ReactNode } from "react";
+import { twMerge } from "@/tailwind.config";
+import Icons, { IconsLiteral } from "../icons/icons";
+
+export interface FeaturesItemProps {
+  children: ReactNode;
+  light?: boolean;
+  icon: IconsLiteral;
+}
+
+const FeaturesItem: FC<FeaturesItemProps> = ({
+  children,
+  light,
+  icon = "candle",
+}) => {
+  const Icon = Icons[icon];
   return (
-    <span className="flex gap-x-2 items-center">
-      <CheckIcon
-        className={twMerge("w-4 h-4 stroke-blue-800", light && "stroke-white")}
-      />
+    <div className="flex gap-x-2 items-center">
+      <span
+        className={twMerge("w-8 h-8 stroke-blue-800", light && "stroke-white")}
+      >
+        <Icon />
+      </span>
       <p
         className={twMerge(
           "font-poppins text-sm text-blue-800 leading-body",
@@ -17,7 +31,7 @@ const FeaturesItem: FC<FeaturesItemProps> = ({ children, light }) => {
       >
         {children}
       </p>
-    </span>
+    </div>
   );
 };
 

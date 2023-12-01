@@ -125,12 +125,16 @@ const BarLounge = () => {
                 exude an air of casual elegance.
               </TextBody>
               <FeaturesContainer>
-                <FeaturesItem>Additional bar seating</FeaturesItem>
-                <FeaturesItem>Refreshed upholstery</FeaturesItem>
-                <FeaturesItem>Open floor plan</FeaturesItem>
-                <FeaturesItem>Modern lighting</FeaturesItem>
-                <FeaturesItem>Welcoming host station</FeaturesItem>
-                <FeaturesItem>New carpeting</FeaturesItem>
+                <FeaturesItem icon="barSeating">
+                  Additional bar seating
+                </FeaturesItem>
+                <FeaturesItem icon="furniture">
+                  Refreshed upholstery
+                </FeaturesItem>
+                <FeaturesItem icon="light">Modern lighting</FeaturesItem>
+                <FeaturesItem icon="hostStand">
+                  Welcoming host station
+                </FeaturesItem>
               </FeaturesContainer>
             </TextContainer>
           </ContentPanel>

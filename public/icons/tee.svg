@@ -1,0 +1,5 @@
+<svg width="inherit" height="inherit" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M42 10C43.0609 10 44.0783 10.4214 44.8284 11.1716C45.5786 11.9217 46 12.9391 46 14C46 15.0609 45.5786 16.0783 44.8284 16.8284C44.0783 17.5786 43.0609 18 42 18H22C20.9391 18 19.9217 17.5786 19.1716 16.8284C18.4214 16.0783 18 15.0609 18 14C18 12.9391 18.4214 11.9217 19.1716 11.1716C19.9217 10.4214 20.9391 10 22 10H42Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26 18V30H38V18" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 30V50L32 54L36 50V30" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

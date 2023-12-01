@@ -1,0 +1,15 @@
+<svg width="inherit" height="inherit" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 46C16.2091 46 18 44.2091 18 42C18 39.7909 16.2091 38 14 38C11.7909 38 10 39.7909 10 42C10 44.2091 11.7909 46 14 46Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 50C18 48.9391 17.5786 47.9217 16.8284 47.1716C16.0783 46.4214 15.0609 46 14 46C12.9391 46 11.9217 46.4214 11.1716 47.1716C10.4214 47.9217 10 48.9391 10 50V54H18V50Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M50 46C52.2091 46 54 44.2091 54 42C54 39.7909 52.2091 38 50 38C47.7909 38 46 39.7909 46 42C46 44.2091 47.7909 46 50 46Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54 50C54 48.9391 53.5786 47.9217 52.8284 47.1716C52.0783 46.4214 51.0609 46 50 46C48.9391 46 47.9217 46.4214 47.1716 47.1716C46.4214 47.9217 46 48.9391 46 50V54H54V50Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32 46C34.2091 46 36 44.2091 36 42C36 39.7909 34.2091 38 32 38C29.7909 38 28 39.7909 28 42C28 44.2091 29.7909 46 32 46Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 50C36 48.9391 35.5786 47.9217 34.8284 47.1716C34.0783 46.4214 33.0609 46 32 46C30.9391 46 29.9217 46.4214 29.1716 47.1716C28.4214 47.9217 28 48.9391 28 50V54H36V50Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42 18C44.2091 18 46 16.2091 46 14C46 11.7909 44.2091 10 42 10C39.7909 10 38 11.7909 38 14C38 16.2091 39.7909 18 42 18Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M46 22C46 20.9391 45.5786 19.9217 44.8284 19.1716C44.0783 18.4214 43.0609 18 42 18C40.9391 18 39.9217 18.4214 39.1716 19.1716C38.4214 19.9217 38 20.9391 38 22V26H46V22Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 18C24.2091 18 26 16.2091 26 14C26 11.7909 24.2091 10 22 10C19.7909 10 18 11.7909 18 14C18 16.2091 19.7909 18 22 18Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26 22C26 20.9391 25.5786 19.9217 24.8284 19.1716C24.0783 18.4214 23.0609 18 22 18C20.9391 18 19.9217 18.4214 19.1716 19.1716C18.4214 19.9217 18 20.9391 18 22V26H26V22Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26 22H38" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 38V32H50V38" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32 22V38" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

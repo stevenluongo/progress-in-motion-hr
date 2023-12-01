@@ -4,8 +4,11 @@ import { TextContainerProps } from "./text";
 import { motion } from "framer-motion";
 
 const TextContainer = motion(
-  forwardRef<HTMLDivElement, TextContainerProps>(
-    ({ className, light, children }, ref) => (
+  forwardRef<HTMLDivElement, TextContainerProps>(function fn(
+    { className, light, children },
+    ref
+  ) {
+    return (
       <div
         ref={ref}
         className={twMerge(
@@ -23,8 +26,8 @@ const TextContainer = motion(
             ))
           : children}
       </div>
-    )
-  )
+    );
+  })
 );
 
 export default TextContainer;

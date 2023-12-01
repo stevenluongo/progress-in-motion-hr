@@ -1,0 +1,11 @@
+<svg width="inherit" height="inherit" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 22C23.3137 22 26 19.3137 26 16C26 12.6863 23.3137 10 20 10C16.6863 10 14 12.6863 14 16C14 19.3137 16.6863 22 20 22Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26 28C26 26.4087 25.3679 24.8826 24.2426 23.7574C23.1174 22.6321 21.5913 22 20 22C18.4087 22 16.8826 22.6321 15.7574 23.7574C14.6321 24.8826 14 26.4087 14 28V54H26V28Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 54H54" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M44 22C47.3137 22 50 19.3137 50 16C50 12.6863 47.3137 10 44 10C40.6863 10 38 12.6863 38 16C38 19.3137 40.6863 22 44 22Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M50 28C50 26.4087 49.3679 24.8826 48.2426 23.7574C47.1174 22.6321 45.5913 22 44 22C42.4087 22 40.8826 22.6321 39.7574 23.7574C38.6321 24.8826 38 26.4087 38 28V54H50V28Z" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 42H26" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38 42H50" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20 54V42" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M44 54V42" stroke="inherit" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
