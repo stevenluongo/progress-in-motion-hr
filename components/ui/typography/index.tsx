@@ -3,8 +3,8 @@ import { twMerge } from "tailwind-merge";
 type ParagraphProps = React.HTMLProps<HTMLParagraphElement>;
 type HeadingProps = React.HTMLProps<HTMLHeadingElement>;
 
-const titleBase = "font-prata leading-header";
-const scriptBase = "font-adelia";
+const titleBase = "font-prata leading-header text-center md:text-start";
+const scriptBase = "font-adelia text-center md:text-start";
 const bodyBase = "font-kumbh leading-body";
 
 export const TitleLarge = ({ children, className }: HeadingProps) => (
@@ -34,7 +34,7 @@ export const Title = ({ children, className }: HeadingProps) => (
 export const TitleSmall = ({ children, className }: HeadingProps) => (
   <h3
     className={twMerge(
-      "text-[1.5em] lg:text-[1.75em] 2xl:text-[2em] text-blue-700 leading-body",
+      " text-[1.5em] lg:text-[1.75em] 2xl:text-[2em] text-blue-700 leading-body",
       className,
       titleBase
     )}

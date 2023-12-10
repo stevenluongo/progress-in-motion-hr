@@ -16,7 +16,7 @@ const Features = ({ children, icon, className }: FeaturesProps) => {
       )}
     >
       <Icon />
-      <Body>{children}</Body>
+      <Body className="text-center">{children}</Body>
     </div>
   );
 };
