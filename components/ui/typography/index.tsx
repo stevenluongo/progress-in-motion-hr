@@ -10,7 +10,7 @@ const bodyBase = "font-kumbh leading-body";
 export const TitleLarge = ({ children, className }: HeadingProps) => (
   <h1
     className={twMerge(
-      "text-[2em] xs:text-[3em] lg:text-[3.75em] 2xl:text-[4em] tracking-[-1.5%] uppercase text-blue-700",
+      "text-[2.5em] md:text-[3.25em] lg:text-[3.75em] 2xl:text-[4em] tracking-[-1.5%] uppercase text-blue-700",
       className,
       titleBase
     )}

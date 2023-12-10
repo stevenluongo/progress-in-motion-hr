@@ -20,28 +20,30 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <section className="h-screen grid place-items-center bg-black">
-        <div className="w-full h-full bg-gradient-to-b from-[#0000005a] from-30% to-transparent z-[1] absolute top-0 left-0" />
-        <Image
-          src="/header.jpeg"
-          alt="header"
-          className="z-0"
-          fill
-          sizes="100vw"
-          style={{
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
-        <TextContainer className="z-30 !items-center">
-          <TitleLarge className="text-center text-white">
-            Progress in
-            <br /> Motion
-          </TitleLarge>
-          <Button light className="w-fit">
-            explore
-          </Button>
-        </TextContainer>
+      <section>
+        <Container className="h-screen grid place-items-center bg-black">
+          <div className="w-full h-full bg-gradient-to-b from-[#0000005a] from-30% to-transparent z-[1] absolute top-0 left-0" />
+          <Image
+            src="/header.jpeg"
+            alt="header"
+            className="z-0"
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+          />
+          <TextContainer className="z-30 !items-center">
+            <TitleLarge className="text-center text-white">
+              Progress in
+              <br /> Motion
+            </TitleLarge>
+            <Button light className="w-fit">
+              explore
+            </Button>
+          </TextContainer>
+        </Container>
       </section>
       <section>
         <Container className="py-24 sm:py-36 lg:py-48">
