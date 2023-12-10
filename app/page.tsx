@@ -260,7 +260,7 @@ export default function Page() {
                 <Title>Bar Lounge</Title>
               </HeaderContainer>
               <Body className="hidden lg:flex">
-                Our Bar Lounge is more than just a place to unwind; it's a
+                Our Bar Lounge is more than just a place to unwind; it&apos;s a
                 canvas of camaraderie, where conversations flow as freely as the
                 libations. With the stroke of renovation magic, we are crafting
                 a space that harmoniously blends modern touches with comfort.
