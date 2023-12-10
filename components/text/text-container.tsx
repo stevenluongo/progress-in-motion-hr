@@ -12,7 +12,7 @@ const TextContainer = motion(
       <div
         ref={ref}
         className={twMerge(
-          `flex flex-col gap-y-8 w-full items-center md:items-start text-center md:text-left`,
+          `flex flex-col gap-y-0 md:gap-y-8 w-full items-center md:items-start text-center md:text-left`,
           className
         )}
       >

@@ -4,17 +4,11 @@ import { FC, ReactNode } from "react";
 import { twMerge } from "@/tailwind.config";
 import Icons, { IconsLiteral } from "../icons/icons";
 
-export interface FeaturesItemProps {
+const FeaturesItem: FC<{
   children: ReactNode;
   light?: boolean;
   icon: IconsLiteral;
-}
-
-const FeaturesItem: FC<FeaturesItemProps> = ({
-  children,
-  light,
-  icon = "candle",
-}) => {
+}> = ({ children, light, icon }) => {
   const Icon = Icons[icon];
   return (
     <div className="flex gap-x-2 items-center">

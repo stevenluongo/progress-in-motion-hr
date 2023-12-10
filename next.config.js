@@ -9,6 +9,9 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: ["developers.elementor.com"],
+  },
 };
 
 module.exports = nextConfig;

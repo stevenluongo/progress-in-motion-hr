@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
@@ -30,6 +32,16 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@types/react-scroll": "^1.8.7"
+    "@storybook/addon-essentials": "^7.6.3",
+    "@storybook/addon-interactions": "^7.6.3",
+    "@storybook/addon-links": "^7.6.3",
+    "@storybook/addon-onboarding": "^1.0.9",
+    "@storybook/blocks": "^7.6.3",
+    "@storybook/nextjs": "^7.6.3",
+    "@storybook/react": "^7.6.3",
+    "@storybook/test": "^7.6.3",
+    "@types/react-scroll": "^1.8.7",
+    "eslint-plugin-storybook": "^0.6.15",
+    "storybook": "^7.6.3"
   }
 }

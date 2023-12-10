@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .box {
+    height: fit-content;
+    z-index: 1;
+    position: relative;
+  }
+  .box:before {
+    background: white;
+    width: calc(100% + 6rem);
+    height: calc(100% + 6rem);
+    content: "";
+    bottom: -3rem;
+    position: absolute;
+    left: -3rem;
+    z-index: -1;
+  }
+}
