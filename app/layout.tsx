@@ -2,6 +2,9 @@ import { Kumbh_Sans, Prata } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 const adelia = localFont({
   src: "../public/adelia.woff2",

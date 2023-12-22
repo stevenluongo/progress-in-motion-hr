@@ -9,6 +9,7 @@ import ImageWrapper from "@/components/ui/image-wrapper";
 import TextContainer from "@/components/layout/text-container";
 import {
   Body,
+  BodyLarge,
   Script,
   ScriptSmall,
   Title,
@@ -17,6 +18,7 @@ import {
 } from "@/components/ui/typography";
 import Image from "@/components/ui/image";
 import ImageBackground from "@/components/ui/image-background";
+import { Footer } from "@/components/footer";
 
 export default function Page() {
   return (
@@ -317,93 +319,164 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* driving range */}
-
-      {/* <section className="py-48 bg-blue-100 overflow-hidden">
-        <Container className="flex items-end">
-          <ImageWrapper>
-            <Image
-              src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
-              alt="placeholder"
-            />
-          </ImageWrapper>
-          <TextContainer className="w-1/2 box">
-            <HeaderContainer>
-              <Script>refreshed</Script>
-              <Title>Driving Range</Title>
-            </HeaderContainer>
-            <Body>
-              Get ready to tee off into a new era of golfing excellence as we
-              embark on a journey to elevate your practice experience through
-              the renovation of our Golf Driving Range.
-            </Body>
-            <ButtonGroup>
-              <Button icon="video">Watch Video</Button>
-              <Button secondary icon="arrowDown">
-                Learn More
-              </Button>
-            </ButtonGroup>
-          </TextContainer>
-        </Container>
-
-        <ContentWrapper className="container mx-auto px-4 py-48">
-          <TextContainer>
-            <HeaderContainer>
-              <ScriptSmall>from</ScriptSmall>
-              <TitleSmall>Drive to excellence.</TitleSmall>
-            </HeaderContainer>
-            <Body>
-              The renovated Driving Range provides the ideal space to unleash
-              your potential.
-            </Body>
-            <FeaturesGroup>
-              <Features icon="tee">Increased Number of Tees</Features>
-              <Features icon="drivingRange">More Driving Stations</Features>
-              <Features icon="drainage">Improved Drainage</Features>
-              <Features icon="target">Short & long range targets</Features>
-            </FeaturesGroup>
-          </TextContainer>
-          <div className="relative w-full h-full opacity-70">
+      {/* East Course */}
+      <section className="bg-blue-100">
+        <Container className="flex flex-col justify-center pt-24 sm:pt-36 lg:pt-48">
+          <HeaderContainer className="!items-center">
+            <Script>vision</Script>
+            <TitleSmall>Reimagining the greens.</TitleSmall>
+          </HeaderContainer>
+          <div className="relative w-full h-[300px] mt-12">
             <Image
               src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
               alt="placeholder"
             />
           </div>
-        </ContentWrapper>
-      </section> */}
+        </Container>
+        <Container className="py-24 sm:py-36 lg:py-48">
+          <ContentWrapper>
+            <TextContainer className="md:order-2">
+              <HeaderContainer>
+                <Script>refreshed</Script>
+                <Title>Driving Range</Title>
+              </HeaderContainer>
+              <Body className="text-center max-w-[500px] md:text-start">
+                Get ready to tee off into a new era of golfing excellence as we
+                embark on a journey to elevate your practice experience through
+                the renovation of our Golf Driving Range.
+              </Body>
+              <ButtonGroup>
+                <Button className="w-full xs:w-fit" icon="video">
+                  Watch Video
+                </Button>
+                <Button
+                  className="hidden xs:flex md:hidden lg:flex"
+                  secondary
+                  icon="arrowDown"
+                >
+                  Learn More
+                </Button>
+              </ButtonGroup>
+            </TextContainer>
+            <ImageWrapper className="md:order-1">
+              <Image
+                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                alt="placeholder"
+              />
+            </ImageWrapper>
+          </ContentWrapper>
+          <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48">
+            <TextContainer>
+              <HeaderContainer>
+                <ScriptSmall>from</ScriptSmall>
+                <TitleSmall>Drive to excellence.</TitleSmall>
+              </HeaderContainer>
+              <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
+                The renovated Driving Range provides the ideal space to unleash
+                your potential.
+              </Body>
+              <FeaturesGroup>
+                <Features icon="tee">Increased Tees</Features>
+                <Features icon="drivingRange">More Driving Stations</Features>
+                <Features icon="drainage">Improved Drainage</Features>
+                <Features icon="target">Various Targets</Features>
+              </FeaturesGroup>
+            </TextContainer>
+            <ImageWrapper>
+              <ImageBackground />
+              <Image
+                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                alt="placeholder"
+              />
+            </ImageWrapper>
+          </ContentWrapper>
+        </Container>
+      </section>
+
+      {/* Bar Lounge */}
+      <section>
+        <Container className="py-24 sm:py-36 lg:py-48">
+          <ContentWrapper>
+            <TextContainer>
+              <HeaderContainer>
+                <Script>updating the</Script>
+                <Title>Bar Lounge</Title>
+              </HeaderContainer>
+              <Body className="hidden lg:flex">
+                Our Bar Lounge is more than just a place to unwind; it&apos;s a
+                canvas of camaraderie, where conversations flow as freely as the
+                libations. With the stroke of renovation magic, we are crafting
+                a space that harmoniously blends modern touches with comfort.
+              </Body>
+              <Body className="text-center max-w-[500px] md:text-start lg:hidden">
+                Our Bar Lounge is more than just a place to unwind.
+              </Body>
+              <ButtonGroup>
+                <Button className="w-full xs:w-fit" icon="photograph">
+                  View Before
+                </Button>
+                <Button
+                  className="hidden xs:flex md:hidden lg:flex"
+                  secondary
+                  icon="arrowDown"
+                >
+                  Learn More
+                </Button>
+              </ButtonGroup>
+            </TextContainer>
+            <ImageWrapper>
+              <Image
+                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                alt="placeholder"
+              />
+            </ImageWrapper>
+          </ContentWrapper>
+          <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48">
+            <TextContainer className="md:order-2">
+              <HeaderContainer>
+                <ScriptSmall>sip</ScriptSmall>
+                <TitleSmall>Savor and relax.</TitleSmall>
+              </HeaderContainer>
+              <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
+                The newly renovated Bar Lounge boasts a harmonious fusion of
+                textures, colors, and furnishings that exude an air of casual
+                elegance.
+              </Body>
+              <FeaturesGroup>
+                <Features icon="barSeating">Additional Bar Seating</Features>
+                <Features icon="furniture">Refreshed Upholstery</Features>
+                <Features icon="light">Modern Lighting</Features>
+                <Features icon="hostStand">Welcoming Host Station</Features>
+              </FeaturesGroup>
+            </TextContainer>
+            <ImageWrapper className="md:order-1">
+              <ImageBackground />
+              <Image
+                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                alt="placeholder"
+              />
+            </ImageWrapper>
+          </ContentWrapper>
+        </Container>
+      </section>
+
+      {/* Call to Action */}
+
+      <section className="py-24 bg-blue-100">
+        <Container className="flex flex-col items-center gap-y-8">
+          <Script>stay tuned</Script>
+          <Body className="text-center max-w-[400px]">
+            Join our newsletter and be informed of our news and exceptional new
+            projects.
+          </Body>
+          <Button className="w-full xs:w-fit" icon="mail">
+            Subscribe
+          </Button>
+        </Container>
+      </section>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
-}
-
-{
-  /* <Container className="flex items-end mt-40">
-          <TextContainer className="w-1/2 box">
-            <HeaderContainer>
-              <Script>refreshed</Script>
-              <Title>Driving Range</Title>
-            </HeaderContainer>
-            <Body>
-              Get ready to tee off into a new era of golfing excellence as we
-              embark on a journey to elevate your practice experience through
-              the renovation of our Golf Driving Range.
-            </Body>
-            <ButtonGroup>
-              <Button icon="video">Watch Video</Button>
-              <Button secondary icon="arrowDown">
-                Learn More
-              </Button>
-            </ButtonGroup>
-          </TextContainer>
-          <ImageWrapper>
-            <Image
-              src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
-              alt="placeholder"
-              fill
-              style={{
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
-            />
-          </ImageWrapper>
-        </Container> */
 }

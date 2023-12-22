@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+address {
+  font-style: normal;
+}
+
 @layer components {
   .box {
     height: fit-content;
