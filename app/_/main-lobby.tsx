@@ -44,15 +44,7 @@ const MainLobby = () => {
                 <Script>reimagining the</Script>
                 <Title>Main Lobby</Title>
               </HeaderContainer>
-              <Body className="hidden lg:flex">
-                A bright transformation is underway, as we re-imagine and
-                refresh our current lobby space into a realm of quintessential
-                warmth and unpretentious sophistication. As we refresh our
-                lobby, we are also rejuvenating the heart of our club – a space
-                where connections begin, and the future unfolds in the most
-                graceful of ways.
-              </Body>
-              <Body className="text-center max-w-[500px] md:text-start lg:hidden">
+              <Body className="text-center max-w-[500px] md:text-start">
                 A bright transformation is underway, as we re-imagine and
                 refresh our current lobby space into a realm of quintessential
                 warmth and unpretentious sophistication.

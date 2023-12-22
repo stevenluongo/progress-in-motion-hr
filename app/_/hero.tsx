@@ -6,6 +6,7 @@ import TextContainer from "@/components/layout/text-container";
 import { TitleLarge } from "@/components/ui/typography";
 import Image from "@/components/ui/image";
 import { Element } from "react-scroll";
+import { executeScroll } from "@/utils/scroll";
 
 const Hero = () => {
   return (
@@ -18,7 +19,11 @@ const Hero = () => {
             Progress in
             <br /> Motion
           </TitleLarge>
-          <Button light className="w-fit">
+          <Button
+            onClick={() => executeScroll("twenty-six-north")}
+            light
+            className="w-fit"
+          >
             explore
           </Button>
         </TextContainer>

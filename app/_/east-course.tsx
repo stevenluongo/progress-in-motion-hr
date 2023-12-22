@@ -41,17 +41,19 @@ const EastCourse = () => {
           <ContentWrapper>
             <TextContainer className="md:order-2">
               <HeaderContainer>
-                <Script>refreshed</Script>
-                <Title>Driving Range</Title>
+                <Script>renovation</Script>
+                <Title>East Course</Title>
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start">
-                Get ready to tee off into a new era of golfing excellence as we
-                embark on a journey to elevate your practice experience through
-                the renovation of our Golf Driving Range.
+                Exciting changes are on the horizon as we proudly present the
+                East Golf Course Renovation Project. This endeavor marks a
+                thrilling chapter in our commitment to enhancing the golfing
+                adventure, where tradition meets innovation for an even more
+                enjoyable experience.
               </Body>
               <ButtonGroup>
                 <Button className="w-full xs:w-fit" icon="video">
-                  Watch Video
+                  View Booklet
                 </Button>
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
@@ -75,19 +77,18 @@ const EastCourse = () => {
           <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48">
             <TextContainer>
               <HeaderContainer>
-                <ScriptSmall>from</ScriptSmall>
-                <TitleSmall>Drive to excellence.</TitleSmall>
+                <ScriptSmall>a fresh</ScriptSmall>
+                <TitleSmall>Fairway forward.</TitleSmall>
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
-                The renovated Driving Range provides the ideal space to unleash
-                your potential.
+                This project is a true reflection of our dedication to both golf
+                and nature. By revitalizing the East Golf Course, we're ensuring
+                that both avid golf enthusiasts and newcomers can enjoy a
+                fantastic golfing experience.
               </Body>
-              <FeaturesGroup>
-                <Features icon="tee">Increased Tees</Features>
-                <Features icon="drivingRange">More Driving Stations</Features>
-                <Features icon="drainage">Improved Drainage</Features>
-                <Features icon="target">Various Targets</Features>
-              </FeaturesGroup>
+              <Button className="w-full xs:w-fit" icon="video">
+                View Booklet
+              </Button>
             </TextContainer>
             <ImageWrapper>
               <ImageBackground />

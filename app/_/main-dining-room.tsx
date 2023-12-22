@@ -29,17 +29,15 @@ const MainDiningRoom = () => {
           <ContentWrapper>
             <TextContainer>
               <HeaderContainer>
-                <Script>updating the</Script>
-                <Title>Bar Lounge</Title>
+                <Script>renewed</Script>
+                <Title>Main Dining Room</Title>
               </HeaderContainer>
-              <Body className="hidden lg:flex">
-                Our Bar Lounge is more than just a place to unwind; it&apos;s a
-                canvas of camaraderie, where conversations flow as freely as the
-                libations. With the stroke of renovation magic, we are crafting
-                a space that harmoniously blends modern touches with comfort.
-              </Body>
-              <Body className="text-center max-w-[500px] md:text-start lg:hidden">
-                Our Bar Lounge is more than just a place to unwind.
+              <Body className="text-center max-w-[500px] md:text-start">
+                The Main Dining Room has always been the heart of our culinary
+                affairs, where flavors come to life and memories are made. With
+                this refurbishment, we&apos;re not just upgrading the setting;
+                we're crafting an event space that reflects the artistry of our
+                Club and the warmth of our hospitality.
               </Body>
               <ButtonGroup>
                 <Button className="w-full xs:w-fit" icon="photograph">
@@ -67,19 +65,23 @@ const MainDiningRoom = () => {
           <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48">
             <TextContainer className="md:order-2">
               <HeaderContainer>
-                <ScriptSmall>sip</ScriptSmall>
-                <TitleSmall>Savor and relax.</TitleSmall>
+                <ScriptSmall>experience</ScriptSmall>
+                <TitleSmall>A taste of tomorrow.</TitleSmall>
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
-                The newly renovated Bar Lounge boasts a harmonious fusion of
-                textures, colors, and furnishings that exude an air of casual
-                elegance.
+                Whether you&apos;re planning a grand celebration, a company
+                gala, or a corporate meeting, our banquet space can be tailored
+                to suit your needs. With flexible seating arrangements and
+                state-of-the-art audiovisual equipment, we&apos;ve got you
+                covered.
               </Body>
               <FeaturesGroup>
-                <Features icon="barSeating">Additional Bar Seating</Features>
-                <Features icon="furniture">Refreshed Upholstery</Features>
-                <Features icon="light">Modern Lighting</Features>
-                <Features icon="hostStand">Welcoming Host Station</Features>
+                <Features icon="window">Modern Furnishings</Features>
+                <Features icon="light">Updated Lighting</Features>
+                <Features icon="infrastructure">
+                  Improved Infrastructure
+                </Features>
+                <Features icon="seating">New Seating</Features>
               </FeaturesGroup>
             </TextContainer>
             <ImageWrapper className="md:order-1">
