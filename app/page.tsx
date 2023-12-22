@@ -9,7 +9,6 @@ import ImageWrapper from "@/components/ui/image-wrapper";
 import TextContainer from "@/components/layout/text-container";
 import {
   Body,
-  BodyLarge,
   Script,
   ScriptSmall,
   Title,
