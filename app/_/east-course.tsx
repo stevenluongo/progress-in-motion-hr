@@ -82,9 +82,9 @@ const EastCourse = () => {
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
                 This project is a true reflection of our dedication to both golf
-                and nature. By revitalizing the East Golf Course, we're ensuring
-                that both avid golf enthusiasts and newcomers can enjoy a
-                fantastic golfing experience.
+                and nature. By revitalizing the East Golf Course, we&apos;re
+                ensuring that both avid golf enthusiasts and newcomers can enjoy
+                a fantastic golfing experience.
               </Body>
               <Button className="w-full xs:w-fit" icon="video">
                 View Booklet

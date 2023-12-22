@@ -36,8 +36,8 @@ const MainDiningRoom = () => {
                 The Main Dining Room has always been the heart of our culinary
                 affairs, where flavors come to life and memories are made. With
                 this refurbishment, we&apos;re not just upgrading the setting;
-                we're crafting an event space that reflects the artistry of our
-                Club and the warmth of our hospitality.
+                we&apos;re crafting an event space that reflects the artistry of
+                our Club and the warmth of our hospitality.
               </Body>
               <ButtonGroup>
                 <Button className="w-full xs:w-fit" icon="photograph">
