@@ -51,42 +51,24 @@ export const Footer = () => {
               <FooterVerticalRule className="hidden sm:block" />
               <div className="flex sm:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Renovations</FooterHeader>
-                <p
-                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-                  onClick={() => executeScroll("twenty-six-north")}
-                >
+                <FooterScrollLink href="twenty-six-north">
                   26 North
-                </p>
-                <p
-                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-                  onClick={() => executeScroll("driving-range")}
-                >
+                </FooterScrollLink>
+                <FooterScrollLink href="driving-range">
                   Driving Range
-                </p>
-                <p
-                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-                  onClick={() => executeScroll("main-lobby")}
-                >
+                </FooterScrollLink>
+                <FooterScrollLink href="main-lobby">
                   Main Lobby
-                </p>
-                <p
-                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-                  onClick={() => executeScroll("bar-lounge")}
-                >
+                </FooterScrollLink>
+                <FooterScrollLink href="bar-lounge">
                   Bar Lounge
-                </p>
-                <p
-                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-                  onClick={() => executeScroll("east-course")}
-                >
+                </FooterScrollLink>
+                <FooterScrollLink href="east-course">
                   East Course
-                </p>
-                <p
-                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-                  onClick={() => executeScroll("main-dining-room")}
-                >
+                </FooterScrollLink>
+                <FooterScrollLink href="main-dining-room">
                   Main Dining Room
-                </p>
+                </FooterScrollLink>
               </div>
             </div>
           </div>
@@ -176,6 +158,23 @@ const FooterLink = ({
     >
       {children}
     </a>
+  );
+};
+
+const FooterScrollLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: ReactNode;
+}) => {
+  return (
+    <p
+      className="hover:text-blue-100 cursor-pointer transition-all duration-150"
+      onClick={() => executeScroll(href)}
+    >
+      {children}
+    </p>
   );
 };
 

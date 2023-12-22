@@ -13,28 +13,13 @@ import MainDiningRoom from "./_/main-dining-room";
 export default function Page() {
   return (
     <>
-      {/* hero section */}
       <Hero />
-
-      {/* 26 North */}
       <TwentySixNorth />
-
-      {/* Driving Range */}
       <DrivingRange />
-
-      {/* Main Lobby */}
       <MainLobby />
-
-      {/* Bar Lounge */}
       <BarLounge />
-
-      {/* East Course */}
       <EastCourse />
-
-      {/* Main Dining Room */}
       <MainDiningRoom />
-
-      {/* Call to Action */}
       <section className="py-24 bg-blue-100">
         <Container className="flex flex-col items-center gap-y-8">
           <Script>stay tuned</Script>
@@ -47,8 +32,6 @@ export default function Page() {
           </Button>
         </Container>
       </section>
-
-      {/* Footer */}
       <Footer />
     </>
   );

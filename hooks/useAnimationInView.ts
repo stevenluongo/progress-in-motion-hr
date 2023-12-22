@@ -1,24 +1,27 @@
-import { AnimationControls, useInView } from "framer-motion";
-import { MutableRefObject, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
+import { useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
-export const useAnimationInView = (
-  ref: MutableRefObject<null>,
-  animationControls: AnimationControls
-) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
-
-  const margin = `${isMobile ? "0px" : "-200px"} 0px`;
-
-  const isInView = useInView(ref, {
-    margin,
+export const useAnimationInView = (delay?: number, hide?: boolean) => {
+  const { ref, inView: isHeaderInView } = useInView({
+    /* Optional options */
+    threshold: 0,
+    delay: delay || 0,
   });
 
+  const controls = useAnimation();
+
   useEffect(() => {
-    if (isInView) {
+    if (isHeaderInView) {
       setTimeout(() => {
-        animationControls.start("visible");
+        controls.start("visible");
       });
+    } else {
+      if (hide) {
+        controls.start("initial");
+      }
     }
-  }, [isInView, animationControls]);
+  }, [isHeaderInView, controls]);
+
+  return { ref, controls };
 };
