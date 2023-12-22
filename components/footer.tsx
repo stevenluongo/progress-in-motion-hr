@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "./layout/container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,6 +13,7 @@ import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import HrccLogo from "@/public/horizontal.svg";
+import { executeScroll } from "@/utils/scroll";
 
 export const Footer = () => {
   return (
@@ -48,12 +51,42 @@ export const Footer = () => {
               <FooterVerticalRule className="hidden sm:block" />
               <div className="flex sm:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Renovations</FooterHeader>
-                <p>26 North</p>
-                <p>Driving Range</p>
-                <p>Main Lobby</p>
-                <p>Bar Lounge</p>
-                <p>East Course</p>
-                <p>Main Dining Room</p>
+                <p
+                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
+                  onClick={() => executeScroll("twenty-six-north")}
+                >
+                  26 North
+                </p>
+                <p
+                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
+                  onClick={() => executeScroll("driving-range")}
+                >
+                  Driving Range
+                </p>
+                <p
+                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
+                  onClick={() => executeScroll("main-lobby")}
+                >
+                  Main Lobby
+                </p>
+                <p
+                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
+                  onClick={() => executeScroll("bar-lounge")}
+                >
+                  Bar Lounge
+                </p>
+                <p
+                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
+                  onClick={() => executeScroll("east-course")}
+                >
+                  East Course
+                </p>
+                <p
+                  className="hover:text-blue-100 cursor-pointer transition-all duration-150"
+                  onClick={() => executeScroll("main-dining-room")}
+                >
+                  Main Dining Room
+                </p>
               </div>
             </div>
           </div>

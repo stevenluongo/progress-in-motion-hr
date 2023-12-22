@@ -16,11 +16,12 @@ const Button = ({
   light,
   className,
   small,
-  large,
+  onClick,
 }: ButtonProps) => {
   const Icon = icon ? ButtonIcons[icon] : null;
   return (
     <button
+      onClick={onClick}
       className={twMerge(
         "bg-transparent outline-none px-4 py-[10px] border transition-all duration-300 text-blue-primary uppercase justify-center xs:justify-start font-kumbh font-semibold tracking-[.25rem] flex gap-x-4 items-center [&>svg]:w-[20px]",
         secondary
