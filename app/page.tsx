@@ -22,7 +22,7 @@ export default function Page() {
       <Hero />
       <TwentySixNorth />
       <DrivingRange />
-      {/* <MainLobby /> */}
+      <MainLobby />
       <BarLounge />
       <EastCourse />
       <MainDiningRoom />

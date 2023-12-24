@@ -30,13 +30,13 @@ const MainLobby = () => {
           <TitleSmall>A Warm Entrance Awaits</TitleSmall>
         </HeaderContainer>
       </Container>
-      <div className="relative w-screen h-[800px] mt-12">
+      <div className="relative max-w-screen h-[800px] mt-12">
         <Image
           src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
           alt="placeholder"
         />
       </div>
-      <Container className="py-24 sm:py-36 lg:py-48">
+      <Container className="py-24 sm:py-36 lg:py-48 box-border">
         <Element name="main-lobby">
           <ContentWrapper>
             <TextContainer className="md:order-2">
