@@ -1,5 +1,3 @@
-"use client";
-
 import Container from "@/components/layout/container";
 import Button from "@/components/ui/button";
 import { Body, Script } from "@/components/ui/typography";
@@ -11,9 +9,7 @@ import MainLobby from "./_/main-lobby";
 import BarLounge from "./_/bar-lounge";
 import EastCourse from "./_/east-course";
 import MainDiningRoom from "./_/main-dining-room";
-import ReactModal from "react-modal";
 
-ReactModal.setAppElement('#root')
 
 export default function Page() {
 

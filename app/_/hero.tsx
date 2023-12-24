@@ -11,7 +11,7 @@ import { executeScroll } from "@/utils/scroll";
 const Hero = () => {
   return (
     <Element name="hero">
-      <Container className="h-screen grid place-items-center bg-black">
+      <Container className="h-screen w-screen grid place-items-center">
         <div className="w-full h-full bg-gradient-to-b from-[#0000005a] z-10 from-30% to-transparent absolute top-0 left-0" />
         <Image src="/header.jpeg" alt="header" />
         <TextContainer className="z-20 !items-center">

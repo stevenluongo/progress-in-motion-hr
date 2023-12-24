@@ -9,6 +9,10 @@ import { faBars, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { NavbarMenu } from "./navbar/navbar-menu";
 import NavbarMenuItem from "./navbar/navbar-menu-item";
 import { useScrolled } from "@/hooks/useScrolled";
+import ReactModal from "react-modal";
+
+ReactModal.setAppElement('#root')
+
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
