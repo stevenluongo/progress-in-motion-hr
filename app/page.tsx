@@ -13,15 +13,16 @@ import EastCourse from "./_/east-course";
 import MainDiningRoom from "./_/main-dining-room";
 import ReactModal from "react-modal";
 
+ReactModal.setAppElement('#root')
+
 export default function Page() {
-  // ReactModal.setAppElement("__next"); // This should be the root element of your app
 
   return (
     <>
       <Hero />
       <TwentySixNorth />
       <DrivingRange />
-      <MainLobby />
+      {/* <MainLobby /> */}
       <BarLounge />
       <EastCourse />
       <MainDiningRoom />

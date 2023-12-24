@@ -6,6 +6,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "@/components/navbar";
 config.autoAddCss = false;
 
+
 const adelia = localFont({
   src: "../public/adelia.woff2",
   variable: "--font-adelia",

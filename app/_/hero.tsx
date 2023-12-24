@@ -12,9 +12,9 @@ const Hero = () => {
   return (
     <Element name="hero">
       <Container className="h-screen grid place-items-center bg-black">
-        <div className="w-full h-full bg-gradient-to-b from-[#0000005a] from-30% to-transparent z-[1] absolute top-0 left-0" />
+        <div className="w-full h-full bg-gradient-to-b from-[#0000005a] z-10 from-30% to-transparent absolute top-0 left-0" />
         <Image src="/header.jpeg" alt="header" />
-        <TextContainer className="z-30 !items-center">
+        <TextContainer className="z-20 !items-center">
           <TitleLarge className="!text-center text-white">
             Progress in
             <br /> Motion
