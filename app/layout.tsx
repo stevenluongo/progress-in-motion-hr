@@ -1,9 +1,9 @@
 import { Kumbh_Sans, Prata } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import Navbar from "@/components/navbar";
 config.autoAddCss = false;
 
 const adelia = localFont({
@@ -23,11 +23,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" id="root">
       <body
         className={`${kumbhSans.variable} ${prata.variable} ${adelia.variable}`}
       >
         <Navbar />
+
         {children}
       </body>
     </html>

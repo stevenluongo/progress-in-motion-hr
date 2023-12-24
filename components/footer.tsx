@@ -51,22 +51,18 @@ export const Footer = () => {
               <FooterVerticalRule className="hidden sm:block" />
               <div className="flex sm:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Renovations</FooterHeader>
-                <FooterScrollLink href="twenty-six-north">
+                <FooterScrollLink to="twenty-six-north">
                   26 North
                 </FooterScrollLink>
-                <FooterScrollLink href="driving-range">
+                <FooterScrollLink to="driving-range">
                   Driving Range
                 </FooterScrollLink>
-                <FooterScrollLink href="main-lobby">
-                  Main Lobby
-                </FooterScrollLink>
-                <FooterScrollLink href="bar-lounge">
-                  Bar Lounge
-                </FooterScrollLink>
-                <FooterScrollLink href="east-course">
+                <FooterScrollLink to="main-lobby">Main Lobby</FooterScrollLink>
+                <FooterScrollLink to="bar-lounge">Bar Lounge</FooterScrollLink>
+                <FooterScrollLink to="east-course">
                   East Course
                 </FooterScrollLink>
-                <FooterScrollLink href="main-dining-room">
+                <FooterScrollLink to="main-dining-room">
                   Main Dining Room
                 </FooterScrollLink>
               </div>
@@ -162,16 +158,16 @@ const FooterLink = ({
 };
 
 const FooterScrollLink = ({
-  href,
+  to,
   children,
 }: {
-  href: string;
+  to: string;
   children: ReactNode;
 }) => {
   return (
     <p
       className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-      onClick={() => executeScroll(href)}
+      onClick={() => executeScroll(to)}
     >
       {children}
     </p>

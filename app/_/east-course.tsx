@@ -2,10 +2,8 @@
 
 import Container from "@/components/layout/container";
 import ContentWrapper from "@/components/layout/content-wrapper";
-import FeaturesGroup from "@/components/layout/features-group";
 import Button from "@/components/ui/button";
 import ButtonGroup from "@/components/ui/button-group";
-import Features from "@/components/ui/features";
 import HeaderContainer from "@/components/layout/header-container";
 import ImageWrapper from "@/components/ui/image-wrapper";
 import TextContainer from "@/components/layout/text-container";
