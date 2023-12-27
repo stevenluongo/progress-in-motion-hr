@@ -18,19 +18,21 @@ const Hero = () => {
     <Element name="hero" className="bg-blue-900">
       <Container
         ref={ref}
-        className="h-screen w-screen grid place-items-center"
+        className="h-screen w-screen overflow-hidden grid place-items-center"
       >
         <div className="w-full h-full bg-gradient-to-b from-[#00000089] z-10 from-30% to-transparent absolute top-0 left-0" />
-        <MotionImage
-          src="https://progress-in-motion.s3.amazonaws.com/26+North/26North1.jpg"
-          alt="Image of the renovated 26 North restaurant"
-          animate={{ y: 0, opacity: 1 }}
-          initial={{ y: -5, opacity: 0 }}
-          transition={{
-            type: "linear",
-            duration: 2,
-          }}
-        />
+        <div className="w-full h-full relative">
+          <MotionImage
+            src="https://progress-in-motion.s3.amazonaws.com/26+North/26North1.jpg"
+            alt="Image of the renovated 26 North restaurant"
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: -5, opacity: 0 }}
+            transition={{
+              type: "linear",
+              duration: 2,
+            }}
+          />
+        </div>
         <TextContainer className="z-20 !items-center">
           <MotionTitleLarge
             className="!text-center text-white"
