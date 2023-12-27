@@ -41,7 +41,10 @@ const Navbar: React.FC = () => {
           : "bg-transparent text-white fill-white"
       )}
     >
-      <div className="flex container px-8 mx-auto relative justify-between sm:justify-center items-center h-16">
+      <div
+        className="flex container px-8 mx-auto relative justify-between sm:justify-center items-center h-16"
+        onClick={toggleMenu}
+      >
         <div className="absolute left-8">
           <div className="relative">
             <p
