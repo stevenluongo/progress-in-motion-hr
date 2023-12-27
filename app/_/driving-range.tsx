@@ -54,7 +54,7 @@ const DrivingRange = () => {
             <ImageWrapper className="md:order-1">
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/greens.png"
-                alt="placeholder"
+                alt="Image of golf course"
               />
             </ImageWrapper>
           </ContentWrapper>
@@ -81,7 +81,7 @@ const DrivingRange = () => {
               <ImageBackground />
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/ball.png"
-                alt="placeholder"
+                alt="Close up picture of a golf ball"
               />
             </ImageWrapper>
           </ContentWrapper>

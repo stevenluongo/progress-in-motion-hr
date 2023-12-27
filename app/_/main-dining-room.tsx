@@ -56,7 +56,7 @@ const MainDiningRoom = () => {
             <ImageWrapper>
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Main+Dining+Room/Dining2.jpg"
-                alt="placeholder"
+                alt="A front view of the newly renovated main dining room"
               />
             </ImageWrapper>
           </ContentWrapper>
@@ -88,7 +88,7 @@ const MainDiningRoom = () => {
               <ImageBackground />
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Main+Dining+Room/Dining3.jpg"
-                alt="placeholder"
+                alt="Another view of the newly renovated main dining room"
               />
             </ImageWrapper>
           </ContentWrapper>

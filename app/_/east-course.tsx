@@ -30,7 +30,7 @@ const EastCourse = () => {
         <div className="relative w-full h-[300px] mt-12">
           <Image
             src="https://progress-in-motion.s3.amazonaws.com/East+Course/putting.png"
-            alt="placeholder"
+            alt="Image of a putting green with a golf ball"
           />
         </div>
       </Container>
@@ -66,7 +66,7 @@ const EastCourse = () => {
             <ImageWrapper className="md:order-1">
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/East+Course/east-course.png"
-                alt="placeholder"
+                alt="An aerial view of the current east golf course"
               />
             </ImageWrapper>
           </ContentWrapper>
@@ -92,7 +92,7 @@ const EastCourse = () => {
               <ImageBackground />
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/East+Course/map.png"
-                alt="placeholder"
+                alt="A map of the proposed changes to the east golf course"
               />
             </ImageWrapper>
           </ContentWrapper>

@@ -33,7 +33,7 @@ const MainLobby = () => {
       <div className="relative max-w-screen h-[800px] mt-12">
         <Image
           src="https://progress-in-motion.s3.amazonaws.com/Main+Lobby/Lobby4.jpg"
-          alt="placeholder"
+          alt="Large display of the main lobby of the club"
         />
       </div>
       <Container className="py-24 sm:py-36 lg:py-48 box-border">
@@ -66,7 +66,7 @@ const MainLobby = () => {
             <ImageWrapper className="md:order-1">
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Main+Lobby/Lobby8.jpg"
-                alt="placeholder"
+                alt="Another view of the main lobby of the club"
               />
             </ImageWrapper>
           </ContentWrapper>
@@ -94,7 +94,7 @@ const MainLobby = () => {
               <ImageBackground />
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Main+Lobby/Lobby1.jpg"
-                alt="placeholder"
+                alt="A final view of the main lobby of the club"
               />
             </ImageWrapper>
           </ContentWrapper>

@@ -1,10 +1,7 @@
 "use client";
 
 import Container from "@/components/layout/container";
-import Button from "@/components/ui/button";
 import TextContainer from "@/components/layout/text-container";
-import { TitleLarge } from "@/components/ui/typography";
-import Image from "@/components/ui/image";
 import { Element } from "react-scroll";
 import { executeScroll } from "@/utils/scroll";
 import {
@@ -26,7 +23,7 @@ const Hero = () => {
         <div className="w-full h-full bg-gradient-to-b from-[#00000089] z-10 from-30% to-transparent absolute top-0 left-0" />
         <MotionImage
           src="https://progress-in-motion.s3.amazonaws.com/26+North/26North1.jpg"
-          alt="header"
+          alt="Image of the renovated 26 North restaurant"
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: -5, opacity: 0 }}
           transition={{
