@@ -2,17 +2,15 @@ import Container from "@/components/layout/container";
 import Button from "@/components/ui/button";
 import { Body, Script } from "@/components/ui/typography";
 import { Footer } from "@/components/footer";
-import Hero from "./_/hero";
-import TwentySixNorth from "./_/twenty-six-north";
-import DrivingRange from "./_/driving-range";
-import MainLobby from "./_/main-lobby";
-import BarLounge from "./_/bar-lounge";
-import EastCourse from "./_/east-course";
-import MainDiningRoom from "./_/main-dining-room";
-
+import Hero from "./_assets/hero";
+import TwentySixNorth from "./_assets/twenty-six-north";
+import DrivingRange from "./_assets/driving-range";
+import MainLobby from "./_assets/main-lobby";
+import BarLounge from "./_assets/bar-lounge";
+import EastCourse from "./_assets/east-course";
+import MainDiningRoom from "./_assets/main-dining-room";
 
 export default function Page() {
-
   return (
     <>
       <Hero />
