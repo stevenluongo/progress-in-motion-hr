@@ -21,7 +21,7 @@ const NavbarMenuItem: React.FC<NavbarMenuItemProps> = ({
     if (set) {
       set(false);
     }
-    executeScroll(to);
+    executeScroll({ to });
   }, [set, to]);
 
   return (
@@ -34,10 +34,7 @@ const NavbarMenuItem: React.FC<NavbarMenuItemProps> = ({
       tabIndex={-1}
       onClick={handleMenuClick}
     >
-      <div className="container px-8 mx-auto">
-
-        {children}
-      </div>
+      <div className="container px-8 mx-auto">{children}</div>
     </button>
   );
 };

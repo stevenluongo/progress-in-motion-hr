@@ -167,7 +167,7 @@ const FooterScrollLink = ({
   return (
     <p
       className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-      onClick={() => executeScroll(to)}
+      onClick={() => executeScroll({ to })}
     >
       {children}
     </p>

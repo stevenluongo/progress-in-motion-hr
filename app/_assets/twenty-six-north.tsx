@@ -27,6 +27,7 @@ import {
   MotionTextContainer,
 } from "@/components/motion";
 import { translateX, translateY } from "@/utils/variants";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const TwentySixNorth = () => {
   const { ref, controls } = useAnimationInView({
@@ -37,6 +38,7 @@ const TwentySixNorth = () => {
     margin: "-150px -150px",
     delay: 250,
   });
+
   return (
     <section className="overflow-x-hidden">
       <Container className="py-24 sm:py-36 lg:py-48">
@@ -83,7 +85,11 @@ const TwentySixNorth = () => {
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
                   icon="arrowDown"
-                  onClick={() => executeScroll("twenty-six-north-more")}
+                  onClick={() =>
+                    executeScroll({
+                      to: "twenty-six-north-more",
+                    })
+                  }
                 >
                   Learn More
                 </Button>

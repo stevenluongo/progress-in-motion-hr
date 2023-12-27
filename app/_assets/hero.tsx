@@ -11,9 +11,12 @@ import {
 } from "@/components/motion";
 import { translateY } from "@/utils/variants";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const Hero = () => {
   const { ref, controls } = useAnimationInView({});
+  const isMobile = useMediaQuery("(max-width: 640px)");
+
   return (
     <Element name="hero" className="bg-blue-900">
       <Container
@@ -44,7 +47,12 @@ const Hero = () => {
             <br /> Motion
           </MotionTitleLarge>
           <MotionButton
-            onClick={() => executeScroll("twenty-six-north")}
+            onClick={() =>
+              executeScroll({
+                to: "twenty-six-north",
+                offset: isMobile ? -100 : -200,
+              })
+            }
             light
             className="w-fit"
             animate={controls}

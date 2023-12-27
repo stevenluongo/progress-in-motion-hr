@@ -57,7 +57,7 @@ const EastCourse = () => {
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
                   icon="arrowDown"
-                  onClick={() => executeScroll("east-course-more")}
+                  onClick={() => executeScroll({ to: "east-course-more" })}
                 >
                   Learn More
                 </Button>

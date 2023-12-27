@@ -49,7 +49,7 @@ const BarLounge = () => {
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
                   icon="arrowDown"
-                  onClick={() => executeScroll("bar-lounge-more")}
+                  onClick={() => executeScroll({ to: "bar-lounge-more" })}
                 >
                   Learn More
                 </Button>

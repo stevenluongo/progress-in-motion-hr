@@ -57,7 +57,7 @@ const MainLobby = () => {
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
                   icon="arrowDown"
-                  onClick={() => executeScroll("main-lobby-more")}
+                  onClick={() => executeScroll({ to: "main-lobby-more" })}
                 >
                   Learn More
                 </Button>

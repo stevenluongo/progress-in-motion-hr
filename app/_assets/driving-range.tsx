@@ -73,7 +73,7 @@ const DrivingRange = () => {
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
                   icon="arrowDown"
-                  onClick={() => executeScroll("driving-range-more")}
+                  onClick={() => executeScroll({ to: "driving-range-more" })}
                 >
                   Learn More
                 </Button>

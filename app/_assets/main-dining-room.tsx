@@ -47,7 +47,7 @@ const MainDiningRoom = () => {
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
                   icon="arrowDown"
-                  onClick={() => executeScroll("main-dining-room-more")}
+                  onClick={() => executeScroll({ to: "main-dining-room-more" })}
                 >
                   Learn More
                 </Button>
