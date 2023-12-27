@@ -38,7 +38,7 @@ const TwentySixNorth = () => {
     delay: 250,
   });
   return (
-    <section>
+    <section className="overflow-x-hidden">
       <Container className="py-24 sm:py-36 lg:py-48">
         <Element name="twenty-six-north">
           <ContentWrapper ref={ref}>

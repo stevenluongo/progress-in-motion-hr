@@ -11,12 +11,15 @@ import NavbarMenuItem from "./navbar/navbar-menu-item";
 import { useScrolled } from "@/hooks/useScrolled";
 import ReactModal from "react-modal";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 ReactModal.setAppElement("#root");
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const isScrolled = useScrolled();
+
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
@@ -43,7 +46,7 @@ const Navbar: React.FC = () => {
     >
       <div
         className="flex container px-8 mx-auto relative justify-between sm:justify-center items-center h-16"
-        onClick={toggleMenu}
+        onClick={() => isMobile && toggleMenu}
       >
         <div className="absolute left-8">
           <div className="relative">
