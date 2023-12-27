@@ -10,9 +10,9 @@ import { NavbarMenu } from "./navbar/navbar-menu";
 import NavbarMenuItem from "./navbar/navbar-menu-item";
 import { useScrolled } from "@/hooks/useScrolled";
 import ReactModal from "react-modal";
+import { motion } from "framer-motion";
 
-ReactModal.setAppElement('#root')
-
+ReactModal.setAppElement("#root");
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -23,16 +23,31 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav
+    <motion.nav
+      animate={{ y: 0 }}
+      initial={{ y: -100 }}
+      transition={{
+        type: "spring",
+        damping: 25,
+        mass: 0.75,
+        stiffness: 80,
+      }}
       className={twMerge(
-        "z-50 w-full fixed left-0 right-0 transition-all duration-300 text-sm select-none",
-        isScrolled ? "bg-blue-900 text-white fill-white" : isMenuOpen ? "bg-transparent text-gray-700 fill-gray-700" : "bg-transparent text-white fill-white"
+        "z-50 w-full fixed left-0 right-0 text-sm select-none transition-[background-color] duration-300",
+        isScrolled
+          ? "bg-blue-900 text-white fill-white"
+          : isMenuOpen
+          ? "bg-transparent text-gray-700 fill-gray-700"
+          : "bg-transparent text-white fill-white"
       )}
     >
       <div className="flex container px-8 mx-auto relative justify-between sm:justify-center items-center h-16">
         <div className="absolute left-8">
           <div className="relative">
-            <p onClick={toggleMenu} className="absolute left-0 top-0 bottom-0 right-0 m-auto hidden sm:flex font-extralight tracking-[1px] font-kumbh gap-x-2 items-center cursor-pointer">
+            <p
+              onClick={toggleMenu}
+              className="absolute left-0 top-0 bottom-0 right-0 m-auto hidden sm:flex font-extralight tracking-[1px] font-kumbh gap-x-2 items-center cursor-pointer"
+            >
               Menu
               <FontAwesomeIcon icon={faCaretDown} />
             </p>
@@ -64,7 +79,7 @@ const Navbar: React.FC = () => {
         <NavbarMenuItem to="east-course">East Course</NavbarMenuItem>
         <NavbarMenuItem to="main-dining-room">Main Dining Room</NavbarMenuItem>
       </NavbarMenu>
-    </nav>
+    </motion.nav>
   );
 };
 

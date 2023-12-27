@@ -32,7 +32,7 @@ const MainLobby = () => {
       </Container>
       <div className="relative max-w-screen h-[800px] mt-12">
         <Image
-          src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+          src="https://progress-in-motion.s3.amazonaws.com/Main+Lobby/Lobby4.jpg"
           alt="placeholder"
         />
       </div>
@@ -65,7 +65,7 @@ const MainLobby = () => {
             </TextContainer>
             <ImageWrapper className="md:order-1">
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Main+Lobby/Lobby8.jpg"
                 alt="placeholder"
               />
             </ImageWrapper>
@@ -93,7 +93,7 @@ const MainLobby = () => {
             <ImageWrapper>
               <ImageBackground />
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Main+Lobby/Lobby1.jpg"
                 alt="placeholder"
               />
             </ImageWrapper>

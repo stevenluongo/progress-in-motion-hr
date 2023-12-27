@@ -1,18 +1,17 @@
-import { ReactNode } from "react";
+import { ReactNode, forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
 
-const Container = ({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) => {
+const Container = forwardRef<
+  HTMLDivElement,
+  { children: ReactNode; className?: string }
+>(({ children, className }, ref) => {
   return (
-    <div className={twMerge("container mx-auto px-8", className)}>
+    <div ref={ref} className={twMerge("container mx-auto px-8", className)}>
       {children}
     </div>
   );
-};
+});
 
 export default Container;
+
+Container.displayName = "Container";

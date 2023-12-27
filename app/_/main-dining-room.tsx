@@ -55,7 +55,7 @@ const MainDiningRoom = () => {
             </TextContainer>
             <ImageWrapper>
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Main+Dining+Room/Dining2.jpg"
                 alt="placeholder"
               />
             </ImageWrapper>
@@ -87,7 +87,7 @@ const MainDiningRoom = () => {
             <ImageWrapper className="md:order-1">
               <ImageBackground />
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Main+Dining+Room/Dining3.jpg"
                 alt="placeholder"
               />
             </ImageWrapper>

@@ -8,17 +8,22 @@ const titleBase = "font-prata leading-header text-center md:text-start";
 const scriptBase = "font-adelia text-center md:text-start";
 const bodyBase = "font-kumbh leading-body";
 
-export const TitleLarge = ({ children, className }: HeadingProps) => (
-  <h1
-    className={twMerge(
-      "text-[2.5em] md:text-[3.25em] lg:text-[3.75em] 2xl:text-[4em] tracking-[-1.5%] uppercase text-blue-700",
-      className,
-      titleBase
-    )}
-  >
-    {children}
-  </h1>
+export const TitleLarge = forwardRef<HTMLHeadingElement, HeadingProps>(
+  ({ children, className }, ref) => (
+    <h1
+      ref={ref}
+      className={twMerge(
+        "text-[2.5em] md:text-[3.25em] lg:text-[3.75em] 2xl:text-[4em] tracking-[-1.5%] uppercase text-blue-700",
+        className,
+        titleBase
+      )}
+    >
+      {children}
+    </h1>
+  )
 );
+
+TitleLarge.displayName = "TitleLarge";
 
 export const Title = ({ children, className }: HeadingProps) => (
   <h2
@@ -90,6 +95,8 @@ export const Body = forwardRef<HTMLParagraphElement, ParagraphProps>(
     </p>
   )
 );
+
+Body.displayName = "Body";
 
 export const BodySmall = ({ children, className }: ParagraphProps) => (
   <p className={twMerge("text-[0.875em]", className, bodyBase)}>{children}</p>

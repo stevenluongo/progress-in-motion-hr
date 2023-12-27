@@ -5,6 +5,6 @@ export const executeScroll = (to: string) => {
     duration: 1500,
     delay: 0,
     smooth: "easeInOutQuart",
-    offset: -100,
+    offset: -200,
   });
 };

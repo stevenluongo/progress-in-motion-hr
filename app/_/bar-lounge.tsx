@@ -57,7 +57,7 @@ const BarLounge = () => {
             </TextContainer>
             <ImageWrapper>
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Bar+Lounge/Bar4.jpg"
                 alt="placeholder"
               />
             </ImageWrapper>
@@ -85,7 +85,7 @@ const BarLounge = () => {
             <ImageWrapper className="md:order-1">
               <ImageBackground />
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Bar+Lounge/Bar10.jpg"
                 alt="placeholder"
               />
             </ImageWrapper>

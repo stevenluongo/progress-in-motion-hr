@@ -53,7 +53,7 @@ const DrivingRange = () => {
             </TextContainer>
             <ImageWrapper className="md:order-1">
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/greens.png"
                 alt="placeholder"
               />
             </ImageWrapper>
@@ -80,7 +80,7 @@ const DrivingRange = () => {
             <ImageWrapper>
               <ImageBackground />
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/ball.png"
                 alt="placeholder"
               />
             </ImageWrapper>

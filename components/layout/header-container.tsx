@@ -20,3 +20,5 @@ const HeaderContainer = forwardRef<HTMLDivElement, HeaderContainerProps>(
 );
 
 export default HeaderContainer;
+
+HeaderContainer.displayName = "HeaderContainer";

@@ -10,7 +10,10 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ["developers.elementor.com"],
+    domains: [
+      "developers.elementor.com",
+      "progress-in-motion.s3.amazonaws.com",
+    ],
   },
 };
 

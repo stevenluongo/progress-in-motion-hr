@@ -2,11 +2,21 @@ import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-export const useAnimationInView = (delay?: number, hide?: boolean) => {
+type AnimationInViewProps = {
+  delay?: number;
+  threshold?: number;
+  margin?: string;
+};
+
+export const useAnimationInView = ({
+  delay = 0,
+  threshold = 0,
+  margin = "0px 0px 0px 0px",
+}: AnimationInViewProps) => {
   const { ref, inView: isHeaderInView } = useInView({
-    /* Optional options */
-    threshold: 0,
-    delay: delay || 0,
+    threshold,
+    delay,
+    rootMargin: margin,
   });
 
   const controls = useAnimation();
@@ -16,10 +26,6 @@ export const useAnimationInView = (delay?: number, hide?: boolean) => {
       setTimeout(() => {
         controls.start("visible");
       });
-    } else {
-      if (hide) {
-        controls.start("initial");
-      }
     }
   }, [isHeaderInView, controls]);
 

@@ -29,7 +29,7 @@ const EastCourse = () => {
         </HeaderContainer>
         <div className="relative w-full h-[300px] mt-12">
           <Image
-            src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+            src="https://progress-in-motion.s3.amazonaws.com/East+Course/putting.png"
             alt="placeholder"
           />
         </div>
@@ -65,7 +65,7 @@ const EastCourse = () => {
             </TextContainer>
             <ImageWrapper className="md:order-1">
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/East+Course/east-course.png"
                 alt="placeholder"
               />
             </ImageWrapper>
@@ -91,7 +91,7 @@ const EastCourse = () => {
             <ImageWrapper>
               <ImageBackground />
               <Image
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src="https://progress-in-motion.s3.amazonaws.com/East+Course/map.png"
                 alt="placeholder"
               />
             </ImageWrapper>
