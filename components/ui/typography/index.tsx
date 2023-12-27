@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
 
 type ParagraphProps = React.HTMLProps<HTMLParagraphElement>;
@@ -79,10 +80,15 @@ export const BodyLarge = ({ children, className }: ParagraphProps) => (
   </p>
 );
 
-export const Body = ({ children, className }: ParagraphProps) => (
-  <p className={twMerge("text-[1em] text-blue-600", className, bodyBase)}>
-    {children}
-  </p>
+export const Body = forwardRef<HTMLParagraphElement, ParagraphProps>(
+  ({ children, className }, ref) => (
+    <p
+      ref={ref}
+      className={twMerge("text-[1em] text-blue-600", className, bodyBase)}
+    >
+      {children}
+    </p>
+  )
 );
 
 export const BodySmall = ({ children, className }: ParagraphProps) => (

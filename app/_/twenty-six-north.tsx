@@ -20,29 +20,33 @@ import Image from "@/components/ui/image";
 import ImageBackground from "@/components/ui/image-background";
 import { Element } from "react-scroll";
 import { executeScroll } from "@/utils/scroll";
+import { useAnimationInView } from "@/hooks/useAnimationInView";
+import { MotionBody, MotionButtonGroup, MotionHeaderContainer } from "@/components/motion";
+import { translateY } from "@/utils/variants";
 
 const TwentySixNorth = () => {
+  const { ref, controls } = useAnimationInView(500);
   return (
     <section>
       <Container className="py-24 sm:py-36 lg:py-48">
         <Element name="twenty-six-north">
-          <ContentWrapper>
+          <ContentWrapper ref={ref}>
             <TextContainer>
-              <HeaderContainer>
+              <MotionHeaderContainer animate={controls} variants={translateY(0)} initial="initial">
                 <Script>welcome</Script>
                 <Title>26° North</Title>
-              </HeaderContainer>
-              <Body className="hidden lg:flex">
+              </MotionHeaderContainer>
+              <MotionBody className="hidden lg:flex" animate={controls} variants={translateY(0.25)} initial="initial">
                 Dining at 26° North Craft Kitchen will indeed be a feast for the
                 senses. Here you&apos;ll find a carefully crafted menu
                 complemented by hand-selected fine wines, craft cocktails and
                 exceptional service.
-              </Body>
-              <Body className="text-center max-w-[500px] md:text-start lg:hidden">
+              </MotionBody>
+              <MotionBody className="text-center max-w-[500px] md:text-start lg:hidden" animate={controls} variants={translateY(0.25)} initial="initial">
                 Dining at 26° North Craft Kitchen will indeed be a feast for the
                 senses. Here you&apos;ll find a carefully crafted menu.
-              </Body>
-              <ButtonGroup>
+              </MotionBody>
+              <MotionButtonGroup animate={controls} variants={translateY(0.5)} initial="initial">
                 <Button className="w-full xs:w-fit" icon="photograph">
                   View Before
                 </Button>
@@ -54,7 +58,7 @@ const TwentySixNorth = () => {
                 >
                   Learn More
                 </Button>
-              </ButtonGroup>
+              </MotionButtonGroup>
             </TextContainer>
             <ImageWrapper>
               <Image

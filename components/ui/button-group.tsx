@@ -1,9 +1,21 @@
-type ButtonGroupProps = React.HTMLProps<HTMLDivElement>;
+import { ReactNode, forwardRef } from "react";
 
-const ButtonGroup = ({ children }: ButtonGroupProps) => {
-  return (
-    <div className="flex gap-6 justify-between w-full sm:w-fit">{children}</div>
-  );
-};
+type ButtonGroupProps = { children: ReactNode};
+
+
+const ButtonGroup = forwardRef<HTMLDivElement, ButtonGroupProps>(
+  ({ children }, ref) => {
+    return (
+      <div
+        ref={ref}
+        className=
+          "flex gap-6 justify-between w-full sm:w-fit"
+      >
+        {children}
+      </div>
+    );
+  }
+);
+
 
 export default ButtonGroup;
