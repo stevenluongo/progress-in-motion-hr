@@ -7,6 +7,7 @@ import BarLounge from "./_assets/bar-lounge";
 import EastCourse from "./_assets/east-course";
 import MainDiningRoom from "./_assets/main-dining-room";
 import CallToAction from "./_assets/call-to-action";
+import Modal from "./_assets/modal";
 
 export default function Page() {
   return (
@@ -20,6 +21,7 @@ export default function Page() {
       <MainDiningRoom />
       <CallToAction />
       <Footer />
+      <Modal/>
     </>
   );
 }

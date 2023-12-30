@@ -27,6 +27,7 @@ import {
   MotionTextContainer,
 } from "@/components/motion";
 import { translateX, translateY } from "@/utils/variants";
+import { useModalStore } from "@/lib/store";
 
 const TwentySixNorth = () => {
   const { ref, controls } = useAnimationInView({
@@ -37,6 +38,8 @@ const TwentySixNorth = () => {
     margin: "-150px -150px",
     delay: 250,
   });
+
+  const { isOpen, toggleStore } = useModalStore();
 
   return (
     <section className="overflow-x-hidden">
@@ -77,7 +80,11 @@ const TwentySixNorth = () => {
                 variants={translateY({ delay: 0.5 })}
                 initial="initial"
               >
-                <Button className="w-full xs:w-fit" icon="photograph">
+                <Button
+                  onClick={toggleStore}
+                  className="w-full xs:w-fit"
+                  icon="photograph"
+                >
                   View Before
                 </Button>
                 <Button
