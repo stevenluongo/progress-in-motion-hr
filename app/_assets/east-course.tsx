@@ -79,7 +79,7 @@ const EastCourse = () => {
                 variants={translateY({ delay: 0 })}
                 initial="initial"
               >
-                <Script>renovation</Script>
+                <Script>refreshed</Script>
                 <Title>East Course</Title>
               </MotionHeaderContainer>
               <MotionBody

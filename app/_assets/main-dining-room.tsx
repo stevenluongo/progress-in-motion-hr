@@ -52,7 +52,7 @@ const MainDiningRoom = () => {
                 variants={translateY({ delay: 0 })}
                 initial="initial"
               >
-                <Script>renewed</Script>
+                <Script>reimagined</Script>
                 <Title>Main Dining Room</Title>
               </MotionHeaderContainer>
               <MotionBody

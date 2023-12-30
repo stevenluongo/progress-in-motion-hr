@@ -4,6 +4,7 @@ import Container from "@/components/layout/container";
 import { MotionBody, MotionScript, MotionButton } from "@/components/motion";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { translateY } from "@/utils/variants";
+import Link from "next/link";
 
 const CallToAction = () => {
   const { ref, controls } = useAnimationInView({
@@ -26,18 +27,20 @@ const CallToAction = () => {
           initial="initial"
           className="text-center max-w-[400px]"
         >
-          Join our newsletter and be informed of our news and exceptional new
+          View our newsletter and be informed of our news and exceptional new
           projects.
         </MotionBody>
-        <MotionButton
-          animate={controls}
-          variants={translateY({ delay: 0.5 })}
-          initial="initial"
-          className="w-full xs:w-fit"
-          icon="mail"
-        >
-          Subscribe
-        </MotionButton>
+        <Link href="https://www.huntersrun.net/hunters-run-magazine">
+          <MotionButton
+            animate={controls}
+            variants={translateY({ delay: 0.5 })}
+            initial="initial"
+            className="w-full xs:w-fit"
+            icon="mail"
+          >
+            View
+          </MotionButton>
+        </Link>
       </Container>
     </section>
   );

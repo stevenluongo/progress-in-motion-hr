@@ -52,7 +52,7 @@ const BarLounge = () => {
                 variants={translateY({ delay: 0 })}
                 initial="initial"
               >
-                <Script>updating the</Script>
+                <Script>revitalized</Script>
                 <Title>Bar Lounge</Title>
               </MotionHeaderContainer>
               <MotionBody

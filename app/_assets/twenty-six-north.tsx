@@ -52,7 +52,7 @@ const TwentySixNorth = () => {
                 variants={translateY({ delay: 0 })}
                 initial="initial"
               >
-                <Script>welcome</Script>
+                <Script>discover</Script>
                 <Title>26° North</Title>
               </MotionHeaderContainer>
               <MotionBody

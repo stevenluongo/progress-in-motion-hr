@@ -48,7 +48,7 @@ const DrivingRange = () => {
                 variants={translateY({ delay: 0 })}
                 initial="initial"
               >
-                <Script>refreshed</Script>
+                <Script>redesigned</Script>
                 <Title>Driving Range</Title>
               </MotionHeaderContainer>
               <MotionBody
@@ -66,9 +66,9 @@ const DrivingRange = () => {
                 variants={translateY({ delay: 0.5 })}
                 initial="initial"
               >
-                <Button className="w-full xs:w-fit" icon="video">
+                {/* <Button className="w-full xs:w-fit" icon="video">
                   Watch Video
-                </Button>
+                </Button> */}
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
