@@ -4,8 +4,9 @@ import { createWithEqualityFn } from "zustand/traditional";
 
 interface ModalStoreProps {
   isOpen: boolean;
-  setIsOpen: (value: boolean) => void;
-  toggleStore: () => void;
+  setIsOpen: (href: string) => void;
+  setIsClosed: () => void;
+  href: string;
 }
 
 export const modalStore = createWithEqualityFn<
@@ -15,22 +16,25 @@ export const modalStore = createWithEqualityFn<
   devtools(
     (setState, getState) => ({
       isOpen: false,
+      href: "",
       setIsOpen: (value) => {
         setState(
           {
-            isOpen: value,
+            isOpen: true,
+            href: value,
           },
           false,
           { type: "setIsOpen", value }
         );
       },
-      toggleStore: () => {
+      setIsClosed: () => {
         setState(
-          (state) => ({
-            isOpen: !state.isOpen,
-          }),
+          {
+            isOpen: false,
+            href: "",
+          },
           false,
-          { type: "toggleStore" }
+          { type: "setIsClosed" }
         );
       },
     }),
@@ -40,10 +44,11 @@ export const modalStore = createWithEqualityFn<
 
 export const useModalStore = () =>
   modalStore(
-    ({ isOpen, setIsOpen, toggleStore }) => ({
+    ({ isOpen, setIsOpen, setIsClosed, href }) => ({
+      href,
       isOpen,
       setIsOpen,
-      toggleStore,
+      setIsClosed,
     }),
 
     shallow

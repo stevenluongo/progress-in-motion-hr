@@ -29,6 +29,7 @@ import {
 import { useScroll, useTransform } from "framer-motion";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { translateX, translateY } from "@/utils/variants";
+import { useModalStore } from "@/lib/store";
 
 const MainLobby = () => {
   const { scrollYProgress } = useScroll();
@@ -48,6 +49,8 @@ const MainLobby = () => {
     delay: 250,
     margin: "-150px -150px",
   });
+
+  const { setIsOpen } = useModalStore();
 
   return (
     <section className="pt-24">
@@ -98,7 +101,15 @@ const MainLobby = () => {
                 variants={translateY({ delay: 0.5 })}
                 initial="initial"
               >
-                <Button className="w-full xs:w-fit" icon="photograph">
+                <Button
+                  onClick={() =>
+                    setIsOpen(
+                      "https://progress-in-motion.s3.amazonaws.com/Before+Renovations/Lobby.png"
+                    )
+                  }
+                  className="w-full xs:w-fit"
+                  icon="photograph"
+                >
                   View Before
                 </Button>
                 <Button

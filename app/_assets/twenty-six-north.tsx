@@ -39,7 +39,7 @@ const TwentySixNorth = () => {
     delay: 250,
   });
 
-  const { isOpen, toggleStore } = useModalStore();
+  const { setIsOpen } = useModalStore();
 
   return (
     <section className="overflow-x-hidden">
@@ -81,7 +81,11 @@ const TwentySixNorth = () => {
                 initial="initial"
               >
                 <Button
-                  onClick={toggleStore}
+                  onClick={() =>
+                    setIsOpen(
+                      "https://progress-in-motion.s3.amazonaws.com/Before+Renovations/26+North.png"
+                    )
+                  }
                   className="w-full xs:w-fit"
                   icon="photograph"
                 >

@@ -27,6 +27,7 @@ import {
 } from "@/components/motion";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { translateX, translateY } from "@/utils/variants";
+import { useModalStore } from "@/lib/store";
 
 const MainDiningRoom = () => {
   const { ref, controls } = useAnimationInView({
@@ -37,6 +38,9 @@ const MainDiningRoom = () => {
     margin: "-150px -150px",
     delay: 250,
   });
+
+  const { setIsOpen } = useModalStore();
+
   return (
     <section>
       <Container className="py-24 sm:py-36 lg:py-48">
@@ -68,7 +72,15 @@ const MainDiningRoom = () => {
                 variants={translateY({ delay: 0.5 })}
                 initial="initial"
               >
-                <Button className="w-full xs:w-fit" icon="photograph">
+                <Button
+                  onClick={() =>
+                    setIsOpen(
+                      "https://progress-in-motion.s3.amazonaws.com/Before+Renovations/Main+Dining+Room.png"
+                    )
+                  }
+                  className="w-full xs:w-fit"
+                  icon="photograph"
+                >
                   View Before
                 </Button>
                 <Button

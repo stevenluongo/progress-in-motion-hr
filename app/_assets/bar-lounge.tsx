@@ -27,6 +27,7 @@ import {
   MotionTextContainer,
 } from "@/components/motion";
 import { translateX, translateY } from "@/utils/variants";
+import { useModalStore } from "@/lib/store";
 
 const BarLounge = () => {
   const { ref, controls } = useAnimationInView({
@@ -37,6 +38,8 @@ const BarLounge = () => {
     margin: "-150px -150px",
     delay: 250,
   });
+
+  const { setIsOpen } = useModalStore();
 
   return (
     <section>
@@ -76,7 +79,15 @@ const BarLounge = () => {
                 variants={translateY({ delay: 0.5 })}
                 initial="initial"
               >
-                <Button className="w-full xs:w-fit" icon="photograph">
+                <Button
+                  onClick={() =>
+                    setIsOpen(
+                      "https://progress-in-motion.s3.amazonaws.com/Before+Renovations/Bar.png"
+                    )
+                  }
+                  className="w-full xs:w-fit"
+                  icon="photograph"
+                >
                   View Before
                 </Button>
                 <Button

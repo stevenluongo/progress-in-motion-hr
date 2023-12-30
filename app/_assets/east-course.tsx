@@ -26,6 +26,7 @@ import {
 } from "@/components/motion";
 import { translateX, translateY } from "@/utils/variants";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const EastCourse = () => {
   const { ref, controls } = useAnimationInView({
@@ -98,9 +99,6 @@ const EastCourse = () => {
                 variants={translateY({ delay: 0.5 })}
                 initial="initial"
               >
-                <Button className="w-full xs:w-fit" icon="video">
-                  View Booklet
-                </Button>
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
@@ -141,9 +139,14 @@ const EastCourse = () => {
                 ensuring that both avid golf enthusiasts and newcomers can enjoy
                 a fantastic golfing experience.
               </Body>
-              <Button className="w-full xs:w-fit" icon="video">
-                View Booklet
-              </Button>
+              <Link
+                target="_blank"
+                href="https://www.huntersrun.net/documents/10184/14462025/East+Course+Renovation+Hole+by+Hole+Web+Booklet.pdf?t=1692393509574"
+              >
+                <Button className="w-full xs:w-fit" icon="photograph">
+                  View Booklet
+                </Button>
+              </Link>
             </MotionTextContainer>
             <MotionImageWrapper
               animate={controls3}
