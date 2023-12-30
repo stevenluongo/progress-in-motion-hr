@@ -18,13 +18,13 @@ const Hero = () => {
   const isMobile = useMediaQuery("(max-width: 640px)");
 
   return (
-    <Element name="hero" className="bg-blue-900">
-      <Container
-        ref={ref}
-        className="h-screen w-screen overflow-hidden grid place-items-center"
-      >
-        <div className="w-full h-full bg-gradient-to-b from-[#00000089] z-10 from-30% to-transparent absolute top-0 left-0" />
-        <div className="w-screen h-screen absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
+    <Element
+      name="hero"
+      className="bg-blue-900 max-w-screen h-screen overflow-x-hidden"
+    >
+      <Container ref={ref} className="grid place-items-center h-full">
+        <div className="max-w-screen w-full h-screen bg-gradient-to-b from-[#00000089] z-10 from-30% to-transparent absolute top-0 left-0" />
+        <div className="max-w-screen h-screen absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
           <MotionImage
             src="https://progress-in-motion.s3.amazonaws.com/26+North/26North1.jpg"
             alt="Image of the renovated 26 North restaurant"

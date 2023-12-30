@@ -12,6 +12,7 @@ import { useScrolled } from "@/hooks/useScrolled";
 import ReactModal from "react-modal";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import Link from "next/link";
 
 ReactModal.setAppElement("#root");
 
@@ -45,7 +46,7 @@ const Navbar: React.FC = () => {
       )}
     >
       <div
-        className="flex container px-8 mx-auto relative justify-between sm:justify-center items-center h-16"
+        className="cursor-pointer sm:cursor-auto flex container px-8 mx-auto relative justify-between sm:justify-center items-center h-16"
         onClick={() => isMobile && toggleMenu()}
       >
         <div className="absolute left-8">
@@ -62,20 +63,21 @@ const Navbar: React.FC = () => {
         <span className=" w-[140px] py-1">
           <HrccLogo />
         </span>
-        <div
-          className="sm:hidden cursor-pointer select-none"
-          onClick={toggleMenu}
-        >
+        <div className="sm:hidden cursor-pointer select-none">
           <FontAwesomeIcon id="menu-button" icon={faBars} />
         </div>
-
-        <Button
-          light={!isScrolled && !isMenuOpen}
-          className="absolute right-8 hidden sm:block transition-all duration-300"
-          small
+        <Link
+          href="https://www.huntersrun.net/contact-info"
+          className="absolute right-8 hidden sm:block "
         >
-          Contact
-        </Button>
+          <Button
+            light={!isScrolled && !isMenuOpen}
+            small
+            className="transition-all duration-300"
+          >
+            Contact
+          </Button>
+        </Link>
       </div>
       <NavbarMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}>
         <NavbarMenuItem to="twenty-six-north">26 North</NavbarMenuItem>

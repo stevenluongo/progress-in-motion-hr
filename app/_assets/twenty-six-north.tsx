@@ -27,7 +27,6 @@ import {
   MotionTextContainer,
 } from "@/components/motion";
 import { translateX, translateY } from "@/utils/variants";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const TwentySixNorth = () => {
   const { ref, controls } = useAnimationInView({

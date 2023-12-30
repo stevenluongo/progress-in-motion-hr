@@ -11,7 +11,7 @@ const Features = ({ children, icon, className }: FeaturesProps) => {
   return (
     <div
       className={twMerge(
-        "flex flex-col md:flex-row items-center gap-x-4 fill-transparent [&>svg]:w-[30px] stroke-blue-700 border py-2 lg:py-0 border-blue-200 md:border-none md:bg-transparent rounded-md bg-blue-100 w-full",
+        "flex flex-col md:flex-row items-center gap-x-4 fill-transparent [&>svg]:w-[30px] [&>svg]:h-[30px] stroke-blue-700 border py-2 lg:py-0 border-blue-200 md:border-none md:bg-transparent rounded-md bg-blue-100 w-full",
         className
       )}
     >

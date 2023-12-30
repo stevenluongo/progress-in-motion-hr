@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import HeaderContainer from "./layout/header-container";
-import { Body, TitleLarge } from "./ui/typography";
+import { Body, Script, TitleLarge } from "./ui/typography";
 import ButtonGroup from "./ui/button-group";
 import ImageWrapper from "./ui/image-wrapper";
 import TextContainer from "./layout/text-container";
@@ -25,3 +25,5 @@ export const MotionTitleLarge = motion(TitleLarge);
 export const MotionImage = motion(Image);
 
 export const MotionContainer = motion(Container);
+
+export const MotionScript = motion(Script);

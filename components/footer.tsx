@@ -14,11 +14,34 @@ import { twMerge } from "tailwind-merge";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import HrccLogo from "@/public/horizontal.svg";
 import { executeScroll } from "@/utils/scroll";
+import { motion } from "framer-motion";
+import { useAnimationInView } from "@/hooks/useAnimationInView";
+import { MotionContainer } from "./motion";
 
 export const Footer = () => {
+  const { ref, controls } = useAnimationInView({
+    delay: 500,
+    margin: "-150px -150px",
+  });
   return (
-    <footer className="py-16 bg-blue-900">
-      <Container className="text-blue-100-alpha text-sm">
+    <motion.footer className="py-16 bg-blue-900">
+      <MotionContainer
+        ref={ref}
+        animate={controls}
+        initial="initial"
+        variants={{
+          initial: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              type: "linear",
+              duration: 2,
+              ease: "easeOut",
+            },
+          },
+        }}
+        className="text-blue-100-alpha text-sm"
+      >
         <FooterHorizontalRule />
         <div className="grid sm:grid-cols-[1fr_1fr] md:grid-cols-[1fr_min-content_min-content] lg:grid-cols-[1fr_min-content_min-content_min-content] w-full gap-x-12 h-full items-stretch my-8">
           <address className="flex flex-col gap-y-4 whitespace-nowrap font-extralight w-full">
@@ -129,8 +152,8 @@ export const Footer = () => {
             />
           </span>
         </div>
-      </Container>
-    </footer>
+      </MotionContainer>
+    </motion.footer>
   );
 };
 

@@ -4,10 +4,8 @@ import Container from "@/components/layout/container";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import FeaturesGroup from "@/components/layout/features-group";
 import Button from "@/components/ui/button";
-import ButtonGroup from "@/components/ui/button-group";
 import Features from "@/components/ui/features";
 import HeaderContainer from "@/components/layout/header-container";
-import ImageWrapper from "@/components/ui/image-wrapper";
 import TextContainer from "@/components/layout/text-container";
 import {
   Body,
@@ -20,28 +18,64 @@ import Image from "@/components/ui/image";
 import ImageBackground from "@/components/ui/image-background";
 import { Element } from "react-scroll";
 import { executeScroll } from "@/utils/scroll";
+import { useAnimationInView } from "@/hooks/useAnimationInView";
+import {
+  MotionBody,
+  MotionButtonGroup,
+  MotionHeaderContainer,
+  MotionImageWrapper,
+  MotionTextContainer,
+} from "@/components/motion";
+import { translateX, translateY } from "@/utils/variants";
 
 const BarLounge = () => {
+  const { ref, controls } = useAnimationInView({
+    margin: "-150px -150px",
+    delay: 750,
+  });
+  const { ref: ref2, controls: controls2 } = useAnimationInView({
+    margin: "-150px -150px",
+    delay: 250,
+  });
+
   return (
     <section>
       <Container className="py-24 sm:py-36 lg:py-48">
         <Element name="bar-lounge">
-          <ContentWrapper>
+          <ContentWrapper ref={ref}>
             <TextContainer>
-              <HeaderContainer>
+              <MotionHeaderContainer
+                animate={controls}
+                variants={translateY({ delay: 0 })}
+                initial="initial"
+              >
                 <Script>updating the</Script>
                 <Title>Bar Lounge</Title>
-              </HeaderContainer>
-              <Body className="hidden lg:flex">
+              </MotionHeaderContainer>
+              <MotionBody
+                animate={controls}
+                variants={translateY({ delay: 0.25 })}
+                initial="initial"
+                className="hidden lg:flex"
+              >
                 Our Bar Lounge is more than just a place to unwind; it&apos;s a
                 canvas of camaraderie, where conversations flow as freely as the
                 libations. With the stroke of renovation magic, we are crafting
                 a space that harmoniously blends modern touches with comfort.
-              </Body>
-              <Body className="text-center max-w-[500px] md:text-start lg:hidden">
+              </MotionBody>
+              <MotionBody
+                animate={controls}
+                variants={translateY({ delay: 0.25 })}
+                initial="initial"
+                className="text-center max-w-[500px] md:text-start lg:hidden"
+              >
                 Our Bar Lounge is more than just a place to unwind.
-              </Body>
-              <ButtonGroup>
+              </MotionBody>
+              <MotionButtonGroup
+                animate={controls}
+                variants={translateY({ delay: 0.5 })}
+                initial="initial"
+              >
                 <Button className="w-full xs:w-fit" icon="photograph">
                   View Before
                 </Button>
@@ -53,19 +87,28 @@ const BarLounge = () => {
                 >
                   Learn More
                 </Button>
-              </ButtonGroup>
+              </MotionButtonGroup>
             </TextContainer>
-            <ImageWrapper>
+            <MotionImageWrapper
+              animate={controls}
+              variants={translateX({ delay: 0.5 })}
+              initial="initial"
+            >
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Bar+Lounge/Bar4.jpg"
                 alt="A side view of the newly renovated bar lounge"
               />
-            </ImageWrapper>
+            </MotionImageWrapper>
           </ContentWrapper>
         </Element>
         <Element name="bar-lounge-more">
-          <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48">
-            <TextContainer className="md:order-2">
+          <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48" ref={ref2}>
+            <MotionTextContainer
+              className="md:order-2"
+              animate={controls2}
+              variants={translateY({ delay: 0.5 })}
+              initial="initial"
+            >
               <HeaderContainer>
                 <ScriptSmall>sip</ScriptSmall>
                 <TitleSmall>Savor and relax.</TitleSmall>
@@ -81,14 +124,19 @@ const BarLounge = () => {
                 <Features icon="light">Modern Lighting</Features>
                 <Features icon="hostStand">Welcoming Host Station</Features>
               </FeaturesGroup>
-            </TextContainer>
-            <ImageWrapper className="md:order-1">
+            </MotionTextContainer>
+            <MotionImageWrapper
+              animate={controls2}
+              variants={translateX({ delay: 0.25, reverse: true })}
+              initial="initial"
+              className="md:order-1"
+            >
               <ImageBackground />
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Bar+Lounge/Bar10.jpg"
                 alt="Another view of the newly renovated bar lounge"
               />
-            </ImageWrapper>
+            </MotionImageWrapper>
           </ContentWrapper>
         </Element>
       </Container>

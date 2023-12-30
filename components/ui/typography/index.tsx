@@ -23,8 +23,6 @@ export const TitleLarge = forwardRef<HTMLHeadingElement, HeadingProps>(
   )
 );
 
-TitleLarge.displayName = "TitleLarge";
-
 export const Title = ({ children, className }: HeadingProps) => (
   <h2
     className={twMerge(
@@ -49,16 +47,19 @@ export const TitleSmall = ({ children, className }: HeadingProps) => (
   </h3>
 );
 
-export const Script = ({ children, className }: HeadingProps) => (
-  <h1
-    className={twMerge(
-      "text-[1.25em] md:text-[1.5em] 2xl:text-[1.75em] leading-body text-blue-primary w-fit",
-      className,
-      scriptBase
-    )}
-  >
-    {children}
-  </h1>
+export const Script = forwardRef<HTMLHeadingElement, HeadingProps>(
+  ({ children, className }, ref) => (
+    <h1
+      ref={ref}
+      className={twMerge(
+        "text-[1.25em] md:text-[1.5em] 2xl:text-[1.75em] leading-body text-blue-primary w-fit",
+        className,
+        scriptBase
+      )}
+    >
+      {children}
+    </h1>
+  )
 );
 
 export const ScriptSmall = ({ children, className }: HeadingProps) => (
@@ -96,8 +97,6 @@ export const Body = forwardRef<HTMLParagraphElement, ParagraphProps>(
   )
 );
 
-Body.displayName = "Body";
-
 export const BodySmall = ({ children, className }: ParagraphProps) => (
   <p className={twMerge("text-[0.875em]", className, bodyBase)}>{children}</p>
 );
@@ -116,3 +115,14 @@ export const ButtonText = ({ children, className }: ParagraphProps) => (
     {children}
   </p>
 );
+
+TitleLarge.displayName = "TitleLarge";
+Title.displayName = "Title";
+TitleSmall.displayName = "TitleSmall";
+Script.displayName = "Script";
+ScriptSmall.displayName = "ScriptSmall";
+BodyLarge.displayName = "BodyLarge";
+Body.displayName = "Body";
+BodySmall.displayName = "BodySmall";
+BodyExtraSmall.displayName = "BodyExtraSmall";
+ButtonText.displayName = "ButtonText";

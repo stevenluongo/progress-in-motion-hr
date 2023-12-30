@@ -13,7 +13,7 @@ export const useAnimationInView = ({
   threshold = 0,
   margin = "0px 0px 0px 0px",
 }: AnimationInViewProps) => {
-  const { ref, inView: isHeaderInView } = useInView({
+  const { ref, inView } = useInView({
     threshold,
     delay,
     rootMargin: margin,
@@ -22,12 +22,12 @@ export const useAnimationInView = ({
   const controls = useAnimation();
 
   useEffect(() => {
-    if (isHeaderInView) {
+    if (inView) {
       setTimeout(() => {
         controls.start("visible");
       });
     }
-  }, [isHeaderInView, controls]);
+  }, [inView, controls]);
 
-  return { ref, controls };
+  return { ref, controls, inView };
 };

@@ -4,10 +4,8 @@ import Container from "@/components/layout/container";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import FeaturesGroup from "@/components/layout/features-group";
 import Button from "@/components/ui/button";
-import ButtonGroup from "@/components/ui/button-group";
 import Features from "@/components/ui/features";
 import HeaderContainer from "@/components/layout/header-container";
-import ImageWrapper from "@/components/ui/image-wrapper";
 import TextContainer from "@/components/layout/text-container";
 import {
   Body,
@@ -20,26 +18,56 @@ import Image from "@/components/ui/image";
 import ImageBackground from "@/components/ui/image-background";
 import { Element } from "react-scroll";
 import { executeScroll } from "@/utils/scroll";
+import {
+  MotionBody,
+  MotionButtonGroup,
+  MotionHeaderContainer,
+  MotionImageWrapper,
+  MotionTextContainer,
+} from "@/components/motion";
+import { useAnimationInView } from "@/hooks/useAnimationInView";
+import { translateX, translateY } from "@/utils/variants";
 
 const MainDiningRoom = () => {
+  const { ref, controls } = useAnimationInView({
+    margin: "-150px -150px",
+    delay: 750,
+  });
+  const { ref: ref2, controls: controls2 } = useAnimationInView({
+    margin: "-150px -150px",
+    delay: 250,
+  });
   return (
     <section>
       <Container className="py-24 sm:py-36 lg:py-48">
         <Element name="main-dining-room">
-          <ContentWrapper>
+          <ContentWrapper ref={ref}>
             <TextContainer>
-              <HeaderContainer>
+              <MotionHeaderContainer
+                animate={controls}
+                variants={translateY({ delay: 0 })}
+                initial="initial"
+              >
                 <Script>renewed</Script>
                 <Title>Main Dining Room</Title>
-              </HeaderContainer>
-              <Body className="text-center max-w-[500px] md:text-start">
+              </MotionHeaderContainer>
+              <MotionBody
+                animate={controls}
+                variants={translateY({ delay: 0.25 })}
+                initial="initial"
+                className="text-center max-w-[500px] md:text-start"
+              >
                 The Main Dining Room has always been the heart of our culinary
                 affairs, where flavors come to life and memories are made. With
                 this refurbishment, we&apos;re not just upgrading the setting;
                 we&apos;re crafting an event space that reflects the artistry of
                 our Club and the warmth of our hospitality.
-              </Body>
-              <ButtonGroup>
+              </MotionBody>
+              <MotionButtonGroup
+                animate={controls}
+                variants={translateY({ delay: 0.5 })}
+                initial="initial"
+              >
                 <Button className="w-full xs:w-fit" icon="photograph">
                   View Before
                 </Button>
@@ -51,19 +79,28 @@ const MainDiningRoom = () => {
                 >
                   Learn More
                 </Button>
-              </ButtonGroup>
+              </MotionButtonGroup>
             </TextContainer>
-            <ImageWrapper>
+            <MotionImageWrapper
+              animate={controls}
+              variants={translateX({ delay: 0.5 })}
+              initial="initial"
+            >
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Main+Dining+Room/Dining2.jpg"
                 alt="A front view of the newly renovated main dining room"
               />
-            </ImageWrapper>
+            </MotionImageWrapper>
           </ContentWrapper>
         </Element>
         <Element name="main-dining-room-more">
-          <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48">
-            <TextContainer className="md:order-2">
+          <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48" ref={ref2}>
+            <MotionTextContainer
+              className="md:order-2"
+              animate={controls2}
+              variants={translateY({ delay: 0.5 })}
+              initial="initial"
+            >
               <HeaderContainer>
                 <ScriptSmall>experience</ScriptSmall>
                 <TitleSmall>A taste of tomorrow.</TitleSmall>
@@ -83,14 +120,19 @@ const MainDiningRoom = () => {
                 </Features>
                 <Features icon="seating">New Seating</Features>
               </FeaturesGroup>
-            </TextContainer>
-            <ImageWrapper className="md:order-1">
+            </MotionTextContainer>
+            <MotionImageWrapper
+              animate={controls2}
+              variants={translateX({ delay: 0.25, reverse: true })}
+              initial="initial"
+              className="md:order-1"
+            >
               <ImageBackground />
               <Image
                 src="https://progress-in-motion.s3.amazonaws.com/Main+Dining+Room/Dining3.jpg"
                 alt="Another view of the newly renovated main dining room"
               />
-            </ImageWrapper>
+            </MotionImageWrapper>
           </ContentWrapper>
         </Element>
       </Container>
