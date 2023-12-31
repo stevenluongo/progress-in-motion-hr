@@ -49,6 +49,23 @@ export const metadata: Metadata = {
     siteName: "Hunters Run | Progress in Motion",
     locale: "en_US",
   },
+  icons: {
+    icon: [
+      { url: "/icon.png" },
+      { url: "/icon-dark.png", media: "(prefers-color-scheme: dark)" },
+    ],
+    shortcut: ["/shortcut-icon.png"],
+    apple: [
+      { url: "/apple-icon.png" },
+      { url: "/apple-icon-x3.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/apple-touch-icon-precomposed.png",
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({
