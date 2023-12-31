@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description:
       "Explore the ongoing projects at Hunters Run Country Club, a premier lifestyle destination nestled in South Florida. With 54-holes of championship golf, 30 Racquet Sports' courts, a Fitness Center, 7 restaurants, and over 20 special interest clubs, our 1,649 residences offer endless opportunities for outdoor pursuits, dining, and socializing. Discover our progress in motion and join our vibrant community today.",
     type: "website",
-    url: "https://progressinmotion.com",
+    url: "https:/progresshuntersrun.net",
     images: [
       {
         url: "https://progress-in-motion.s3.amazonaws.com/26+North/26North1.jpg",
