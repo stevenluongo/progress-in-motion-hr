@@ -6,7 +6,7 @@ Welcome to the official repository for the Hunters Run Country Club's "Progress 
 
 ## About This Repository
 
-This repository hosts the source code and resources for our website. It's intended for developers and contributors working to enhance our online presence. 
+Welcome to the repository for the Hunters Run Country Club's "Progress in Motion" website. This site is a premier lifestyle destination nestled in South Florida, offering endless opportunities for outdoor pursuits, dining, and socializing. This website was designed, developed, and currently maintained by Steven Luongo.
 
 ## Club Features
 
