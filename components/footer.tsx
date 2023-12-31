@@ -1,6 +1,5 @@
 "use client";
 
-import Container from "./layout/container";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -17,6 +16,7 @@ import { executeScroll } from "@/utils/scroll";
 import { motion } from "framer-motion";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { MotionContainer } from "./motion";
+import Link from "next/link";
 
 export const Footer = () => {
   const { ref, controls } = useAnimationInView({
@@ -53,6 +53,7 @@ export const Footer = () => {
               <br /> Boynton Beach, FL 33436
             </p>
             <FooterLink
+              ariaLabel="Call us at 561-737-CLUB (2582)"
               href="tel:561-737-2582"
               className="flex gap-x-2 items-center"
             >
@@ -60,6 +61,7 @@ export const Footer = () => {
               <p>561-737-CLUB (2582)</p>
             </FooterLink>
             <FooterLink
+              ariaLabel="Email us at membership@huntersrun.net"
               href="tel:561-737-2582"
               className="flex gap-x-2 items-center"
             >
@@ -98,16 +100,28 @@ export const Footer = () => {
               <FooterVerticalRule className="hidden md:block" />
               <div className="flex ml-0 md:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Club Info</FooterHeader>
-                <FooterLink href="https://www.huntersrun.net/location">
+                <FooterLink
+                  ariaLabel="View the club location"
+                  href="https://www.huntersrun.net/location"
+                >
                   Location
                 </FooterLink>
-                <FooterLink href="https://www.huntersrun.net/meet-the-team">
+                <FooterLink
+                  ariaLabel="View the club team"
+                  href="https://www.huntersrun.net/meet-the-team"
+                >
                   Meet the Team
                 </FooterLink>
-                <FooterLink href="https://www.huntersrun.net/contact-info">
+                <FooterLink
+                  ariaLabel="View the club contact information"
+                  href="https://www.huntersrun.net/contact-info"
+                >
                   Contact Info
                 </FooterLink>
-                <FooterLink href="https://www.huntersrun.net/careers">
+                <FooterLink
+                  ariaLabel="View the club careers"
+                  href="https://www.huntersrun.net/careers"
+                >
                   Careers
                 </FooterLink>
               </div>
@@ -120,10 +134,16 @@ export const Footer = () => {
               <FooterVerticalRule className="hidden sm:block md:hidden lg:block" />
               <div className="flex sm:ml-8 md:ml-0 lg:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Membership</FooterHeader>
-                <FooterLink href="https://www.huntersrun.net/membership-info">
+                <FooterLink
+                  ariaLabel="View the club membership information"
+                  href="https://www.huntersrun.net/membership-info"
+                >
                   Membership Info
                 </FooterLink>
-                <FooterLink href="https://www.huntersrun.net/contact-membership">
+                <FooterLink
+                  ariaLabel="View the club membership benefits"
+                  href="https://www.huntersrun.net/contact-membership"
+                >
                   Contact Membership
                 </FooterLink>
               </div>
@@ -133,20 +153,24 @@ export const Footer = () => {
         <FooterHorizontalRule />
         <div className="flex flex-col sm:flex-row gap-y-8 items-center justify-between mt-12">
           <p>Copyright © 2023 Hunters Run Country Club | All Rights Reserved</p>
-          <span className="flex gap-x-4 items-center text-base">
+          <span className="flex gap-x-8 items-center text-base">
             <SocialMediaIcon
+              ariaLabel="View the club facebook page"
               icon={faFacebookF}
               href="https://www.facebook.com/HuntersRunCC/"
             />
             <SocialMediaIcon
+              ariaLabel="View the club linkedin page"
               icon={faLinkedinIn}
               href="https://www.linkedin.com/company/hunters-run-cc"
             />
             <SocialMediaIcon
+              ariaLabel="View the club youtube page"
               icon={faYoutube}
               href="https://www.youtube.com/channel/UCWzApG8mcavd10GxsDUuQ6Q"
             />
             <SocialMediaIcon
+              ariaLabel="View the club instagram page"
               icon={faInstagram}
               href="https://www.instagram.com/huntersruncc/"
             />
@@ -161,22 +185,25 @@ const FooterLink = ({
   children,
   href,
   className,
+  ariaLabel,
 }: {
   children: ReactNode;
   href: string;
   className?: string;
+  ariaLabel: string;
 }) => {
   return (
-    <a
+    <Link
       href={href}
       target="_blank"
       className={twMerge(
         "hover:text-blue-100 transition-all duration-150",
         className
       )}
+      aria-label={ariaLabel}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 
@@ -227,14 +254,23 @@ const FooterHeader = ({ children }: { children: ReactNode }) => {
   );
 };
 
-const SocialMediaIcon = ({ icon, href }: { icon: IconProp; href: string }) => {
+const SocialMediaIcon = ({
+  icon,
+  href,
+  ariaLabel,
+}: {
+  icon: IconProp;
+  href: string;
+  ariaLabel: string;
+}) => {
   return (
-    <a
+    <Link
       target="_blank"
       href={href}
+      aria-label={ariaLabel}
       className="cursor-pointer hover:text-blue-100 transition-all duration-150"
     >
       <FontAwesomeIcon icon={icon} />
-    </a>
+    </Link>
   );
 };

@@ -70,6 +70,7 @@ const Navbar: React.FC = () => {
           href="https://www.huntersrun.net/contact-info"
           className="absolute right-8 hidden sm:block "
           target="_blank"
+          aria-label="Contact Us"
         >
           <Button
             light={!isScrolled && !isMenuOpen}

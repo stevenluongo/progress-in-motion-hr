@@ -141,6 +141,7 @@ const EastCourse = () => {
               </Body>
               <Link
                 target="_blank"
+                aria-label="View the East Course Renovation Hole by Hole Web Booklet"
                 href="https://www.huntersrun.net/documents/10184/14462025/East+Course+Renovation+Hole+by+Hole+Web+Booklet.pdf?t=1692393509574"
               >
                 <Button className="w-full xs:w-fit" icon="photograph">

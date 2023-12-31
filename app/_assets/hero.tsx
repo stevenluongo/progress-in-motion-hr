@@ -30,6 +30,7 @@ const Hero = () => {
             alt="Image of the renovated 26 North restaurant"
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: -5, opacity: 0 }}
+            priority
             transition={{
               type: "linear",
               duration: 2,

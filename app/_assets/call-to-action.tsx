@@ -30,7 +30,10 @@ const CallToAction = () => {
           View our newsletter and be informed of our news and exceptional new
           projects.
         </MotionBody>
-        <Link href="https://www.huntersrun.net/hunters-run-magazine">
+        <Link
+          aria-label="View the hnters run magazine"
+          href="https://www.huntersrun.net/hunters-run-magazine"
+        >
           <MotionButton
             animate={controls}
             variants={translateY({ delay: 0.5 })}

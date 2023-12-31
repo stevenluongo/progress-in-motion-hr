@@ -68,7 +68,7 @@ const MainLobby = () => {
       </Container>
       <div className="relative max-w-screen h-[700px] lg:mt-6">
         <MotionImage
-          src="https://progress-in-motion.s3.amazonaws.com/Main+Lobby/Lobby4.jpg"
+          src="https://progress-in-motion.s3.amazonaws.com/Main+Lobby/Lobby5.jpg"
           alt="Large display of the main lobby of the club"
           style={{ scale }}
           className="transtiion-all duration-[50ms] ease-out"

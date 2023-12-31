@@ -5,17 +5,20 @@ type ImageProps = {
   src: string;
   alt: string;
   className?: string;
+  priority?: boolean;
 };
 
 const Image = forwardRef<HTMLImageElement, ImageProps>(
-  ({ src, alt, className }, ref) => {
+  ({ src, alt, className, priority }, ref) => {
     return (
       <NextImage
         ref={ref}
         className={className}
         fill
+        sizes="(max-width: 768px) 100vw, 50vw"
         src={src}
         alt={alt}
+        priority={priority}
         style={{
           objectFit: "cover",
           objectPosition: "center",
