@@ -19,7 +19,7 @@ const prata = Prata({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://progressinmotion.com"),
+  metadataBase: new URL("https://progresshuntersrun.net"),
   alternates: {
     canonical: "/",
     languages: {
