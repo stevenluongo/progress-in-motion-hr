@@ -43,7 +43,7 @@ const BarLounge = () => {
 
   return (
     <section>
-      <Container className="py-24 sm:py-36 lg:py-48">
+      <Container className="py-24 sm:py-36 lg:py-48 overflow-x-hidden">
         <Element name="bar-lounge">
           <ContentWrapper ref={ref}>
             <TextContainer>

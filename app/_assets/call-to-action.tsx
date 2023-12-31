@@ -12,7 +12,7 @@ const CallToAction = () => {
     margin: "-150px -150px",
   });
   return (
-    <section className="py-24 bg-blue-100" ref={ref}>
+    <section className="py-24 bg-blue-100 overflow-x-hidden" ref={ref}>
       <Container className="flex flex-col items-center gap-y-8">
         <MotionScript
           animate={controls}

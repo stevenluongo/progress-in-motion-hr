@@ -53,7 +53,7 @@ const MainLobby = () => {
   const { setIsOpen } = useModalStore();
 
   return (
-    <section className="pt-24">
+    <section className="pt-24 overflow-x-hidden">
       <Container className="flex justify-center">
         <MotionHeaderContainer
           ref={ref}

@@ -44,7 +44,7 @@ const EastCourse = () => {
     margin: "-150px -150px",
   });
   return (
-    <section className="bg-blue-100">
+    <section className="bg-blue-100 overflow-x-hidden">
       <Container
         ref={ref}
         className="flex flex-col justify-center pt-24 sm:pt-36 lg:pt-48"
