@@ -10,9 +10,12 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: [
-      "developers.elementor.com",
-      "progress-in-motion.s3.amazonaws.com",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "progress-in-motion.s3.amazonaws.com",
+        pathname: "**",
+      },
     ],
   },
 };
