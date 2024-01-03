@@ -53,7 +53,7 @@ const MainDiningRoom = () => {
                 initial="initial"
               >
                 <Script>reimagined</Script>
-                <Title>Main Dining Room</Title>
+                <Title>Dining Room</Title>
               </MotionHeaderContainer>
               <MotionBody
                 animate={controls}
@@ -61,7 +61,7 @@ const MainDiningRoom = () => {
                 initial="initial"
                 className="text-center max-w-[500px] md:text-start"
               >
-                The Main Dining Room has always been the heart of our culinary
+                The Dining Room has always been the heart of our culinary
                 affairs, where flavors come to life and memories are made. With
                 this refurbishment, we&apos;re not just upgrading the setting;
                 we&apos;re crafting an event space that reflects the artistry of

@@ -107,12 +107,6 @@ export const Footer = () => {
                   Location
                 </FooterLink>
                 <FooterLink
-                  ariaLabel="View the club team"
-                  href="https://www.huntersrun.net/meet-the-team"
-                >
-                  Meet the Team
-                </FooterLink>
-                <FooterLink
                   ariaLabel="View the club contact information"
                   href="https://www.huntersrun.net/contact-info"
                 >
@@ -134,12 +128,7 @@ export const Footer = () => {
               <FooterVerticalRule className="hidden sm:block md:hidden lg:block" />
               <div className="flex sm:ml-8 md:ml-0 lg:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Membership</FooterHeader>
-                <FooterLink
-                  ariaLabel="View the club membership information"
-                  href="https://www.huntersrun.net/membership-info"
-                >
-                  Membership Info
-                </FooterLink>
+
                 <FooterLink
                   ariaLabel="View the club membership benefits"
                   href="https://www.huntersrun.net/contact-membership"

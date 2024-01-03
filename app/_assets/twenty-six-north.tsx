@@ -134,10 +134,10 @@ const TwentySixNorth = () => {
                 membership with seasonally sourced ingredients.
               </Body>
               <FeaturesGroup>
-                <Features icon="drinks">Craft Cocktails</Features>
-                <Features icon="outdoorSeating">Outdoor Seating</Features>
-                <Features icon="service">Attentive Service</Features>
                 <Features icon="candle">Intimate Ambiance</Features>
+                <Features icon="drinks">Craft Cocktails</Features>
+                <Features icon="service">Elegant Dining</Features>
+                <Features icon="outdoorSeating">Outdoor Seating</Features>
               </FeaturesGroup>
             </MotionTextContainer>
             <MotionImageWrapper

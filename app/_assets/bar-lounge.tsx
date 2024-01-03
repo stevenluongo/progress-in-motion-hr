@@ -131,7 +131,7 @@ const BarLounge = () => {
               </Body>
               <FeaturesGroup>
                 <Features icon="barSeating">Additional Bar Seating</Features>
-                <Features icon="furniture">Refreshed Upholstery</Features>
+                <Features icon="candle">Sophisticated Ambiance</Features>
                 <Features icon="light">Modern Lighting</Features>
                 <Features icon="hostStand">Welcoming Host Station</Features>
               </FeaturesGroup>
@@ -144,7 +144,7 @@ const BarLounge = () => {
             >
               <ImageBackground />
               <Image
-                src="https://progress-in-motion.s3.amazonaws.com/Bar+Lounge/Bar10.jpg"
+                src="https://progress-in-motion.s3.amazonaws.com/Bar+Lounge/Batch.png"
                 alt="Another view of the newly renovated bar lounge"
               />
             </MotionImageWrapper>

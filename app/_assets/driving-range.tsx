@@ -108,8 +108,10 @@ const DrivingRange = () => {
                 your potential.
               </Body>
               <FeaturesGroup>
-                <Features icon="tee">Increased Tees</Features>
-                <Features icon="drivingRange">More Driving Stations</Features>
+                <Features icon="tee">Toptracer by Topgolf</Features>
+                <Features icon="drivingRange">
+                  More Driving Stations & Shade Structures
+                </Features>
                 <Features icon="drainage">Improved Drainage</Features>
                 <Features icon="target">Various Targets</Features>
               </FeaturesGroup>
