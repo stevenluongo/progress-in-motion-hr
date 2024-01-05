@@ -13,7 +13,6 @@ import { twMerge } from "tailwind-merge";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import HrccLogo from "@/public/horizontal.svg";
 import { executeScroll } from "@/utils/scroll";
-import { motion } from "framer-motion";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { MotionContainer } from "./motion";
 import Link from "next/link";
@@ -141,7 +140,9 @@ export const Footer = () => {
         </div>
         <FooterHorizontalRule />
         <div className="flex flex-col sm:flex-row gap-y-8 items-center justify-between mt-12">
-          <p>Copyright © 2023 Hunters Run Country Club | All Rights Reserved</p>
+          <p className="font-extralight">
+            Copyright © 2023 Hunters Run Country Club | All Rights Reserved
+          </p>
           <span className="flex gap-x-8 items-center text-base">
             <SocialMediaIcon
               ariaLabel="View the club facebook page"

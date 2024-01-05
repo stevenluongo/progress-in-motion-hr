@@ -28,6 +28,7 @@ import {
 } from "@/components/motion";
 import { translateX, translateY } from "@/utils/variants";
 import { useModalStore } from "@/lib/store";
+import { faCaretDown, faImage } from "@fortawesome/free-solid-svg-icons";
 
 const TwentySixNorth = () => {
   const { ref, controls } = useAnimationInView({
@@ -87,14 +88,14 @@ const TwentySixNorth = () => {
                     )
                   }
                   className="w-full xs:w-fit"
-                  icon="photograph"
+                  icon={faImage}
                 >
                   View Before
                 </Button>
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
-                  icon="arrowDown"
+                  icon={faCaretDown}
                   onClick={() =>
                     executeScroll({
                       to: "twenty-six-north-more",

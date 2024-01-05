@@ -1,9 +1,11 @@
 "use client";
 
 import Container from "@/components/layout/container";
-import { MotionBody, MotionScript, MotionButton } from "@/components/motion";
+import { MotionBody, MotionScript, MotionWrapper } from "@/components/motion";
+import Button from "@/components/ui/button";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { translateY } from "@/utils/variants";
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const CallToAction = () => {
@@ -34,15 +36,15 @@ const CallToAction = () => {
           aria-label="View the hnters run magazine"
           href="https://www.huntersrun.net/hunters-run-magazine"
         >
-          <MotionButton
+          <MotionWrapper
             animate={controls}
             variants={translateY({ delay: 0.5 })}
             initial="initial"
-            className="w-full xs:w-fit"
-            icon="mail"
           >
-            View
-          </MotionButton>
+            <Button className="w-full xs:w-fit" icon={faNewspaper}>
+              View
+            </Button>
+          </MotionWrapper>
         </Link>
       </Container>
     </section>

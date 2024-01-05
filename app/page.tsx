@@ -1,4 +1,3 @@
-import { Footer } from "@/components/footer";
 import Hero from "./_assets/hero";
 import TwentySixNorth from "./_assets/twenty-six-north";
 import DrivingRange from "./_assets/driving-range";
@@ -20,7 +19,6 @@ export default function Page() {
       <EastCourse />
       <MainDiningRoom />
       <CallToAction />
-      <Footer />
       <Modal />
     </>
   );

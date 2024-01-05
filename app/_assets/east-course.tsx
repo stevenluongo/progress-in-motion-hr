@@ -27,6 +27,7 @@ import {
 import { translateX, translateY } from "@/utils/variants";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { faBook, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const EastCourse = () => {
   const { ref, controls } = useAnimationInView({
@@ -101,8 +102,7 @@ const EastCourse = () => {
               >
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
-                  secondary
-                  icon="arrowDown"
+                  icon={faCaretDown}
                   onClick={() => executeScroll({ to: "east-course-more" })}
                 >
                   Learn More
@@ -144,7 +144,7 @@ const EastCourse = () => {
                 aria-label="View the East Course Renovation Hole by Hole Web Booklet"
                 href="https://www.huntersrun.net/documents/10184/14462025/East+Course+Renovation+Hole+by+Hole+Web+Booklet.pdf?t=1692393509574"
               >
-                <Button className="w-full xs:w-fit" icon="photograph">
+                <Button className="w-full xs:w-fit" icon={faBook}>
                   View Booklet
                 </Button>
               </Link>

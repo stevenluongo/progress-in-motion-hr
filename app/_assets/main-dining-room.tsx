@@ -28,6 +28,7 @@ import {
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { translateX, translateY } from "@/utils/variants";
 import { useModalStore } from "@/lib/store";
+import { faCamera, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const MainDiningRoom = () => {
   const { ref, controls } = useAnimationInView({
@@ -79,14 +80,14 @@ const MainDiningRoom = () => {
                     )
                   }
                   className="w-full xs:w-fit"
-                  icon="photograph"
+                  icon={faCamera}
                 >
                   View Before
                 </Button>
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
                   secondary
-                  icon="arrowDown"
+                  icon={faCaretDown}
                   onClick={() => executeScroll({ to: "main-dining-room-more" })}
                 >
                   Learn More

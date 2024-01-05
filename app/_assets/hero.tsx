@@ -5,13 +5,15 @@ import TextContainer from "@/components/layout/text-container";
 import { Element } from "react-scroll";
 import { executeScroll } from "@/utils/scroll";
 import {
-  MotionButton,
   MotionImage,
   MotionTitleLarge,
+  MotionWrapper,
 } from "@/components/motion";
 import { translateY } from "@/utils/variants";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import Button from "@/components/ui/button";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   const { ref, controls } = useAnimationInView({});
@@ -47,21 +49,25 @@ const Hero = () => {
             Progress in
             <br /> Motion
           </MotionTitleLarge>
-          <MotionButton
-            onClick={() =>
-              executeScroll({
-                to: "twenty-six-north",
-                offset: isMobile ? -100 : -200,
-              })
-            }
-            light
-            className="w-fit"
+          <MotionWrapper
             animate={controls}
             variants={translateY({ delay: 0.35 })}
             initial="initial"
           >
-            explore
-          </MotionButton>
+            <Button
+              onClick={() =>
+                executeScroll({
+                  to: "twenty-six-north",
+                  offset: isMobile ? -100 : -200,
+                })
+              }
+              light
+              className="w-fit"
+              icon={faCaretDown}
+            >
+              explore
+            </Button>
+          </MotionWrapper>
         </TextContainer>
       </Container>
     </Element>

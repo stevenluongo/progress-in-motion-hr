@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { MotionProps, motion } from "framer-motion";
 import HeaderContainer from "./layout/header-container";
 import { Body, Script, TitleLarge } from "./ui/typography";
 import ButtonGroup from "./ui/button-group";
@@ -27,3 +27,9 @@ export const MotionImage = motion(Image);
 export const MotionContainer = motion(Container);
 
 export const MotionScript = motion(Script);
+
+export const MotionWrapper = (
+  props: MotionProps & { children: React.ReactNode }
+) => {
+  return <motion.div {...props}>{props.children}</motion.div>;
+};

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Button from "../components/ui/button";
+import { faEnvelope, faImage } from "@fortawesome/free-solid-svg-icons";
 
 const meta = {
   title: "Example/Button",
@@ -17,14 +18,14 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     children: "subscribe",
-    icon: "mail",
+    icon: faEnvelope,
   },
 };
 
 export const Photograph: Story = {
   args: {
     children: "View before",
-    icon: "photograph",
+    icon: faImage,
   },
 };
 
@@ -39,7 +40,7 @@ export const Secondary: Story = {
   args: {
     children: "View before",
     secondary: true,
-    icon: "mail",
+    icon: faEnvelope,
   },
 };
 

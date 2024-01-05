@@ -27,6 +27,7 @@ import {
   MotionTextContainer,
 } from "@/components/motion";
 import { translateX, translateY } from "@/utils/variants";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const DrivingRange = () => {
   const { ref, controls } = useAnimationInView({
@@ -66,13 +67,9 @@ const DrivingRange = () => {
                 variants={translateY({ delay: 0.5 })}
                 initial="initial"
               >
-                {/* <Button className="w-full xs:w-fit" icon="video">
-                  Watch Video
-                </Button> */}
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
-                  secondary
-                  icon="arrowDown"
+                  icon={faCaretDown}
                   onClick={() => executeScroll({ to: "driving-range-more" })}
                 >
                   Learn More
