@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Navbar from "@/components/navbar";
 import { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 config.autoAddCss = false;
 
 const adelia = localFont({
@@ -79,7 +80,7 @@ export default async function RootLayout({
         className={`${kumbhSans.variable} ${prata.variable} ${adelia.variable}`}
       >
         <Navbar />
-
+        <SpeedInsights />
         {children}
       </body>
     </html>

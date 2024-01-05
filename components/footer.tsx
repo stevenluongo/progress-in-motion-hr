@@ -24,7 +24,7 @@ export const Footer = () => {
     margin: "-150px -150px",
   });
   return (
-    <motion.footer className="py-16 overflow-x-hidden bg-blue-900">
+    <footer className="py-16 overflow-x-hidden bg-blue-900">
       <MotionContainer
         ref={ref}
         animate={controls}
@@ -166,7 +166,7 @@ export const Footer = () => {
           </span>
         </div>
       </MotionContainer>
-    </motion.footer>
+    </footer>
   );
 };
 
