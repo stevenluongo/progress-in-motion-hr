@@ -5,7 +5,7 @@ import { MotionBody, MotionScript, MotionWrapper } from "@/components/motion";
 import Button from "@/components/ui/button";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { translateY } from "@/utils/variants";
-import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
+import { faContactCard, faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const CallToAction = () => {
@@ -29,20 +29,20 @@ const CallToAction = () => {
           initial="initial"
           className="text-center max-w-[400px]"
         >
-          View our newsletter and be informed of our news and exceptional new
-          projects.
+          Exciting progress is happening every day in many ways! Contact us for
+          more information or to arrange a tour.
         </MotionBody>
         <Link
           aria-label="View the hnters run magazine"
-          href="https://www.huntersrun.net/hunters-run-magazine"
+          href="https://www.huntersrun.net/contact-info"
         >
           <MotionWrapper
             animate={controls}
             variants={translateY({ delay: 0.5 })}
             initial="initial"
           >
-            <Button className="w-full xs:w-fit" icon={faNewspaper}>
-              View
+            <Button className="w-full xs:w-fit" icon={faContactCard}>
+              Contact
             </Button>
           </MotionWrapper>
         </Link>
