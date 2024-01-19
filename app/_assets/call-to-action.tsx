@@ -5,7 +5,7 @@ import { MotionBody, MotionScript, MotionWrapper } from "@/components/motion";
 import Button from "@/components/ui/button";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { translateY } from "@/utils/variants";
-import { faContactCard, faNewspaper } from "@fortawesome/free-solid-svg-icons";
+import { faContactCard } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const CallToAction = () => {
