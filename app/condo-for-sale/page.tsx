@@ -6,7 +6,6 @@ import CondoNavbar from "@/components/condo-navbar";
 export default function Page() {
   return (
     <>
-      <CondoNavbar />
       <Hero />
       <Overview />
       <VideoSection />
