@@ -3,12 +3,10 @@
 import { useModalStore } from "@/lib/store";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import ReactModal from "react-modal";
 import { PuffLoader } from "react-spinners";
-import { twMerge } from "tailwind-merge";
 
 const VideoModal = () => {
   const {
@@ -56,8 +54,8 @@ const VideoModal = () => {
         style={{
           padding: "56.25% 0 0 0",
           position: "relative",
-          width: "80vw",
         }}
+        className="w-screen md:w-[80vw]"
       >
         <iframe
           src="https://player.vimeo.com/video/902402136?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"

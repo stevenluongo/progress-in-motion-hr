@@ -87,9 +87,9 @@ export default async function RootLayout({
         {/* hello */}
         <Navbar />
         {children}
-        <Modal />
+        {/* <Modal />
         <VideoModal />
-        <PDFModal />
+        <PDFModal /> */}
         <Analytics />
         <Footer />
       </body>

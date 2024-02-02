@@ -2,9 +2,7 @@
 
 import Container from "@/components/layout/container";
 import ContentWrapper from "@/components/layout/content-wrapper";
-import FeaturesGroup from "@/components/layout/features-group";
 import Button from "@/components/ui/button";
-import Features from "@/components/ui/features";
 import HeaderContainer from "@/components/layout/header-container";
 import TextContainer from "@/components/layout/text-container";
 import {
@@ -32,14 +30,13 @@ import {
   faCircleInfo,
   faCirclePlay,
   faPlay,
-  faVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useModalStore } from "@/lib/store";
-import ButtonGroup from "@/components/ui/button-group";
+import Link from "next/link";
 
 const VideoSection = () => {
-  const { setVideoModalOpen, setPDFModalOpen } = useModalStore();
+  const { setVideoModalOpen } = useModalStore();
   const { ref, controls } = useAnimationInView({
     margin: "-150px -150px",
     delay: 750,
@@ -51,7 +48,7 @@ const VideoSection = () => {
   return (
     <section className="bg-gradient-to-t from-transparent via-blue-100 to-transparent overflow-x-hidden">
       <Container className="py-24 sm:py-36 lg:py-48">
-        <Element name="driving-range">
+        <Element name="video">
           <ContentWrapper ref={ref}>
             <TextContainer className="md:order-2">
               <MotionHeaderContainer
@@ -78,14 +75,22 @@ const VideoSection = () => {
                 variants={translateY({ delay: 0.5 })}
                 initial="initial"
               >
-                <Button onClick={() => setVideoModalOpen()} icon={faCirclePlay}>
+                <Button
+                  onClick={() => setVideoModalOpen()}
+                  className="w-full xs:w-fit"
+                  icon={faCirclePlay}
+                >
                   Watch Video
                 </Button>
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
-                  icon={faCaretDown}
-                  onClick={() => executeScroll({ to: "driving-range-more" })}
                   secondary
+                  icon={faCaretDown}
+                  onClick={() =>
+                    executeScroll({
+                      to: "pricing",
+                    })
+                  }
                 >
                   Keep Reading
                 </Button>
@@ -114,7 +119,7 @@ const VideoSection = () => {
             </MotionImageWrapper>
           </ContentWrapper>
         </Element>
-        <Element name="driving-range-more">
+        <Element name="pricing">
           <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48" ref={ref2}>
             <MotionTextContainer
               animate={controls2}
@@ -132,26 +137,33 @@ const VideoSection = () => {
                 including 24-hour security, pest control, entertainment options,
                 and exclusive community facilities.
               </Body>
+              <Body className="text-center md:text-start lg:hidden">
+                Offered at $185,000, 30D Southport Lane is an investment in
+                unparalleled luxury and convenience.
+              </Body>
               <MotionButtonGroup
                 animate={controls2}
                 variants={translateY({ delay: 0.5 })}
                 initial="initial"
               >
-                <Button
-                  onClick={() =>
-                    setPDFModalOpen(
-                      "https://progressive-buyer.s3.amazonaws.com/realtor+prospective+buyer+30D.pdf"
-                    )
-                  }
-                  icon={faCircleInfo}
+                <Link
+                  href="https://progressive-buyer.s3.amazonaws.com/realtor+prospective+buyer+30D.pdf"
+                  target="_blank"
+                  className="w-full xs:w-fit"
                 >
-                  More Information
-                </Button>
+                  <Button className="w-full xs:w-fit" icon={faCircleInfo}>
+                    More Information
+                  </Button>
+                </Link>
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
-                  icon={faCaretDown}
-                  onClick={() => executeScroll({ to: "driving-range-more" })}
                   secondary
+                  icon={faCaretDown}
+                  onClick={() =>
+                    executeScroll({
+                      to: "pricing",
+                    })
+                  }
                 >
                   Keep Reading
                 </Button>

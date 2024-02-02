@@ -41,12 +41,21 @@ const Hero = () => {
         </div>
         <TextContainer className="z-20 !items-center">
           <MotionTitleLarge
-            className="!text-center text-white"
+            className="!text-center text-white hidden sm:block"
             animate={controls}
             variants={translateY({ delay: 0 })}
             initial="initial"
           >
             30D Southport <br /> Condo For Sale
+          </MotionTitleLarge>
+          <MotionTitleLarge
+            className="!text-center text-white block sm:hidden"
+            animate={controls}
+            variants={translateY({ delay: 0 })}
+            initial="initial"
+          >
+            30D Condo
+            <br /> For Sale
           </MotionTitleLarge>
           <MotionWrapper
             animate={controls}
@@ -56,7 +65,7 @@ const Hero = () => {
             <Button
               onClick={() =>
                 executeScroll({
-                  to: "twenty-six-north",
+                  to: "overview",
                   offset: isMobile ? -100 : -200,
                 })
               }

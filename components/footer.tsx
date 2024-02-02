@@ -8,7 +8,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import HrccLogo from "@/public/horizontal.svg";
@@ -16,12 +16,31 @@ import { executeScroll } from "@/utils/scroll";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { MotionContainer } from "./motion";
 import Link from "next/link";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { scroller } from "react-scroll";
 
 export const Footer = () => {
   const { ref, controls } = useAnimationInView({
     delay: 500,
     margin: "-150px -150px",
   });
+
+  const searchParams = useSearchParams();
+
+  const { push } = useRouter();
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const s = searchParams.get("s");
+    if (!s) return;
+    executeScroll({
+      to: s,
+    });
+
+    push(pathname);
+  }, [searchParams]);
+
   return (
     <footer className="py-16 overflow-x-hidden bg-blue-900">
       <MotionContainer
@@ -75,20 +94,94 @@ export const Footer = () => {
               <FooterVerticalRule className="hidden sm:block" />
               <div className="flex sm:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Renovations</FooterHeader>
-                <FooterScrollLink to="twenty-six-north">
+                <FooterLink
+                  ariaLabel="View the club 26 North restaurant"
+                  href="/"
+                  query="twenty-six-north"
+                >
                   26 North
-                </FooterScrollLink>
-                <FooterScrollLink to="driving-range">
+                </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club driving range"
+                  href="/"
+                  query="driving-range"
+                >
                   Driving Range
-                </FooterScrollLink>
-                <FooterScrollLink to="main-lobby">Main Lobby</FooterScrollLink>
-                <FooterScrollLink to="bar-lounge">Bar Lounge</FooterScrollLink>
-                <FooterScrollLink to="east-course">
+                </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club main lobby"
+                  href="/"
+                  query="main-lobby"
+                >
+                  Main Lobby
+                </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club bar lounge"
+                  href="/"
+                  query="bar-lounge"
+                >
+                  Bar Lounge
+                </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club east course"
+                  href="/"
+                  query="east-course"
+                >
                   East Course
-                </FooterScrollLink>
-                <FooterScrollLink to="main-dining-room">
+                </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club main dining room"
+                  href="/"
+                  query="main-dining-room"
+                >
                   Main Dining Room
-                </FooterScrollLink>
+                </FooterLink>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col">
+            <FooterHorizontalRule className="lg:hidden my-8" />
+            <div className="flex items-stretch h-full">
+              <FooterVerticalRule className="hidden sm:block md:hidden lg:block" />
+              <div className="flex sm:ml-8 md:ml-0 lg:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
+                <FooterHeader>Real Estate</FooterHeader>
+
+                <FooterLink
+                  ariaLabel="View the club membership benefits"
+                  href="/condo-for-sale"
+                  query="hero"
+                >
+                  Home
+                </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club membership benefits"
+                  href="/condo-for-sale"
+                  query="overview"
+                >
+                  Overview
+                </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club membership benefits"
+                  href="/condo-for-sale"
+                  query="features"
+                >
+                  Features
+                </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club membership benefits"
+                  href="/condo-for-sale"
+                  query="video"
+                >
+                  Virtual Tour
+                </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club membership benefits"
+                  href="/condo-for-sale"
+                  query="pricing"
+                >
+                  Pricing
+                </FooterLink>
               </div>
             </div>
           </div>
@@ -99,6 +192,12 @@ export const Footer = () => {
               <FooterVerticalRule className="hidden md:block" />
               <div className="flex ml-0 md:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Club Info</FooterHeader>
+                <FooterLink
+                  ariaLabel="View the club membership benefits"
+                  href="https://www.huntersrun.net/contact-membership"
+                >
+                  Contact Membership
+                </FooterLink>
                 <FooterLink
                   ariaLabel="View the club location"
                   href="https://www.huntersrun.net/location"
@@ -116,23 +215,6 @@ export const Footer = () => {
                   href="https://www.huntersrun.net/careers"
                 >
                   Careers
-                </FooterLink>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <FooterHorizontalRule className="lg:hidden my-8" />
-            <div className="flex items-stretch h-full">
-              <FooterVerticalRule className="hidden sm:block md:hidden lg:block" />
-              <div className="flex sm:ml-8 md:ml-0 lg:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
-                <FooterHeader>Membership</FooterHeader>
-
-                <FooterLink
-                  ariaLabel="View the club membership benefits"
-                  href="https://www.huntersrun.net/contact-membership"
-                >
-                  Contact Membership
                 </FooterLink>
               </div>
             </div>
@@ -176,16 +258,42 @@ const FooterLink = ({
   href,
   className,
   ariaLabel,
+  query,
 }: {
   children: ReactNode;
   href: string;
   className?: string;
   ariaLabel: string;
+  query?: string;
 }) => {
+  const pathname = usePathname();
+
+  const { push } = useRouter();
+
+  if (pathname === href && query) {
+    return (
+      <p
+        className="hover:text-blue-100 cursor-pointer transition-all duration-150"
+        onClick={() => {
+          push(href);
+          executeScroll({ to: query });
+        }}
+      >
+        {children}
+      </p>
+    );
+  }
+
   return (
     <Link
-      href={href}
-      target="_blank"
+      href={{
+        pathname: href,
+        query: query
+          ? {
+              s: query,
+            }
+          : null,
+      }}
       className={twMerge(
         "hover:text-blue-100 transition-all duration-150",
         className
@@ -194,23 +302,6 @@ const FooterLink = ({
     >
       {children}
     </Link>
-  );
-};
-
-const FooterScrollLink = ({
-  to,
-  children,
-}: {
-  to: string;
-  children: ReactNode;
-}) => {
-  return (
-    <p
-      className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-      onClick={() => executeScroll({ to })}
-    >
-      {children}
-    </p>
   );
 };
 

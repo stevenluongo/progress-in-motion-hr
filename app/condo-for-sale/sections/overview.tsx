@@ -45,7 +45,7 @@ const Overview = () => {
   return (
     <section className="overflow-x-hidden">
       <Container className="py-24 sm:py-36 lg:py-48">
-        <Element name="twenty-six-north">
+        <Element name="overview">
           <ContentWrapper ref={ref}>
             <TextContainer>
               <MotionHeaderContainer
@@ -90,7 +90,7 @@ const Overview = () => {
                   icon={faCaretDown}
                   onClick={() =>
                     executeScroll({
-                      to: "twenty-six-north-more",
+                      to: "features",
                     })
                   }
                 >
@@ -110,7 +110,7 @@ const Overview = () => {
             </MotionImageWrapper>
           </ContentWrapper>
         </Element>
-        <Element name="twenty-six-north-more">
+        <Element name="features">
           <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48" ref={ref2}>
             <MotionTextContainer
               className="md:order-2"
@@ -131,9 +131,9 @@ const Overview = () => {
               <FeaturesGroup>
                 <Features icon="candle">2 Bed / 2 Bath</Features>
                 <Features icon="drinks">Top Unit Second Floor</Features>
-                <Features icon="service">1491 Square Feet</Features>
+                <Features icon="service">1383 Indoor SQ. FT.</Features>
                 <Features icon="outdoorSeating">
-                  Modern Renovated Bathrooms
+                  Open Concept Living Area
                 </Features>
               </FeaturesGroup>
             </MotionTextContainer>
