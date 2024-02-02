@@ -91,7 +91,7 @@ export default async function RootLayout({
         <VideoModal />
         <PDFModal /> */}
         <Analytics />
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
