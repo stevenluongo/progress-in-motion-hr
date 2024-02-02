@@ -1,12 +1,12 @@
-import Hero from "./_assets/hero";
-import TwentySixNorth from "./_assets/twenty-six-north";
-import DrivingRange from "./_assets/driving-range";
-import MainLobby from "./_assets/main-lobby";
-import BarLounge from "./_assets/bar-lounge";
-import EastCourse from "./_assets/east-course";
-import MainDiningRoom from "./_assets/main-dining-room";
-import CallToAction from "./_assets/call-to-action";
-import Modal from "./_assets/modal";
+import Hero from "./sections/hero";
+import TwentySixNorth from "./sections/twenty-six-north";
+import DrivingRange from "./sections/driving-range";
+import MainLobby from "./sections/main-lobby";
+import BarLounge from "./sections/bar-lounge";
+import EastCourse from "./sections/east-course";
+import MainDiningRoom from "./sections/main-dining-room";
+import CallToAction from "./sections/call-to-action";
+import Modal from "./sections/modal";
 
 export default function Page() {
   return (
