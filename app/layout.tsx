@@ -7,6 +7,9 @@ import Navbar from "@/components/navbar";
 import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Analytics } from "@vercel/analytics/react";
+import Modal from "@/components/modal";
+import VideoModal from "@/components/video-modal";
+import PDFModal from "@/components/pdf-modal";
 
 config.autoAddCss = false;
 
@@ -83,6 +86,9 @@ export default async function RootLayout({
       >
         <Navbar />
         {children}
+        <Modal />
+        <VideoModal />
+        <PDFModal />
         <Analytics />
         <Footer />
       </body>
