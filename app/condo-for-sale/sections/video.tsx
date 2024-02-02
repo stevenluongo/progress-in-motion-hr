@@ -48,7 +48,7 @@ const VideoSection = () => {
   return (
     <section className="bg-gradient-to-t from-transparent via-blue-100 to-transparent overflow-x-hidden">
       <Container className="py-24 sm:py-36 lg:py-48">
-        <Element name="driving-range">
+        <Element name="video">
           <ContentWrapper ref={ref}>
             <TextContainer className="md:order-2">
               <MotionHeaderContainer

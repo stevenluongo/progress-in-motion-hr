@@ -85,9 +85,9 @@ export default async function RootLayout({
         className={`${kumbhSans.variable} ${prata.variable} ${adelia.variable}`}
       >
         {children}
-        <Modal />
+        {/* <Modal />
         <VideoModal />
-        <PDFModal />
+        <PDFModal /> */}
         <Analytics />
         <Footer />
       </body>

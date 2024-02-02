@@ -27,12 +27,18 @@ export const Footer = () => {
 
   const searchParams = useSearchParams();
 
+  const { push } = useRouter();
+
+  const pathname = usePathname();
+
   useEffect(() => {
     const s = searchParams.get("s");
     if (!s) return;
     executeScroll({
       to: s,
     });
+
+    push(pathname);
   }, [searchParams]);
 
   return (

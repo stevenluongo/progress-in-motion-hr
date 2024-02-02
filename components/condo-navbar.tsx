@@ -82,11 +82,10 @@ const CondoNavbar: React.FC = () => {
         </Link>
       </div>
       <NavbarMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}>
-        <NavbarMenuItem to="twenty-six-north">Overview</NavbarMenuItem>
-        <NavbarMenuItem to="driving-range">Virtual Tour</NavbarMenuItem>
-        <NavbarMenuItem to="main-lobby">Pricing</NavbarMenuItem>
-        <NavbarMenuItem to="bar-lounge">Gallery</NavbarMenuItem>
-        <NavbarMenuItem to="east-course">Contact</NavbarMenuItem>
+        <NavbarMenuItem to="overview">Overview</NavbarMenuItem>
+        <NavbarMenuItem to="features">Features</NavbarMenuItem>
+        <NavbarMenuItem to="video">Virtual Tour</NavbarMenuItem>
+        <NavbarMenuItem to="pricing">Pricing</NavbarMenuItem>
       </NavbarMenu>
     </motion.nav>
   );
