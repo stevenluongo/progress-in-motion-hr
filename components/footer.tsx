@@ -26,6 +26,10 @@ export const Footer = () => {
 
   const searchParams = useSearchParams();
 
+  const pathname = usePathname();
+
+  const { push } = useRouter();
+
   const s = searchParams.get("s");
 
   useEffect(() => {
@@ -33,6 +37,7 @@ export const Footer = () => {
     executeScroll({
       to: s,
     });
+    push(pathname);
   }, [s]);
 
   return (
@@ -260,6 +265,25 @@ const FooterLink = ({
   ariaLabel: string;
   query?: string;
 }) => {
+  const pathname = usePathname();
+
+  if (pathname == href && query) {
+    return (
+      <p
+        className={twMerge(
+          "hover:text-blue-100 transition-all duration-150 cursor-pointer",
+          className
+        )}
+        onClick={() => {
+          executeScroll({
+            to: query,
+          });
+        }}
+      >
+        {children}
+      </p>
+    );
+  }
   return (
     <Link
       href={{
