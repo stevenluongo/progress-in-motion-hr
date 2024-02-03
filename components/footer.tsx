@@ -29,7 +29,10 @@ export const Footer = () => {
   const s = searchParams.get("s");
 
   useEffect(() => {
-    console.log(s);
+    if (!s) return;
+    executeScroll({
+      to: s,
+    });
   }, [s]);
 
   return (
