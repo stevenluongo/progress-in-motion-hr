@@ -16,13 +16,23 @@ import { executeScroll } from "@/utils/scroll";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { MotionContainer } from "./motion";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export const Footer = () => {
   const { ref, controls } = useAnimationInView({
     delay: 500,
     margin: "-150px -150px",
   });
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const s = searchParams.get("s");
+    if (!s) return;
+    executeScroll({
+      to: s,
+    });
+  }, [searchParams]);
 
   return (
     <footer className="py-16 overflow-x-hidden bg-blue-900">
