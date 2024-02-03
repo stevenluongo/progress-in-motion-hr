@@ -26,13 +26,14 @@ export const Footer = () => {
 
   const searchParams = useSearchParams();
 
+  const s = searchParams.get("s");
+
   useEffect(() => {
-    const s = searchParams.get("s");
     if (!s) return;
     executeScroll({
       to: s,
     });
-  }, [searchParams]);
+  }, [s]);
 
   return (
     <footer className="py-16 overflow-x-hidden bg-blue-900">
