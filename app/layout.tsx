@@ -10,6 +10,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Modal from "@/components/modal";
 import VideoModal from "@/components/video-modal";
 import PDFModal from "@/components/pdf-modal";
+import { Suspense } from "react";
 
 config.autoAddCss = false;
 
@@ -89,7 +90,9 @@ export default async function RootLayout({
         <VideoModal />
         <PDFModal />
         <Analytics />
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );
