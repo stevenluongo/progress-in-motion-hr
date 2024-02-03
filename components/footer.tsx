@@ -16,30 +16,13 @@ import { executeScroll } from "@/utils/scroll";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { MotionContainer } from "./motion";
 import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { scroller } from "react-scroll";
+import { usePathname, useRouter } from "next/navigation";
 
 export const Footer = () => {
   const { ref, controls } = useAnimationInView({
     delay: 500,
     margin: "-150px -150px",
   });
-
-  const searchParams = useSearchParams();
-
-  const { push } = useRouter();
-
-  const pathname = usePathname();
-
-  useEffect(() => {
-    const s = searchParams.get("s");
-    if (!s) return;
-    executeScroll({
-      to: s,
-    });
-
-    push(pathname);
-  }, [searchParams]);
 
   return (
     <footer className="py-16 overflow-x-hidden bg-blue-900">
@@ -266,24 +249,6 @@ const FooterLink = ({
   ariaLabel: string;
   query?: string;
 }) => {
-  const pathname = usePathname();
-
-  const { push } = useRouter();
-
-  if (pathname === href && query) {
-    return (
-      <p
-        className="hover:text-blue-100 cursor-pointer transition-all duration-150"
-        onClick={() => {
-          push(href);
-          executeScroll({ to: query });
-        }}
-      >
-        {children}
-      </p>
-    );
-  }
-
   return (
     <Link
       href={{
