@@ -1,18 +1,18 @@
 "use client";
 
 import React, { useCallback, useState } from "react";
-import Button from "./ui/button";
 import HrccLogo from "@/public/horizontal.svg";
 import { twMerge } from "tailwind-merge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { NavbarMenu } from "./navbar/navbar-menu";
-import NavbarMenuItem from "./navbar/navbar-menu-item";
 import { useScrolled } from "@/hooks/useScrolled";
 import ReactModal from "react-modal";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Link from "next/link";
+import { NavbarMenu } from "./navbar-menu";
+import NavbarMenuItem from "./navbar-menu-item";
+import Button from "../ui/button";
 
 ReactModal.setAppElement("#root");
 

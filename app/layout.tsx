@@ -3,13 +3,11 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import Navbar from "@/components/navbar";
 import { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Analytics } from "@vercel/analytics/react";
 import Modal from "@/components/modal";
 import VideoModal from "@/components/video-modal";
-import PDFModal from "@/components/pdf-modal";
 import { Suspense } from "react";
 
 config.autoAddCss = false;
@@ -88,8 +86,8 @@ export default async function RootLayout({
         {children}
         <Modal />
         <VideoModal />
-        <PDFModal />
         <Analytics />
+        {/* Since footer uses searchParams, we need  to wrap it in a suspense */}
         <Suspense fallback={null}>
           <Footer />
         </Suspense>

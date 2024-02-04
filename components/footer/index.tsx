@@ -7,16 +7,17 @@ import {
   faLinkedinIn,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { ReactNode, useEffect } from "react";
-import { twMerge } from "tailwind-merge";
+import { useEffect } from "react";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import HrccLogo from "@/public/horizontal.svg";
 import { executeScroll } from "@/utils/scroll";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
-import { MotionContainer } from "./motion";
-import Link from "next/link";
+import { MotionContainer } from "../motion";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import SocialMediaIcon from "./social-media.icon";
+import FooterRuler from "./footer-ruler";
+import FooterHeader from "./footer-header";
+import FooterLink from "./footer-link";
 
 export const Footer = () => {
   const { ref, controls } = useAnimationInView({
@@ -59,7 +60,7 @@ export const Footer = () => {
         }}
         className="text-blue-100-alpha text-sm"
       >
-        <FooterHorizontalRule />
+        <FooterRuler direction="horizontal" />
         <div className="grid sm:grid-cols-[1fr_1fr] md:grid-cols-[1fr_min-content_min-content] lg:grid-cols-[1fr_min-content_min-content_min-content] w-full gap-x-12 h-full items-stretch my-8">
           <address className="flex flex-col gap-y-4 whitespace-nowrap font-extralight w-full">
             <span className="fill-white w-[140px] py-1">
@@ -88,9 +89,9 @@ export const Footer = () => {
           </address>
 
           <div className="flex flex-col">
-            <FooterHorizontalRule className="sm:hidden my-8" />
+            <FooterRuler direction="horizontal" className="sm:hidden my-8" />
             <div className="flex items-stretch h-full">
-              <FooterVerticalRule className="hidden sm:block" />
+              <FooterRuler direction="vertical" className="hidden sm:block" />
               <div className="flex sm:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Renovations</FooterHeader>
                 <FooterLink
@@ -140,9 +141,12 @@ export const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <FooterHorizontalRule className="lg:hidden my-8" />
+            <FooterRuler direction="horizontal" className="lg:hidden my-8" />
             <div className="flex items-stretch h-full">
-              <FooterVerticalRule className="hidden sm:block md:hidden lg:block" />
+              <FooterRuler
+                direction="vertical"
+                className="hidden sm:block md:hidden lg:block"
+              />
               <div className="flex sm:ml-8 md:ml-0 lg:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Real Estate</FooterHeader>
 
@@ -186,9 +190,9 @@ export const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <FooterHorizontalRule className="md:hidden my-8" />
+            <FooterRuler direction="horizontal" className="md:hidden my-8" />
             <div className="flex items-stretch h-full">
-              <FooterVerticalRule className="hidden md:block" />
+              <FooterRuler direction="vertical" className="hidden md:block" />
               <div className="flex ml-0 md:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Club Info</FooterHeader>
                 <FooterLink
@@ -219,7 +223,8 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <FooterHorizontalRule />
+
+        <FooterRuler direction="horizontal" />
         <div className="flex flex-col sm:flex-row gap-y-8 items-center justify-between mt-12">
           <p className="font-extralight">
             Copyright © 2023 Hunters Run Country Club | All Rights Reserved
@@ -249,109 +254,5 @@ export const Footer = () => {
         </div>
       </MotionContainer>
     </footer>
-  );
-};
-
-const FooterLink = ({
-  children,
-  href,
-  className,
-  ariaLabel,
-  query,
-}: {
-  children: ReactNode;
-  href: string;
-  className?: string;
-  ariaLabel: string;
-  query?: string;
-}) => {
-  const pathname = usePathname();
-
-  if (pathname == href && query) {
-    return (
-      <p
-        className={twMerge(
-          "hover:text-blue-100 transition-all duration-150 cursor-pointer",
-          className
-        )}
-        onClick={() => {
-          executeScroll({
-            to: query,
-          });
-        }}
-      >
-        {children}
-      </p>
-    );
-  }
-  return (
-    <Link
-      href={{
-        pathname: href,
-        query: query
-          ? {
-              s: query,
-            }
-          : null,
-      }}
-      className={twMerge(
-        "hover:text-blue-100 transition-all duration-150",
-        className
-      )}
-      aria-label={ariaLabel}
-    >
-      {children}
-    </Link>
-  );
-};
-
-const FooterHorizontalRule = ({ className }: { className?: string }) => {
-  return (
-    <div
-      className={twMerge(
-        "bg-[#f0f6fc3d] h-[1px] w-full border-none outline-none",
-        className
-      )}
-    />
-  );
-};
-
-const FooterVerticalRule = ({ className }: { className?: string }) => {
-  return (
-    <div
-      className={twMerge(
-        "bg-[#f0f6fc3d] w-[1px] border-none outline-none",
-        className
-      )}
-    />
-  );
-};
-
-const FooterHeader = ({ children }: { children: ReactNode }) => {
-  return (
-    <p className="text-white uppercase tracking-[2px] font-extralight">
-      {children}
-    </p>
-  );
-};
-
-const SocialMediaIcon = ({
-  icon,
-  href,
-  ariaLabel,
-}: {
-  icon: IconProp;
-  href: string;
-  ariaLabel: string;
-}) => {
-  return (
-    <Link
-      target="_blank"
-      href={href}
-      aria-label={ariaLabel}
-      className="cursor-pointer hover:text-blue-100 transition-all duration-150"
-    >
-      <FontAwesomeIcon icon={icon} />
-    </Link>
   );
 };
