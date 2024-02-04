@@ -39,7 +39,7 @@ export const Footer = () => {
       to: s,
     });
     push(pathname);
-  }, [s]);
+  }, [s, push, pathname]);
 
   return (
     <footer className="py-16 overflow-x-hidden bg-blue-900">

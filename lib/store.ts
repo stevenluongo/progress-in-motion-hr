@@ -9,9 +9,6 @@ interface ModalStoreProps {
   isVideoModalOpen: boolean;
   setVideoModalOpen: () => void;
   setVideoModalClosed: () => void;
-  isPDFModalOpen: boolean;
-  setPDFModalOpen: (href: string) => void;
-  setPDFModalClosed: () => void;
   href: string;
 }
 
@@ -24,7 +21,6 @@ export const modalStore = createWithEqualityFn<
       isOpen: false,
       href: "",
       isVideoModalOpen: false,
-      isPDFModalOpen: false,
       setIsOpen: (value) => {
         setState(
           {
@@ -64,25 +60,6 @@ export const modalStore = createWithEqualityFn<
           { type: "setVideoModalClosed" }
         );
       },
-      setPDFModalOpen: (value) => {
-        setState(
-          {
-            isPDFModalOpen: true,
-            href: value,
-          },
-          false,
-          { type: "setPDFModalOpen" }
-        );
-      },
-      setPDFModalClosed: () => {
-        setState(
-          {
-            isPDFModalOpen: false,
-          },
-          false,
-          { type: "setPDFModalClosed" }
-        );
-      },
     }),
     { name: "previewStore" }
   )
@@ -98,9 +75,6 @@ export const useModalStore = () =>
       isVideoModalOpen,
       setVideoModalClosed,
       setVideoModalOpen,
-      isPDFModalOpen,
-      setPDFModalOpen,
-      setPDFModalClosed,
     }) => ({
       href,
       isOpen,
@@ -109,9 +83,6 @@ export const useModalStore = () =>
       isVideoModalOpen,
       setVideoModalClosed,
       setVideoModalOpen,
-      isPDFModalOpen,
-      setPDFModalOpen,
-      setPDFModalClosed,
     }),
 
     shallow
