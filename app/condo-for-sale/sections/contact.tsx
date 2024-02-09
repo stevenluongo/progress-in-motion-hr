@@ -112,7 +112,7 @@ const ContactSection = () => {
   });
 
   return (
-    <section className=" overflow-x-hidden">
+    <section id="contact" className=" overflow-x-hidden">
       <Container className="py-24 sm:py-36 lg:py-48">
         <Element name="contact">
           <ContentWrapper ref={ref}>
