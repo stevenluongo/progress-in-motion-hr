@@ -185,6 +185,13 @@ export const Footer = () => {
                 >
                   Pricing
                 </FooterLink>
+                <FooterLink
+                  ariaLabel="View the club membership benefits"
+                  href="/condo-for-sale"
+                  query="contact"
+                >
+                  Contact
+                </FooterLink>
               </div>
             </div>
           </div>

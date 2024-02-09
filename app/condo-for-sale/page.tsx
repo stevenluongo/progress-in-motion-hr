@@ -1,3 +1,4 @@
+import ContactSection from "./sections/contact";
 import Hero from "./sections/hero";
 import Overview from "./sections/overview";
 import VideoSection from "./sections/video";
@@ -10,6 +11,7 @@ export default function Page() {
       <Hero />
       <Overview />
       <VideoSection />
+      <ContactSection/>
     </>
   );
 }
