@@ -149,14 +149,6 @@ export const Footer = () => {
               />
               <div className="flex sm:ml-8 md:ml-0 lg:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Real Estate</FooterHeader>
-
-                <FooterLink
-                  ariaLabel="View the club membership benefits"
-                  href="/condo-for-sale"
-                  query="hero"
-                >
-                  Home
-                </FooterLink>
                 <FooterLink
                   ariaLabel="View the club membership benefits"
                   href="/condo-for-sale"

@@ -14,19 +14,11 @@ import {
 } from "@/components/motion";
 import { translateX, translateY } from "@/utils/variants";
 import {
-  faAlignCenter,
-  faBriefcase,
   faBuilding,
-  faCity,
   faComment,
-  faEnvelope,
-  faEnvelopeCircleCheck,
   faEnvelopeOpen,
-  faPhone,
   faPhoneVolume,
-  faSquarePhone,
   faUser,
-  faUserTie,
 } from "@fortawesome/free-solid-svg-icons";
 import { z } from "zod";
 import { useZodForm } from "@/hooks/useZodForm";
@@ -122,6 +114,7 @@ const ContactSection = () => {
                 variants={translateY({ delay: 0 })}
                 initial="initial"
               >
+                <ScriptSmall>welcome</ScriptSmall>
                 <TitleSmall>Interested ? Let&apos;s Chat.</TitleSmall>
               </MotionHeaderContainer>
               <form className="w-full flex flex-col gap-y-2" action={action}>

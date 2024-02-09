@@ -53,7 +53,7 @@ const Overview = () => {
                 variants={translateY({ delay: 0 })}
                 initial="initial"
               >
-                <Script>welcome</Script>
+                <Script>explore</Script>
                 <Title>30D Southport Lane</Title>
               </MotionHeaderContainer>
               <MotionBody
