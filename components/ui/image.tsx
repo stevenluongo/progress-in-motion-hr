@@ -1,5 +1,6 @@
 import { default as NextImage } from "next/image";
 import { forwardRef } from "react";
+import { twMerge } from "tailwind-merge";
 
 type ImageProps = {
   src: string;
@@ -13,7 +14,7 @@ const Image = forwardRef<HTMLImageElement, ImageProps>(
     return (
       <NextImage
         ref={ref}
-        className={className}
+        className={twMerge("rounded-sm", className)}
         fill
         sizes="(max-width: 768px) 100vw, 50vw"
         src={src}

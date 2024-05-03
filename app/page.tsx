@@ -7,14 +7,16 @@ import EastCourse from "./sections/east-course";
 import MainDiningRoom from "./sections/main-dining-room";
 import CallToAction from "./sections/call-to-action";
 import Navbar from "@/components/navbar";
+import Fitness from "./sections/fitness";
 
 export default function Page() {
   return (
     <>
       <Navbar />
       <Hero />
-      <TwentySixNorth />
+      <Fitness />
       <DrivingRange />
+      <TwentySixNorth />
       <MainLobby />
       <BarLounge />
       <EastCourse />

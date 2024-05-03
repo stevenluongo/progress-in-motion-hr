@@ -9,7 +9,6 @@ import { Analytics } from "@vercel/analytics/react";
 import Modal from "@/components/modal";
 import VideoModal from "@/components/video-modal";
 import { Suspense } from "react";
-import Head from "next/head";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 config.autoAddCss = false;

@@ -27,9 +27,10 @@ import {
   MotionTextContainer,
 } from "@/components/motion";
 import { translateX, translateY } from "@/utils/variants";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { useModalStore } from "@/lib/store";
+import { faCaretDown, faImage } from "@fortawesome/free-solid-svg-icons";
 
-const DrivingRange = () => {
+const Fitness = () => {
   const { ref, controls } = useAnimationInView({
     margin: "-150px -150px",
     delay: 750,
@@ -38,29 +39,42 @@ const DrivingRange = () => {
     margin: "-150px -150px",
     delay: 250,
   });
+
+  const { setIsOpen } = useModalStore();
+
   return (
-    <section className="bg-gradient-to-t from-transparent via-blue-100 to-transparent overflow-x-hidden">
+    <section className="overflow-x-hidden">
       <Container className="py-24 sm:py-36 lg:py-48">
-        <Element name="driving-range">
+        <Element name="fitness">
           <ContentWrapper ref={ref}>
-            <TextContainer className="md:order-2">
+            <TextContainer>
               <MotionHeaderContainer
                 animate={controls}
                 variants={translateY({ delay: 0 })}
                 initial="initial"
               >
-                <Script>redesigned</Script>
-                <Title>Driving Range</Title>
+                <Script>energize</Script>
+                <Title>Fitness Center</Title>
               </MotionHeaderContainer>
               <MotionBody
+                className="hidden lg:flex"
                 animate={controls}
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
-                className="text-center max-w-[500px] md:text-start"
               >
-                Get ready to tee off into a new era of golfing excellence as we
-                embark on a journey to elevate your practice experience through
-                the renovation of our Golf Driving Range.
+                Elevate your fitness experience at our state-of-the-art Fitness
+                Center, featuring the latest True Palladium equipment. A modern
+                layout ensures optimal flow and functionality, allowing you to
+                achieve your best workout.
+              </MotionBody>
+              <MotionBody
+                className="text-center max-w-[500px] md:text-start lg:hidden"
+                animate={controls}
+                variants={translateY({ delay: 0.25 })}
+                initial="initial"
+              >
+                Elevate your fitness experience with our state-of-the-art
+                equipment.
               </MotionBody>
               <MotionButtonGroup
                 animate={controls}
@@ -69,8 +83,13 @@ const DrivingRange = () => {
               >
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
+                  secondary
                   icon={faCaretDown}
-                  onClick={() => executeScroll({ to: "driving-range-more" })}
+                  onClick={() =>
+                    executeScroll({
+                      to: "fitness-more",
+                    })
+                  }
                 >
                   Learn More
                 </Button>
@@ -78,51 +97,50 @@ const DrivingRange = () => {
             </TextContainer>
             <MotionImageWrapper
               animate={controls}
-              variants={translateX({ delay: 0.5, reverse: true })}
+              variants={translateX({ delay: 0.5 })}
               initial="initial"
-              className="md:order-1"
             >
               <Image
-                src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/range-aerial.png"
-                alt="Image of golf course"
+                src="https://progress-in-motion.s3.amazonaws.com/Fitness/back.png"
+                alt="Image of the newly renovated 26 North restaurant."
               />
             </MotionImageWrapper>
           </ContentWrapper>
         </Element>
-        <Element name="driving-range-more">
+        <Element name="fitness-more">
           <ContentWrapper className="mt-24 sm:mt-36 lg:mt-48" ref={ref2}>
             <MotionTextContainer
+              className="md:order-2"
               animate={controls2}
               variants={translateY({ delay: 0.5 })}
               initial="initial"
             >
               <HeaderContainer>
-                <ScriptSmall>from</ScriptSmall>
-                <TitleSmall>Drive to excellence.</TitleSmall>
+                <ScriptSmall>enhance</ScriptSmall>
+                <TitleSmall>Your workout experience.</TitleSmall>
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
-                The renovated Driving Range provides the ideal space to unleash
-                your potential.
+                Our Fitness Center is designed for the well-being of our
+                members, featuring a variety of machines and spaces for both
+                strength and cardio workouts.
               </Body>
               <FeaturesGroup>
-                <Features icon="tee">Toptracer by Topgolf</Features>
-                <Features icon="drivingRange">
-                  More Driving Stations & Shade Structures
-                </Features>
-                <Features icon="drainage">Improved Drainage</Features>
-                <Features icon="target">Various Targets</Features>
+                <Features icon="candle">Advanced Equipment</Features>
+                <Features icon="drinks">Cardio Zone</Features>
+                <Features icon="service">Functional Training Area</Features>
+                <Features icon="outdoorSeating">Refreshing Design</Features>
               </FeaturesGroup>
             </MotionTextContainer>
             <MotionImageWrapper
-              variants={translateX({ delay: 0.25 })}
-              initial="initial"
               animate={controls2}
+              variants={translateX({ delay: 0.25, reverse: true })}
+              initial="initial"
               className="md:order-1"
             >
               <ImageBackground />
               <Image
-                src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/new-range.png"
-                alt="Close up picture of a golf ball"
+                src="https://progress-in-motion.s3.amazonaws.com/Fitness/equipment.png"
+                alt="Another view of the newly renovated 26 North restaurant."
               />
             </MotionImageWrapper>
           </ContentWrapper>
@@ -132,4 +150,4 @@ const DrivingRange = () => {
   );
 };
 
-export default DrivingRange;
+export default Fitness;
