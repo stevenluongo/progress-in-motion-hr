@@ -3,8 +3,8 @@
 import Container from "@/components/layout/container";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import TextContainer from "@/components/layout/text-container";
-import { ScriptSmall, TitleSmall } from "@/components/ui/typography";
-import Image from "@/components/ui/image";
+import { ScriptSmall, TitleSmall } from "@/components/common/typography";
+import Image from "@/components/common/image";
 import { Element } from "react-scroll";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import {
@@ -22,10 +22,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { z } from "zod";
 import { useZodForm } from "@/hooks/useZodForm";
-import FormInput from "@/components/ui/form/form-input";
-import FormTextArea from "@/components/ui/form/form-textarea";
-import FormButton from "@/components/ui/form/button";
-import ImageBackground from "@/components/ui/image-background";
+import FormInput from "@/components/common/form/form-input";
+import FormTextArea from "@/components/common/form/form-textarea";
+import FormButton from "@/components/common/form/button";
+import ImageBackground from "@/components/common/image-background";
 import { sendEmail } from "@/lib/actions";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";

@@ -3,8 +3,8 @@
 import Container from "@/components/layout/container";
 import ContentWrapper from "@/components/layout/content-wrapper";
 import FeaturesGroup from "@/components/layout/features-group";
-import Button from "@/components/ui/button";
-import Features from "@/components/ui/features";
+import Button from "@/components/common/button";
+import Features from "@/components/common/features";
 import HeaderContainer from "@/components/layout/header-container";
 import TextContainer from "@/components/layout/text-container";
 import {
@@ -13,9 +13,9 @@ import {
   ScriptSmall,
   Title,
   TitleSmall,
-} from "@/components/ui/typography";
-import Image from "@/components/ui/image";
-import ImageBackground from "@/components/ui/image-background";
+} from "@/components/common/typography";
+import Image from "@/components/common/image";
+import ImageBackground from "@/components/common/image-background";
 import { Element } from "react-scroll";
 import { executeScroll } from "@/utils/scroll";
 import { useAnimationInView } from "@/hooks/useAnimationInView";

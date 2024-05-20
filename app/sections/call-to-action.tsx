@@ -2,7 +2,7 @@
 
 import Container from "@/components/layout/container";
 import { MotionBody, MotionScript, MotionWrapper } from "@/components/motion";
-import Button from "@/components/ui/button";
+import Button from "@/components/common/button";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { translateY } from "@/utils/variants";
 import { faContactCard } from "@fortawesome/free-solid-svg-icons";

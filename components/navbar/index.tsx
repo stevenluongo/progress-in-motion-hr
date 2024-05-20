@@ -11,7 +11,7 @@ import { twMerge } from "tailwind-merge";
 
 // Relative imports.
 import HrccLogo from "@/public/horizontal.svg";
-import Button from "../ui/button";
+import Button from "../common/button";
 import { useScrolled } from "@/hooks/useScrolled";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { NavbarMenu } from "./navbar-menu";

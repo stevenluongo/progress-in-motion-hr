@@ -12,7 +12,7 @@ import {
 import { translateY } from "@/utils/variants";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import Button from "@/components/ui/button";
+import Button from "@/components/common/button";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {

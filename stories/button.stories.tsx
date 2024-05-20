@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Button from "../components/ui/button";
+import Button from "../components/common/button";
 import { faEnvelope, faImage } from "@fortawesome/free-solid-svg-icons";
 
 const meta = {

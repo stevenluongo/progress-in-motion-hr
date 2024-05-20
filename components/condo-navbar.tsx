@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useState } from "react";
-import Button from "./ui/button";
+import Button from "./common/button";
 import HrccLogo from "@/public/horizontal.svg";
 import { twMerge } from "tailwind-merge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -1,11 +1,11 @@
 import { MotionProps, motion } from "framer-motion";
 import HeaderContainer from "./layout/header-container";
-import { Body, Script, TitleLarge } from "./ui/typography";
-import ButtonGroup from "./ui/button-group";
-import ImageWrapper from "./ui/image-wrapper";
+import { Body, Script, TitleLarge } from "./common/typography";
+import ButtonGroup from "./common/button-group";
+import ImageWrapper from "./common/image-wrapper";
 import TextContainer from "./layout/text-container";
-import Button from "./ui/button";
-import Image from "./ui/image";
+import Button from "./common/button";
+import Image from "./common/image";
 import Container from "./layout/container";
 
 export const MotionHeaderContainer = motion(HeaderContainer);

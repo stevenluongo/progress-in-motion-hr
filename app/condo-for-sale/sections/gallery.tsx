@@ -2,7 +2,7 @@
 
 import Container from "@/components/layout/container";
 import { MotionHeaderContainer } from "@/components/motion";
-import { Script, TitleSmall } from "@/components/ui/typography";
+import { Script, TitleSmall } from "@/components/common/typography";
 import { useAnimationInView } from "@/hooks/useAnimationInView";
 import { translateY } from "@/utils/variants";
 

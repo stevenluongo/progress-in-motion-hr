@@ -1,4 +1,4 @@
-import { Kumbh_Sans, Prata } from "next/font/google";
+import { Kumbh_Sans as FontSans, Prata } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -17,7 +17,9 @@ const adelia = localFont({
   src: "../public/adelia.woff2",
   variable: "--font-adelia",
 });
-const kumbhSans = Kumbh_Sans({ subsets: ["latin"], variable: "--font-kumbh" });
+
+const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
+
 const prata = Prata({
   subsets: ["latin"],
   variable: "--font-prata",
@@ -82,7 +84,7 @@ export default async function RootLayout({
   return (
     <html lang="en" id="root">
       <body
-        className={`${kumbhSans.variable} ${prata.variable} ${adelia.variable}`}
+        className={`${fontSans.variable} ${prata.variable} ${adelia.variable}`}
       >
         {children}
         <Modal />
