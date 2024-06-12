@@ -149,7 +149,7 @@ const TwentySixNorth = () => {
             >
               <ImageBackground />
               <Image
-                src="https://progress-in-motion.s3.amazonaws.com/26+North/26North2.jpg"
+                src="https://progress-in-motion.s3.amazonaws.com/26+North/food.png"
                 alt="Another view of the newly renovated 26 North restaurant."
               />
             </MotionImageWrapper>

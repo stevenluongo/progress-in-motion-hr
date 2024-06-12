@@ -82,7 +82,19 @@ const Fitness = () => {
                 initial="initial"
               >
                 <Button
+                  onClick={() =>
+                    setIsOpen(
+                      "https://progress-in-motion.s3.amazonaws.com/Fitness/old.png"
+                    )
+                  }
+                  className="w-full xs:w-fit"
+                  icon={faImage}
+                >
+                  View Before
+                </Button>
+                <Button
                   className="hidden xs:flex md:hidden lg:flex"
+                  secondary
                   icon={faCaretDown}
                   onClick={() => executeScroll({ to: "fitness-more" })}
                 >

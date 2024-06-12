@@ -226,7 +226,7 @@ export const Footer = () => {
         <FooterRuler direction="horizontal" />
         <div className="flex flex-col sm:flex-row gap-y-8 items-center justify-between mt-12">
           <p className="font-extralight">
-            Copyright © 2023 Hunters Run Country Club | All Rights Reserved
+            Copyright © 2024 Hunters Run Country Club | All Rights Reserved
           </p>
           <span className="flex gap-x-8 items-center text-base">
             <SocialMediaIcon
