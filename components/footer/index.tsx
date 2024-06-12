@@ -42,7 +42,7 @@ export const Footer = () => {
   }, [s, push, pathname]);
 
   return (
-    <footer className="py-16 overflow-x-hidden bg-blue-900">
+    <footer className="py-16 overflow-x-hidden bg-blue-900 font-sans">
       <MotionContainer
         ref={ref}
         animate={controls}

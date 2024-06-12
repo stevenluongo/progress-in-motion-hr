@@ -83,7 +83,7 @@ const DrivingRange = () => {
               className="md:order-1"
             >
               <Image
-                src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/range-aerial.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/aerial_2.png"
                 alt="Image of golf course"
               />
             </MotionImageWrapper>
@@ -121,7 +121,7 @@ const DrivingRange = () => {
             >
               <ImageBackground />
               <Image
-                src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/new-range.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Driving+Range/bays.png"
                 alt="Close up picture of a golf ball"
               />
             </MotionImageWrapper>

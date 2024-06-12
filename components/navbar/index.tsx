@@ -51,8 +51,9 @@ const Navbar: React.FC = () => {
         <ContactButton isScrolled={isScrolled} isMenuOpen={isMenuOpen} />
       </div>
       <NavbarMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}>
-        <NavbarMenuItem to="twenty-six-north">26 North</NavbarMenuItem>
+        <NavbarMenuItem to="fitness">Fitness</NavbarMenuItem>
         <NavbarMenuItem to="driving-range">Driving Range</NavbarMenuItem>
+        <NavbarMenuItem to="twenty-six-north">26 North</NavbarMenuItem>
         <NavbarMenuItem to="main-lobby">Main Lobby</NavbarMenuItem>
         <NavbarMenuItem to="bar-lounge">Bar & Lounge</NavbarMenuItem>
         <NavbarMenuItem to="east-course">East Course</NavbarMenuItem>

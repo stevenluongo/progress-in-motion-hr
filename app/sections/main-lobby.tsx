@@ -93,9 +93,9 @@ const MainLobby = () => {
                 initial="initial"
                 className="text-center max-w-[500px] md:text-start"
               >
-                A bright transformation is underway, as we re-imagine and
-                refresh our current lobby space into a realm of quintessential
-                warmth and unpretentious sophistication.
+                A bright transformation is complete. Our current lobby space is
+                a realm of quintessential warmth and unpretentious
+                sophistication.
               </MotionBody>
               <MotionButtonGroup
                 animate={controls2}
@@ -155,7 +155,7 @@ const MainLobby = () => {
               <FeaturesGroup>
                 <Features icon="bright">Bright, Inviting Atmosphere</Features>
                 <Features icon="connections">Multiple Meeting Spaces</Features>
-                <Features icon="hostStand">Dedicated Reception Desk</Features>
+                <Features icon="hostStand">Dedicated Concierge Desk</Features>
                 <Features icon="tech">Communal, Tech Table</Features>
               </FeaturesGroup>
             </MotionTextContainer>

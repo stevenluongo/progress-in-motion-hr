@@ -83,13 +83,8 @@ const Fitness = () => {
               >
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
-                  secondary
                   icon={faCaretDown}
-                  onClick={() =>
-                    executeScroll({
-                      to: "fitness-more",
-                    })
-                  }
+                  onClick={() => executeScroll({ to: "fitness-more" })}
                 >
                   Learn More
                 </Button>
@@ -101,7 +96,7 @@ const Fitness = () => {
               initial="initial"
             >
               <Image
-                src="https://progress-in-motion.s3.amazonaws.com/Fitness/back.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Fitness/front.png"
                 alt="Image of the newly renovated 26 North restaurant."
               />
             </MotionImageWrapper>
@@ -125,10 +120,10 @@ const Fitness = () => {
                 strength and cardio workouts.
               </Body>
               <FeaturesGroup>
-                <Features icon="candle">Advanced Equipment</Features>
-                <Features icon="drinks">Cardio Zone</Features>
-                <Features icon="service">Functional Training Area</Features>
-                <Features icon="outdoorSeating">Refreshing Design</Features>
+                <Features icon="tech">Advanced Equipment</Features>
+                <Features icon="target">Cardio Zone</Features>
+                <Features icon="carpet">Functional Training Area</Features>
+                <Features icon="bright">Refreshing Design</Features>
               </FeaturesGroup>
             </MotionTextContainer>
             <MotionImageWrapper
@@ -139,7 +134,7 @@ const Fitness = () => {
             >
               <ImageBackground />
               <Image
-                src="https://progress-in-motion.s3.amazonaws.com/Fitness/equipment.png"
+                src="https://progress-in-motion.s3.amazonaws.com/Fitness/back.png"
                 alt="Another view of the newly renovated 26 North restaurant."
               />
             </MotionImageWrapper>
