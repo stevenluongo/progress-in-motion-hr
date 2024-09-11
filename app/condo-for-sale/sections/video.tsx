@@ -139,15 +139,15 @@ const VideoSection = () => {
                 <TitleSmall>Secure your sanctuary.</TitleSmall>
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
-                Offered at $185,000, 30D Southport Lane is an investment in
-                unparalleled luxury and convenience. The comprehensive 2024
-                Quarterly HOA Fee of $2,398 ensures access to premium services
-                including 24-hour security, pest control, entertainment options,
-                and exclusive community facilities.
+                30D Southport Lane is an investment in unparalleled luxury and
+                convenience. The comprehensive 2024 Quarterly HOA Fee of $2,398
+                ensures access to premium services including 24-hour security,
+                pest control, entertainment options, and exclusive community
+                facilities.
               </Body>
               <Body className="text-center md:text-start lg:hidden">
-                Offered at $185,000, 30D Southport Lane is an investment in
-                unparalleled luxury and convenience.
+                30D Southport Lane is an investment in unparalleled luxury and
+                convenience.
               </Body>
               <MotionButtonGroup
                 animate={controls2}
@@ -155,7 +155,7 @@ const VideoSection = () => {
                 initial="initial"
               >
                 <Link
-                  href="https://progressive-buyer.s3.amazonaws.com/realtor+prospective+buyer+30D.pdf"
+                  href="https://progress-in-motion.s3.amazonaws.com/30D/sample+2-2+condo+southport.pdf"
                   target="_blank"
                   className="w-full xs:w-fit"
                 >
