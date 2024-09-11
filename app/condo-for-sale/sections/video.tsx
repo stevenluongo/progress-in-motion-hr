@@ -76,7 +76,11 @@ const VideoSection = () => {
                 initial="initial"
               >
                 <Button
-                  onClick={() => setVideoModalOpen()}
+                  onClick={() =>
+                    setVideoModalOpen(
+                      "https://player.vimeo.com/video/902402136?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    )
+                  }
                   className="w-full xs:w-fit"
                   icon={faCirclePlay}
                 >
@@ -108,7 +112,11 @@ const VideoSection = () => {
               />
               <div
                 className="absolute w-full h-full top-0 left-0 bg-black bg-opacity-40 transition-all duration-300 group hover:bg-opacity-30 flex justify-center items-center cursor-pointer"
-                onClick={() => setVideoModalOpen()}
+                onClick={() =>
+                  setVideoModalOpen(
+                    "https://player.vimeo.com/video/902402136?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  )
+                }
               >
                 <FontAwesomeIcon
                   icon={faPlay}

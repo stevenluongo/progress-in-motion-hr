@@ -12,7 +12,7 @@ const VideoModal = () => {
   const {
     isVideoModalOpen: isOpen,
     setVideoModalClosed: setIsClosed,
-    href,
+    videoSrc,
   } = useModalStore();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -58,7 +58,7 @@ const VideoModal = () => {
         className="w-screen md:w-[80vw]"
       >
         <iframe
-          src="https://player.vimeo.com/video/902402136?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          src={videoSrc}
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           onLoad={() => setIsLoading(false)}

@@ -27,9 +27,17 @@ import {
 import { translateX, translateY } from "@/utils/variants";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { faBook, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBook,
+  faCaretDown,
+  faPlay,
+  faVideo,
+} from "@fortawesome/free-solid-svg-icons";
+import { useModalStore } from "@/lib/store";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const EastCourse = () => {
+  const { setVideoModalOpen } = useModalStore();
   const { ref, controls } = useAnimationInView({
     delay: 500,
     margin: "-150px -150px",
@@ -139,15 +147,35 @@ const EastCourse = () => {
                 ensuring that both avid golf enthusiasts and newcomers can enjoy
                 a fantastic golfing experience.
               </Body>
-              <Link
-                target="_blank"
-                aria-label="View the East Course Renovation Hole by Hole Web Booklet"
-                href="https://www.huntersrun.net/documents/10184/14462025/East+Course+Renovation+Hole+by+Hole+Web+Booklet.pdf?t=1692393509574"
+
+              <MotionButtonGroup
+                animate={controls3}
+                variants={translateY({ delay: 0.5 })}
+                initial="initial"
               >
-                <Button className="w-full xs:w-fit" icon={faBook}>
-                  View Booklet
+                <Link
+                  target="_blank"
+                  aria-label="View the East Course Renovation Hole by Hole Web Booklet"
+                  href="https://www.huntersrun.net/documents/10184/14462025/East+Course+Renovation+Hole+by+Hole+Web+Booklet.pdf?t=1692393509574"
+                >
+                  <Button className="w-full xs:w-fit" icon={faBook}>
+                    View Booklet
+                  </Button>
+                </Link>
+
+                <Button
+                  className="hidden xs:flex md:hidden lg:flex"
+                  secondary
+                  icon={faVideo}
+                  onClick={() =>
+                    setVideoModalOpen(
+                      "https://www.youtube.com/embed/videoseries?si=7NNgG4z0mbjhSV5L&amp;list=PL0ALW9uq71x3Cgh6I8h0-Z8ygJSmD978k"
+                    )
+                  }
+                >
+                  Watch Videos
                 </Button>
-              </Link>
+              </MotionButtonGroup>
             </MotionTextContainer>
             <MotionImageWrapper
               animate={controls3}
@@ -159,6 +187,20 @@ const EastCourse = () => {
                 src="https://progress-in-motion.s3.amazonaws.com/East+Course/map.png"
                 alt="A map of the proposed changes to the east golf course"
               />
+              <div
+                className="absolute w-full h-full top-0 left-0 bg-black bg-opacity-40 transition-all duration-300 group hover:bg-opacity-30 flex justify-center items-center cursor-pointer"
+                onClick={() =>
+                  setVideoModalOpen(
+                    "https://www.youtube.com/embed/videoseries?si=7NNgG4z0mbjhSV5L&amp;list=PL0ALW9uq71x3Cgh6I8h0-Z8ygJSmD978k"
+                  )
+                }
+              >
+                <FontAwesomeIcon
+                  icon={faPlay}
+                  className="group-hover:scale-105 transition-all duration-300"
+                  style={{ width: 30, height: 30, color: "white" }}
+                />
+              </div>
             </MotionImageWrapper>
           </ContentWrapper>
         </Element>

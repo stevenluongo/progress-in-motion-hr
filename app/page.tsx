@@ -14,12 +14,12 @@ export default function Page() {
     <>
       <Navbar />
       <Hero />
-      <Fitness />
+      <EastCourse />
       <DrivingRange />
       <TwentySixNorth />
       <MainLobby />
+      <Fitness />
       <BarLounge />
-      <EastCourse />
       <MainDiningRoom />
       <CallToAction />
     </>

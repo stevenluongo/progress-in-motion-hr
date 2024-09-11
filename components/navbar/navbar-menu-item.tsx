@@ -34,7 +34,7 @@ const NavbarMenuItem: React.FC<NavbarMenuItemProps> = ({
       tabIndex={-1}
       onClick={handleMenuClick}
     >
-      <div className="container px-8 mx-auto">{children}</div>
+      <div className="container px-8 mx-auto font-sans">{children}</div>
     </button>
   );
 };

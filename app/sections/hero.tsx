@@ -57,7 +57,7 @@ const Hero = () => {
             <Button
               onClick={() =>
                 executeScroll({
-                  to: "fitness",
+                  to: "east-course",
                   offset: isMobile ? -100 : -200,
                 })
               }

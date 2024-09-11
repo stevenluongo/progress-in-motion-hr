@@ -61,7 +61,7 @@ export const Footer = () => {
         className="text-blue-100-alpha text-sm"
       >
         <FooterRuler direction="horizontal" />
-        <div className="grid sm:grid-cols-[1fr_1fr] md:grid-cols-[1fr_min-content_min-content] lg:grid-cols-[1fr_min-content_min-content_min-content] w-full gap-x-12 h-full items-stretch my-8">
+        <div className="grid sm:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_min-content_min-content_min-content] w-full gap-x-12 h-full items-stretch my-8">
           <address className="flex flex-col gap-y-4 whitespace-nowrap font-extralight w-full">
             <span className="fill-white w-[140px] py-1">
               <HrccLogo />
@@ -95,11 +95,11 @@ export const Footer = () => {
               <div className="flex sm:ml-8 flex-col gap-y-3 whitespace-nowrap font-extralight w-full">
                 <FooterHeader>Renovations</FooterHeader>
                 <FooterLink
-                  ariaLabel="View the club 26 North restaurant"
+                  ariaLabel="View the club east course"
                   href="/"
-                  query="twenty-six-north"
+                  query="east-course"
                 >
-                  26 North
+                  East Course
                 </FooterLink>
                 <FooterLink
                   ariaLabel="View the club driving range"
@@ -109,6 +109,13 @@ export const Footer = () => {
                   Driving Range
                 </FooterLink>
                 <FooterLink
+                  ariaLabel="View the club 26 North restaurant"
+                  href="/"
+                  query="twenty-six-north"
+                >
+                  26 North
+                </FooterLink>
+                <FooterLink
                   ariaLabel="View the club main lobby"
                   href="/"
                   query="main-lobby"
@@ -116,18 +123,18 @@ export const Footer = () => {
                   Main Lobby
                 </FooterLink>
                 <FooterLink
+                  ariaLabel="View the club fitness center"
+                  href="/"
+                  query="fitness"
+                >
+                  Fitness
+                </FooterLink>
+                <FooterLink
                   ariaLabel="View the club bar lounge"
                   href="/"
                   query="bar-lounge"
                 >
                   Bar Lounge
-                </FooterLink>
-                <FooterLink
-                  ariaLabel="View the club east course"
-                  href="/"
-                  query="east-course"
-                >
-                  East Course
                 </FooterLink>
                 <FooterLink
                   ariaLabel="View the club main dining room"

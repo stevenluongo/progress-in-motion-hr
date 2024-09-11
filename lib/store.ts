@@ -7,8 +7,9 @@ interface ModalStoreProps {
   setIsOpen: (href: string) => void;
   setIsClosed: () => void;
   isVideoModalOpen: boolean;
-  setVideoModalOpen: () => void;
+  setVideoModalOpen: (src: string) => void;
   setVideoModalClosed: () => void;
+  videoSrc: string;
   href: string;
 }
 
@@ -20,6 +21,7 @@ export const modalStore = createWithEqualityFn<
     (setState, getState) => ({
       isOpen: false,
       href: "",
+      videoSrc: "",
       isVideoModalOpen: false,
       setIsOpen: (value) => {
         setState(
@@ -41,10 +43,11 @@ export const modalStore = createWithEqualityFn<
           { type: "setIsClosed" }
         );
       },
-      setVideoModalOpen: () => {
+      setVideoModalOpen: (src: string) => {
         setState(
           {
             isVideoModalOpen: true,
+            videoSrc: src,
           },
           false,
           { type: "setVideoModalOpen" }
@@ -54,7 +57,7 @@ export const modalStore = createWithEqualityFn<
         setState(
           {
             isVideoModalOpen: false,
-            href: "",
+            videoSrc: "",
           },
           false,
           { type: "setVideoModalClosed" }
@@ -75,6 +78,7 @@ export const useModalStore = () =>
       isVideoModalOpen,
       setVideoModalClosed,
       setVideoModalOpen,
+      videoSrc,
     }) => ({
       href,
       isOpen,
@@ -83,6 +87,7 @@ export const useModalStore = () =>
       isVideoModalOpen,
       setVideoModalClosed,
       setVideoModalOpen,
+      videoSrc,
     }),
 
     shallow
