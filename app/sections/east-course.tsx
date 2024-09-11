@@ -164,8 +164,6 @@ const EastCourse = () => {
                 </Link>
 
                 <Button
-                  className="hidden xs:flex md:hidden lg:flex"
-                  secondary
                   icon={faVideo}
                   onClick={() =>
                     setVideoModalOpen(

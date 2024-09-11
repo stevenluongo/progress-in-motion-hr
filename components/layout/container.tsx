@@ -6,7 +6,10 @@ const Container = forwardRef<
   { children: ReactNode; className?: string }
 >(({ children, className }, ref) => {
   return (
-    <div ref={ref} className={twMerge("container mx-auto px-8", className)}>
+    <div
+      ref={ref}
+      className={twMerge("container mx-auto px-4 sm:px-8", className)}
+    >
       {children}
     </div>
   );
