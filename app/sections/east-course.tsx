@@ -97,11 +97,11 @@ const EastCourse = () => {
                 initial="initial"
                 className="text-center max-w-[500px] md:text-start"
               >
-                Exciting changes are on the horizon as we proudly present the
-                East Golf Course Renovation Project. This endeavor marks a
-                thrilling chapter in our commitment to enhancing the golfing
-                adventure, where tradition meets innovation for an even more
-                enjoyable experience.
+                We&apos;re proud to announce the successful completion of the
+                East Golf Course Renovation Project! This transformative upgrade
+                marks a new chapter in our commitment to enhancing the golfing
+                experience to create an even more enjoyable and memorable game
+                for all.
               </MotionBody>
               <MotionButtonGroup
                 animate={controls2}
@@ -142,10 +142,10 @@ const EastCourse = () => {
                 <TitleSmall>Fairway forward.</TitleSmall>
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
-                This project is a true reflection of our dedication to both golf
-                and nature. By revitalizing the East Golf Course, we&apos;re
-                ensuring that both avid golf enthusiasts and newcomers can enjoy
-                a fantastic golfing experience.
+                This project stands as a true reflection of our dedication to
+                both golf and nature. With the revitalization of the East Golf
+                Course now complete, both avid golf enthusiasts and newcomers
+                alike can enjoy a refreshed and exceptional golfing experience.
               </Body>
 
               <MotionButtonGroup
