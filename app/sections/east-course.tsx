@@ -124,7 +124,7 @@ const EastCourse = () => {
               className="md:order-1"
             >
               <Image
-                src="https://progress-in-motion.s3.amazonaws.com/East+Course/east-course.png"
+                src="/hunters-run-east.png"
                 alt="An aerial view of the current east golf course"
               />
             </MotionImageWrapper>
@@ -167,7 +167,7 @@ const EastCourse = () => {
                   icon={faVideo}
                   onClick={() =>
                     setVideoModalOpen(
-                      "https://www.youtube.com/embed/videoseries?si=7NNgG4z0mbjhSV5L&amp;list=PL0ALW9uq71x3Cgh6I8h0-Z8ygJSmD978k"
+                      "https://player.vimeo.com/video/1069712641?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                     )
                   }
                 >
@@ -189,7 +189,7 @@ const EastCourse = () => {
                 className="absolute w-full h-full top-0 left-0 bg-black bg-opacity-40 transition-all duration-300 group hover:bg-opacity-30 flex justify-center items-center cursor-pointer"
                 onClick={() =>
                   setVideoModalOpen(
-                    "https://www.youtube.com/embed/videoseries?si=7NNgG4z0mbjhSV5L&amp;list=PL0ALW9uq71x3Cgh6I8h0-Z8ygJSmD978k"
+                    "https://player.vimeo.com/video/1069712641?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                   )
                 }
               >
