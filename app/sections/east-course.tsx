@@ -171,7 +171,7 @@ const EastCourse = () => {
                     )
                   }
                 >
-                  Watch Videos
+                  Photo Slideshow
                 </Button>
               </MotionButtonGroup>
             </MotionTextContainer>
