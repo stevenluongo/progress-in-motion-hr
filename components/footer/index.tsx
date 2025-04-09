@@ -80,7 +80,7 @@ export const Footer = () => {
             </FooterLink>
             <FooterLink
               ariaLabel="Email us at membership@huntersrun.net"
-              href="tel:561-737-2582"
+              href="mailto:membership@huntersrun.net"
               className="flex gap-x-2 items-center"
             >
               <FontAwesomeIcon icon={faEnvelope} />
