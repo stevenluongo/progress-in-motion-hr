@@ -65,10 +65,9 @@ const VideoSection = () => {
                 initial="initial"
                 className="text-center max-w-[500px] md:text-start"
               >
-                Step inside the essence of luxury living with our exclusive
-                video tour of 30D Southport Lane. Experience the meticulous
-                attention to detail, from the modern, open-concept design and
-                high-end finishes to the serene golf course views.
+                Step inside a model 2 Bedroom / 2 Bath. Experience the
+                meticulous attention to detail, from the modern, open-concept
+                design and high-end finishes to the serene golf course views.
               </MotionBody>
               <MotionButtonGroup
                 animate={controls}
@@ -78,7 +77,7 @@ const VideoSection = () => {
                 <Button
                   onClick={() =>
                     setVideoModalOpen(
-                      "https://player.vimeo.com/video/902402136?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                      "https://player.vimeo.com/video/1074046109?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                     )
                   }
                   className="w-full xs:w-fit"
@@ -114,7 +113,7 @@ const VideoSection = () => {
                 className="absolute w-full h-full top-0 left-0 bg-black bg-opacity-40 transition-all duration-300 group hover:bg-opacity-30 flex justify-center items-center cursor-pointer"
                 onClick={() =>
                   setVideoModalOpen(
-                    "https://player.vimeo.com/video/902402136?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    "https://player.vimeo.com/video/1074046109?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                   )
                 }
               >
@@ -136,14 +135,13 @@ const VideoSection = () => {
             >
               <HeaderContainer>
                 <ScriptSmall>elegance</ScriptSmall>
-                <TitleSmall>Secure your sanctuary.</TitleSmall>
+                <TitleSmall>Act Now - Models Going Fast</TitleSmall>
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
-                30D Southport Lane is an investment in unparalleled luxury and
-                convenience. The comprehensive 2024 Quarterly HOA Fee of $2,398
-                ensures access to premium services including 24-hour security,
-                pest control, entertainment options, and exclusive community
-                facilities.
+                Renovated condos are going fast. You&apos;ll enjoy 24-hour guard
+                gate and paramedics, internet and cable service, and exclusive
+                country club amenities as a member. Act now—these won&apos;t
+                last.
               </Body>
               <Body className="text-center md:text-start lg:hidden">
                 30D Southport Lane is an investment in unparalleled luxury and
@@ -155,7 +153,7 @@ const VideoSection = () => {
                 initial="initial"
               >
                 <Link
-                  href="https://progress-in-motion.s3.amazonaws.com/30D/sample+2-2+condo+southport.pdf"
+                  href="https://www.flexmls.com/link.html?1wgrg1p2lnmi,15,1"
                   target="_blank"
                   className="w-full xs:w-fit"
                 >

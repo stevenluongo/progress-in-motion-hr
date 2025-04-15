@@ -54,7 +54,7 @@ const Overview = () => {
                 initial="initial"
               >
                 <Script>explore</Script>
-                <Title>30D Southport Lane</Title>
+                <Title>Luxury Living</Title>
               </MotionHeaderContainer>
               <MotionBody
                 className="hidden lg:flex"
@@ -62,11 +62,10 @@ const Overview = () => {
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
               >
-                Residing at 30D Southport Lane offers an unparalleled living
-                experience, where every detail has been meticulously remodeled
-                from floor to ceiling. This top unit boasts breathtaking views
-                of the golf course, ensuring a serene backdrop to your daily
-                living.
+                Residing at Hunters Run offers an unparalleled living
+                experience. Renovated condos have been meticulously remodeled
+                from floor to ceiling. These top units are light and bright,
+                ensuring a serene backdrop to your daily living.
               </MotionBody>
               <MotionButtonGroup
                 animate={controls}
@@ -120,18 +119,18 @@ const Overview = () => {
             >
               <HeaderContainer>
                 <ScriptSmall>luxury</ScriptSmall>
-                <TitleSmall>Designed for comfort.</TitleSmall>
+                <TitleSmall>Designed for simplicity</TitleSmall>
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
-                The heart of this home is the open concept kitchen and living
-                area, illuminated by recessed lighting, featuring new
-                stainless-steel appliances, soft-close cabinets, and a quartz
-                kitchen island under elegant pendant lights.
+                These homes have an open concept kitchen and living area,
+                illuminated by recessed lighting, featuring new stainless-steel
+                appliances, soft-close cabinets, and a quartz kitchen island
+                under elegant pendant lights.
               </Body>
               <FeaturesGroup>
                 <Features icon="candle">2 Bed / 2 Bath</Features>
                 <Features icon="drinks">Top Unit Second Floor</Features>
-                <Features icon="service">1383 Indoor SQ. FT.</Features>
+                <Features icon="service">~1383 Indoor SQ. FT.</Features>
                 <Features icon="outdoorSeating">
                   Open Concept Living Area
                 </Features>

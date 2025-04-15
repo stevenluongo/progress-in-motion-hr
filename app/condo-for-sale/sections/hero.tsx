@@ -46,7 +46,8 @@ const Hero = () => {
             variants={translateY({ delay: 0 })}
             initial="initial"
           >
-            30D Southport <br /> Condo For Sale
+            Move-in Renovated
+            <br /> Condos
           </MotionTitleLarge>
           <MotionTitleLarge
             className="!text-center text-white block sm:hidden"
@@ -54,8 +55,8 @@ const Hero = () => {
             variants={translateY({ delay: 0 })}
             initial="initial"
           >
-            30D Condo
-            <br /> For Sale
+            Move-in Renovated
+            <br /> Condos
           </MotionTitleLarge>
           <MotionWrapper
             animate={controls}
