@@ -19,6 +19,10 @@ import Tee from "../../../public/icons/tee.svg";
 import Window from "../../../public/icons/window.svg";
 import DrivingRange from "../../../public/icons/driving.svg";
 import Seating from "../../../public/icons/seating.svg";
+import Tennis from "../../../public/icons/racquets/tennis.svg";
+import Racquet from "../../../public/icons/racquets/racquet.svg";
+import Certificate from "../../../public/icons/racquets/certificate.svg";
+import Lightbulb from "../../../public/icons/racquets/lightbulb.svg";
 
 export type IconsLiteral =
   | "barSeating"
@@ -40,7 +44,11 @@ export type IconsLiteral =
   | "tech"
   | "tee"
   | "drivingRange"
-  | "window";
+  | "window"
+  | "tennis"
+  | "racquet"
+  | "certificate"
+  | "lightbulb";
 
 type IconsType = {
   [key in IconsLiteral]: FC;
@@ -67,6 +75,10 @@ const Icons: IconsType = {
   tech: () => <Tech />,
   tee: () => <Tee />,
   window: () => <Window />,
+  tennis: () => <Tennis />,
+  racquet: () => <Racquet />,
+  certificate: () => <Certificate />,
+  lightbulb: () => <Lightbulb />,
 };
 
 export default Icons;

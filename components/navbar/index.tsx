@@ -16,6 +16,7 @@ import { useScrolled } from "@/hooks/useScrolled";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { NavbarMenu } from "./navbar-menu";
 import NavbarMenuItem from "./navbar-menu-item";
+import { executeScroll } from "@/utils/scroll";
 
 // Set app element for accessibility.
 ReactModal.setAppElement("#root");
@@ -40,26 +41,31 @@ const Navbar: React.FC = () => {
   );
 
   return (
-    <nav className={navbarClassName}>
-      <div
-        className="cursor-pointer sm:cursor-auto flex container px-8 mx-auto relative justify-between sm:justify-center items-center h-16"
-        onClick={() => isMobile && toggleMenu()}
-      >
-        <MenuButton toggleMenu={toggleMenu} />
-        <Logo />
-        <HamburgerIcon />
-        <ContactButton isScrolled={isScrolled} isMenuOpen={isMenuOpen} />
-      </div>
-      <NavbarMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}>
-        <NavbarMenuItem to="east-course">East Course</NavbarMenuItem>
-        <NavbarMenuItem to="driving-range">Driving Range</NavbarMenuItem>
-        <NavbarMenuItem to="twenty-six-north">26 North</NavbarMenuItem>
-        <NavbarMenuItem to="main-lobby">Main Lobby</NavbarMenuItem>
-        <NavbarMenuItem to="fitness">Fitness</NavbarMenuItem>
-        <NavbarMenuItem to="bar-lounge">Bar & Lounge</NavbarMenuItem>
-        <NavbarMenuItem to="main-dining-room">Main Dining Room</NavbarMenuItem>
-      </NavbarMenu>
-    </nav>
+    <>
+      <nav className={navbarClassName}>
+        <div
+          className="cursor-pointer sm:cursor-auto flex container px-8 mx-auto relative justify-between sm:justify-center items-center h-16"
+          onClick={() => isMobile && toggleMenu()}
+        >
+          <MenuButton toggleMenu={toggleMenu} />
+          <Logo />
+          <HamburgerIcon />
+          <ContactButton isScrolled={isScrolled} isMenuOpen={isMenuOpen} />
+        </div>
+        <NavbarMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}>
+          <NavbarMenuItem to="east-course">East Course</NavbarMenuItem>
+          <NavbarMenuItem to="driving-range">Driving Range</NavbarMenuItem>
+          <NavbarMenuItem to="twenty-six-north">26 North</NavbarMenuItem>
+          <NavbarMenuItem to="main-lobby">Main Lobby</NavbarMenuItem>
+          <NavbarMenuItem to="fitness">Fitness</NavbarMenuItem>
+          <NavbarMenuItem to="bar-lounge">Bar & Lounge</NavbarMenuItem>
+          <NavbarMenuItem to="main-dining-room">
+            Main Dining Room
+          </NavbarMenuItem>
+        </NavbarMenu>
+      </nav>
+      <Banner />
+    </>
   );
 };
 
@@ -156,6 +162,57 @@ const HamburgerIcon: React.FC = () => {
       className="sm:hidden cursor-pointer select-none"
     >
       <FontAwesomeIcon id="menu-button" icon={faBars} />
+    </motion.div>
+  );
+};
+
+const Banner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  if (!isVisible) return null;
+
+  return (
+    <motion.div
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -50, opacity: 0 }}
+      transition={{
+        type: "spring",
+        damping: 20,
+        stiffness: 100,
+        delay: 0.3,
+      }}
+      className="bg-blue-500 font-sans text-white py-2 text-center font-medium fixed w-full z-40 mt-16"
+    >
+      <div className="container mx-auto px-4 relative">
+        <p>
+          Exciting News! Our new Racquet Sports Complex is underway!
+          <a
+            onClick={() => executeScroll({ to: "racquet-complex" })}
+            className="underline ml-1 hover:text-green-100 transition-colors cursor-pointer"
+          >
+            Learn more
+          </a>
+        </p>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-green-100 transition-colors"
+          aria-label="Close banner"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
     </motion.div>
   );
 };
