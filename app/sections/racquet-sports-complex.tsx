@@ -62,12 +62,12 @@ const RacquetSportsComplex = () => {
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
               >
-                After serving our community for over 40 years, we're excited to
-                unveil our transformational new Racquet Sports Complex. Designed
-                to meet the needs of our 300+ pickleball and 250+ tennis
-                enthusiasts, this modern facility will enhance our vibrant
-                lifestyle while ensuring Hunters Run remains competitive in the
-                country club marketplace.
+                After serving our community for over 40 years, we&apos;re
+                excited to unveil our transformational new Racquet Sports
+                Complex. Designed to meet the needs of our 300+ pickleball and
+                250+ tennis enthusiasts, this modern facility will enhance our
+                vibrant lifestyle while ensuring Hunters Run remains competitive
+                in the country club marketplace.
               </MotionBody>
               <MotionBody
                 className="text-center max-w-[500px] md:text-start lg:hidden"
@@ -75,9 +75,10 @@ const RacquetSportsComplex = () => {
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
               >
-                After serving our community for over 40 years, we're excited to
-                unveil our transformational new Racquet Sports Complex, designed
-                to meet the needs of our growing racquet sports community.
+                After serving our community for over 40 years, we&apos;re
+                excited to unveil our transformational new Racquet Sports
+                Complex, designed to meet the needs of our growing racquet
+                sports community.
               </MotionBody>
               <MotionButtonGroup
                 animate={controls}
