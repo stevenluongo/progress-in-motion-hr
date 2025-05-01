@@ -23,6 +23,7 @@ import Tennis from "../../../public/icons/racquets/tennis.svg";
 import Racquet from "../../../public/icons/racquets/racquet.svg";
 import Certificate from "../../../public/icons/racquets/certificate.svg";
 import Lightbulb from "../../../public/icons/racquets/lightbulb.svg";
+import Boules from "../../../public/icons/racquets/boules.svg";
 
 export type IconsLiteral =
   | "barSeating"
@@ -48,7 +49,8 @@ export type IconsLiteral =
   | "tennis"
   | "racquet"
   | "certificate"
-  | "lightbulb";
+  | "lightbulb"
+  | "boules";
 
 type IconsType = {
   [key in IconsLiteral]: FC;
@@ -79,6 +81,7 @@ const Icons: IconsType = {
   racquet: () => <Racquet />,
   certificate: () => <Certificate />,
   lightbulb: () => <Lightbulb />,
+  boules: () => <Boules />,
 };
 
 export default Icons;

@@ -53,7 +53,7 @@ const RacquetSportsComplex = () => {
                 variants={translateY({ delay: 0 })}
                 initial="initial"
               >
-                <Script>experience</Script>
+                <Script>premier</Script>
                 <Title>Racquet Sports Complex</Title>
               </MotionHeaderContainer>
               <MotionBody
@@ -62,11 +62,12 @@ const RacquetSportsComplex = () => {
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
               >
-                Elevate your game at our newly unveiled Racquet Sports Complex.
-                This state-of-the-art facility features championship-caliber
-                tennis courts, professional pickleball courts, and an exclusive
-                paddle tennis arena, all designed to enhance your playing
-                experience with cutting-edge surfaces and premium amenities.
+                After serving our community for over 40 years, we're excited to
+                unveil our transformational new Racquet Sports Complex. Designed
+                to meet the needs of our 300+ pickleball and 250+ tennis
+                enthusiasts, this modern facility will enhance our vibrant
+                lifestyle while ensuring Hunters Run remains competitive in the
+                country club marketplace.
               </MotionBody>
               <MotionBody
                 className="text-center max-w-[500px] md:text-start lg:hidden"
@@ -74,9 +75,9 @@ const RacquetSportsComplex = () => {
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
               >
-                Elevate your game at our newly unveiled Racquet Sports Complex.
-                This state-of-the-art facility features championship-caliber
-                courts and premium amenities.
+                After serving our community for over 40 years, we're excited to
+                unveil our transformational new Racquet Sports Complex, designed
+                to meet the needs of our growing racquet sports community.
               </MotionBody>
               <MotionButtonGroup
                 animate={controls}
@@ -92,7 +93,7 @@ const RacquetSportsComplex = () => {
                   className="w-full xs:w-fit"
                   icon={faImage}
                 >
-                  View Construction
+                  View Plans
                 </Button>
                 <Button
                   className="hidden xs:flex md:hidden lg:flex"
@@ -129,20 +130,21 @@ const RacquetSportsComplex = () => {
               initial="initial"
             >
               <HeaderContainer>
-                <ScriptSmall>premier</ScriptSmall>
+                <ScriptSmall>exceptional</ScriptSmall>
                 <TitleSmall>World-class facilities.</TitleSmall>
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
-                Our Racquet Sports Complex offers members access to
-                professional-grade courts with advanced lighting systems for day
-                and night play, private instruction from certified pros, and
-                luxurious locker rooms with spa amenities.
+                Construction begins Summer 2026 with an estimated 16-month
+                timeline. The complex will feature championship courts, covered
+                stadium seating, a pro shop, flexible meeting space, and
+                luxurious amenities that enhance both competitive play and
+                social connection.
               </Body>
               <FeaturesGroup>
-                <Features icon="tennis">8 Tennis Courts</Features>
-                <Features icon="racquet">6 Pickleball Courts</Features>
-                <Features icon="certificate">Pro Instruction</Features>
-                <Features icon="lightbulb">Night Play</Features>
+                <Features icon="tennis">16 Lighted Tennis Courts</Features>
+                <Features icon="racquet">16 Pickleball Courts</Features>
+                <Features icon="boules">4 Bocce Courts</Features>
+                <Features icon="drinks">2 Beverage Stations</Features>
               </FeaturesGroup>
             </MotionTextContainer>
             <MotionImageWrapper
