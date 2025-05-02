@@ -62,12 +62,11 @@ const RacquetSportsComplex = () => {
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
               >
-                After serving our community for over 40 years, we&apos;re
-                excited to unveil our transformational new Racquet Sports
-                Complex. Designed to meet the needs of our 300+ pickleball and
-                250+ tennis enthusiasts, this modern facility will enhance our
-                vibrant lifestyle while ensuring Hunters Run remains competitive
-                in the country club marketplace.
+                We&apos;re excited to unveil our plans for an expanded and
+                elevated Racquet Sports Complex. Designed to meet the needs of
+                our 300+ pickleball players and 250+ tennis enthusiasts, this
+                modern facility will enhance our vibrant lifestyle and give all
+                our members another venue to connect socially.
               </MotionBody>
               <MotionBody
                 className="text-center max-w-[500px] md:text-start lg:hidden"
@@ -75,10 +74,11 @@ const RacquetSportsComplex = () => {
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
               >
-                After serving our community for over 40 years, we&apos;re
-                excited to unveil our transformational new Racquet Sports
-                Complex, designed to meet the needs of our growing racquet
-                sports community.
+                We&apos;re excited to unveil our plans for an expanded and
+                elevated Racquet Sports Complex. Designed to meet the needs of
+                our 300+ pickleball players and 250+ tennis enthusiasts, this
+                modern facility will enhance our vibrant lifestyle and give all
+                our members another venue to connect socially.
               </MotionBody>
               <MotionButtonGroup
                 animate={controls}
@@ -136,16 +136,17 @@ const RacquetSportsComplex = () => {
               </HeaderContainer>
               <Body className="text-center max-w-[500px] md:text-start hidden lg:block">
                 Construction begins Summer 2026 with an estimated 16-month
-                timeline. The complex will feature championship courts, covered
-                stadium seating, a pro shop, flexible meeting space, and
-                luxurious amenities that enhance both competitive play and
-                social connection.
+                timeline. The complex will feature 2 stadium covered courts, 3
+                additional pickleball courts, a Retail Shop and locker rooms, a
+                versatile sports bar and restaurant serving as a flexible
+                meeting space, and a new outdoor beverage station, 4 covered
+                bocce courts, and additional outdoor social seating areas.
               </Body>
               <FeaturesGroup>
                 <Features icon="tennis">16 Lighted Tennis Courts</Features>
                 <Features icon="racquet">16 Pickleball Courts</Features>
                 <Features icon="boules">4 Bocce Courts</Features>
-                <Features icon="drinks">2 Beverage Stations</Features>
+                <Features icon="drinks">Sports Bar & Restaurant</Features>
               </FeaturesGroup>
             </MotionTextContainer>
             <MotionImageWrapper
