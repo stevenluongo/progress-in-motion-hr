@@ -62,7 +62,7 @@ const TwentySixNorth = () => {
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
               >
-                Dining at 26° North Craft Kitchen will indeed be a feast for the
+                Dining at 26° North Kitchen will indeed be a feast for the
                 senses. Here you&apos;ll find a carefully crafted menu
                 complemented by hand-selected fine wines, craft cocktails and
                 exceptional service.
@@ -73,7 +73,7 @@ const TwentySixNorth = () => {
                 variants={translateY({ delay: 0.25 })}
                 initial="initial"
               >
-                Dining at 26° North Craft Kitchen will indeed be a feast for the
+                Dining at 26° North Kitchen will indeed be a feast for the
                 senses. Here you&apos;ll find a carefully crafted menu.
               </MotionBody>
               <MotionButtonGroup
